@@ -1,0 +1,40 @@
+/*------------MAIN CLASS--------------*/
+body {
+    display: block;
+    margin: 0;
+    padding: 0;
+}
+.container {
+    max-width: 80%;
+    margin: auto;
+    height: inherit;
+}
+/*------------HEADER--------------*/
+.header {
+    height: 100px;
+    background-color: #67686a;
+    opacity: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 0 150px;
+}
+.header_logo {
+    width: auto;
+    height: inherit;
+}
+.nav {
+    width: 500px;
+}
+.nav_element {
+    text-decoration: none;
+    color: white;
+}
+.social {
+    display: flex;
+    align-items: center;
+}
+.social_element_inner {
+    width: 30px;
+    height: 30px;
+}
