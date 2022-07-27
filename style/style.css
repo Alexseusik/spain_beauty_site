@@ -20,12 +20,12 @@ p {
 }
 /*------------HEADER--------------*/
 .header {
-    height: 100px;
+    height: 80px;
     display: flex;
     justify-content: space-around;
     align-items: center;
     padding: 0 10%;
-    background-color: #9D5F34;
+    background-color: #535352;
     opacity: 80%;
 }
 .header_logo {
@@ -83,7 +83,7 @@ p {
     bottom: 0;
     right: 0;
     z-index: -1;
-    background: #176a49;
+    background: black;
     opacity: 20%;
 }
 .main_title {
@@ -92,21 +92,20 @@ p {
     color: white;
 }
 .main_logo{
-    width: 400px;
-    height: 400px;
+    width: 600px;
+    height: 600px;
 }
 /*------------ABOUT--------------*/
 .about {
     background: white;
     height: 100%;
     display: flex;
-    padding: 0 10%;
+    padding: 10%;
     position: relative;
-    padding-top: 130px;
 }
 .about_title{
     position: absolute;
-    left: 52%;
+    left: 50%;
     transform: translate(-50%, 0);
     font-size: 90px;
     font-family: 'Montserrat', sans-serif;
@@ -137,7 +136,6 @@ p {
 /*------------CAROUSEL--------------*/
 .description{
     background: white;
-    padding-top: 130px;
 }
 .carousel-item {
     height: 800px;
@@ -251,24 +249,38 @@ p {
 /*------------REVIEWS--------------*/
 .reviews {
     background: white;
+    padding: 160px 0;
 }
 .reviews_title {
-    padding-top: 80px;
-    padding-bottom: 20px;
+    padding-bottom: 40px;
     text-align: center;
     font-family: 'Montserrat', sans-serif;
     font-weight: bold;
     font-size: 50px;
     color: black;
 }
+.review_block {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 5%;
+}
+.review_items {
+    width: 40%;
+    background: aquamarine;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+}
 .input_block {
+    width: 40%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
 }
 .input_part {
-    width: 30%;
+    width: 80%;
     padding-bottom: 20px;
 }
 .form-label {
@@ -306,15 +318,16 @@ p {
 }
 /*------------CONTACT--------------*/
 .contacts {
-    background: white;
+    background: black;
+    padding: 120px 0;
+    color: white;
 }
 .contacts_title {
-    padding-top: 80px;
     text-align: center;
     font-family: 'Montserrat', sans-serif;
     font-weight: bold;
     font-size: 50px;
-    color: black;
+    color: white;
 }
 .contacts_items {
     display: flex;
