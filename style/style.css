@@ -20,9 +20,14 @@ body {
     align-items: center;
 }
 .call_btn {
-    color: white;
+    /*color: white;*/
+    /*width: 30px;*/
+    /*height: 30px;*/
+}
+.call_btn_icon {
     width: 30px;
     height: 30px;
+
 }
 h1,h2,h3,h4,h5,h6 {
     display: block;
@@ -35,14 +40,6 @@ h1,h2,h3,h4,h5,h6 {
 }
 p {
     margin: 0;
-}
-.material-symbols-outlined {
- font-variation-settings:
-         'FILL' 1,
-         'wght' 600,
-         'GRAD' 200,
-         'opsz' 48;
-
 }
 /*------------HEADER--------------*/
 .header {
@@ -263,9 +260,8 @@ p {
     flex-wrap: wrap;
 }
 .photo_gallery_item {
-    width: 350px;
-    height: 350px;
-    overflow: hidden;
+    width: 30%;
+    height: auto;
     display: flex;
     justify-content: center;
     align-items: center;
