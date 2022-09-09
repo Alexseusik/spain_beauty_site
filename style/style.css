@@ -82,18 +82,26 @@ p {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    position: relative;
 }
-.main::before {
-    content: '';
-    position: fixed;
+.MainVideo {
+    position: absolute;
     top: 0;
     left: 0;
-    bottom: 0;
-    right: 0;
-    z-index: -2;
-    background: url("../assets/main_photos/main.jpg") center/cover no-repeat;
+    z-index: -1;
     filter: blur(2px);
 }
+/*.main::before {*/
+/*    content: '';*/
+/*    position: fixed;*/
+/*    top: 0;*/
+/*    left: 0;*/
+/*    bottom: 0;*/
+/*    right: 0;*/
+/*    z-index: -2;*/
+/*    background: url("../assets/main_photos/main.jpg") center/cover no-repeat;*/
+/*    filter: blur(2px);*/
+/*}*/
 .main::after{
     content: '';
     position: fixed;
@@ -103,7 +111,7 @@ p {
     right: 0;
     z-index: -1;
     background: black;
-    opacity: 20%;
+    opacity: 50%;
 }
 .main_title {
     font-family: 'Cinzel', serif;
