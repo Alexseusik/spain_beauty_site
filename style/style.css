@@ -274,8 +274,8 @@ p {
 .price {
     background: black;
     overflow: hidden;
-    min-height: 110vh;
-    max-height: 110vh;
+    min-height: 125vh;
+    max-height: 140vh;
     width: auto;
     position: relative;
 }
@@ -355,8 +355,8 @@ p {
     justify-content: space-between;
     margin-bottom: 15px;
 }
-.price_item_amount {
-
+.price_item_text {
+    padding: 5px;
 }
 /*------------PHOTO GALLERY--------------*/
 .photo_gallery {
@@ -429,27 +429,27 @@ p {
 }
 .reviews_items {
     padding: 0 5%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 350px;
+    height: 450px;
 }
 .reviews_short {
     overflow-y: scroll;
     scroll-behavior: smooth;
-    height: 270px;
-    width: 40%;
+    height: 100%;
+    width: 100%;
 }
-.reviews_short_item {
+.reviews_item {
     padding: 2%;
-    margin: 10px;
-    border-radius: 10px;
-    transition: all .2s ease-in-out;
+    display: flex;
+    justify-content: space-between;
 }
-.reviews_short_item:hover {
-    background-color: #b8b7b5;
-    color: white;
-    transition: all .2s ease-in-out;
+.reviews_item_name {
+    display: flex;
+    align-items: center;
+}
+.reviews_item_main_text {
+    width: 70%;
+    font-size: 15px;
+    font-weight: 600;
 }
 .reviews_short::-webkit-scrollbar{
     margin-left: 5px;
@@ -467,25 +467,6 @@ p {
 }
 .reviews_short_item_additional {
     font-size: 10px;
-}
-.reviews_long {
-    width: 40%;
-    height: 270px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
-.reviews_long_text {
-    text-align: center;
-    font-size: 15px;
-}
-.reviews_long_info {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-.reviews_long_name {
-    font-weight: bold;
 }
 .input_block {
     padding-top: 50px;
