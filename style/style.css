@@ -58,6 +58,7 @@ p {
 }
 .nav_element {
     font-family: 'Montserrat', sans-serif;
+    font-size: 15px;
     text-decoration: none;
     color: white;
 }
