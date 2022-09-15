@@ -12,6 +12,7 @@
     <script src="https://code.jquery.com/jquery-3.6.1.js"
             integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI="
             crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/ce86272e1a.js" crossorigin="anonymous"></script>
 </head>
 <body>
 <div class="call">
@@ -138,7 +139,7 @@
     <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
         <div class="carousel-inner">
 
-            <div class="carousel-item active">
+            <div class="carousel-item carousel-description active">
                 <div class="content">
                     <div class="content_text_part">
                         <h3 class="content_title">Extensión de pestañas</h3>
@@ -170,7 +171,7 @@
                 </div>
             </div>
 
-            <div class="carousel-item">
+            <div class="carousel-item carousel-description">
                 <div class="content">
                     <div class="content_text_part">
                         <h3 class="content_title">Lifting de pestañas</h3>
@@ -202,7 +203,7 @@
                 </div>
             </div>
 
-            <div class="carousel-item">
+            <div class="carousel-item carousel-description">
                 <div class="content">
                     <div class="content_text_part">
                         <h3 class="content_title">Diseño de cejas</h3>
@@ -231,7 +232,7 @@
                 </div>
             </div>
 
-            <div class="carousel-item">
+            <div class="carousel-item carousel-description">
                 <div class="content">
                     <div class="content_text_part">
                         <h3 class="content_title">Micropigmentación de labios | cejas | ojos</h3>
@@ -385,38 +386,69 @@
     <div class="see_more_btn">
         <p class="see_more_text">Puedes ver más trabajos en nuestra página de Instagram</p>
         <div class="btn_more_ref">
-            <a href="" class="more_btn_ref"><img src="assets/img/inst_photo.png" alt="" class="more_btn_ref_icon"></a>
+            <a href="" class="btn_more_ref">
+                <i class="fa-brands fa-instagram fa-beat fa-3x"></i>
+            </a>
         </div>
     </div>
 </div>
 <div class="reviews" id = 'reviews'>
     <h2 class="reviews_title">COMENTARIOS</h2>
     <div class="review_block">
-        <div class="reviews_items">
-            <div class="reviews_short">
-                <div class="reviews_item">
-                    <div class="reviews_item_name">Rosae P</div>
-                    <div class="reviews_item_main_text">Ayer visité por primera vez este estudio y decir que Elena me ha demostrado ser una gran profesional. Se nota que le encanta su trabajo y lo hace con todo lujo de detalle. Si estás pensando en ponerte volumen en tus pestañas te la recomiendo 100%; te las deja tan naturales que no se nota que son parte de las manos de una gran profesional.</div>
-                </div>
-                <div class="reviews_item">
-                    <div class="reviews_item_name">Yailyn Freitas</div>
-                    <div class="reviews_item_main_text">Tengo más de un año haciéndome mis pestañas con Elena y siempre salgo encantadísima porque son preciosas y me duran un montón! Hace poco también me he realizado las cejas y son espectaculares!!
-                        Son muy profesionales, te aconsejan y el resultado merece muchísimo la pena! 💖
+<!--        <div class="reviews_items">-->
+<!--            <div class="reviews_short">-->
+<!--                <div class="reviews_item">-->
+<!--                    <div class="reviews_item_name">Rosae P</div>-->
+<!--                    <div class="reviews_item_main_text">Ayer visité por primera vez este estudio y decir que Elena me ha demostrado ser una gran profesional. Se nota que le encanta su trabajo y lo hace con todo lujo de detalle. Si estás pensando en ponerte volumen en tus pestañas te la recomiendo 100%; te las deja tan naturales que no se nota que son parte de las manos de una gran profesional.</div>-->
+<!--                </div>-->
+<!--                <div class="reviews_item">-->
+<!--                    <div class="reviews_item_name">Yailyn Freitas</div>-->
+<!--                    <div class="reviews_item_main_text">Tengo más de un año haciéndome mis pestañas con Elena y siempre salgo encantadísima porque son preciosas y me duran un montón! Hace poco también me he realizado las cejas y son espectaculares!!-->
+<!--                        Son muy profesionales, te aconsejan y el resultado merece muchísimo la pena! 💖-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--                <div class="reviews_item">-->
+<!--                    <div class="reviews_item_name">Raquel Fernández Doncel</div>-->
+<!--                    <div class="reviews_item_main_text">Hoy ha sido la primera vez que he visitado a Elena 😍😍😍 y Aysha me ha puesto unas pestañas espectaculares❤❤ aparte de años deseando coger cita con Elena ya que admiro su trabajo desde hace años conocer su estudio ,a ella ,todo, y más, que me hayan atendido, y me ha encantado son unas profesionales ,el trato como si fueras de casa y súper profesional volveré siempre las mejores                                      graciass  por todo ♥️ 💕 💜</div>-->
+<!--                </div>-->
+<!--                <div class="reviews_item">-->
+<!--                    <div class="reviews_item_name">A. Santos</div>-->
+<!--                    <div class="reviews_item_main_text">He estado hoy poniéndome pestañas... no tengo palabras para lo perfecto que ha sido! Había probado otros centros y nada que ver, no pesan nada las pestañas, tengo exactamente lo que pedí y me aconsejó. Además Elena es muy agradable!-->
+
+<!--                        Muy recomendable!!! La mejor sin duda</div>-->
+<!--                </div>-->
+<!--                <div class="reviews_item">-->
+<!--                    <div class="reviews_item_name">Vane Alberte feijoo</div>-->
+<!--                    <div class="reviews_item_main_text">Una profesional de los pies a la cabeza !! Estoy más que encantada con el trabajo que hace !! Se lo recomiendo a todo el mundo !!!</div>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </div>-->
+        <div id="carouselExampleIndicators" class="carousel slide review_carousel" data-bs-ride="true">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner inner_review">
+                <div class="carousel-item carousel-review active">
+                    <div class="review_item">
+                        <div class="review_main_text">Ayer visité por primera vez este estudio y decir que Elena me ha demostrado ser una gran profesional. Se nota que le encanta su trabajo y lo hace con todo lujo de detalle. Si estás pensando en ponerte volumen en tus pestañas te la recomiendo 100%; te las deja tan naturales que no se nota que son parte de las manos de una gran profesional.</div>
+                        <div class="review_name">Rosae P</div>
                     </div>
                 </div>
-                <div class="reviews_item">
-                    <div class="reviews_item_name">Raquel Fernández Doncel</div>
-                    <div class="reviews_item_main_text">Hoy ha sido la primera vez que he visitado a Elena 😍😍😍 y Aysha me ha puesto unas pestañas espectaculares❤❤ aparte de años deseando coger cita con Elena ya que admiro su trabajo desde hace años conocer su estudio ,a ella ,todo, y más, que me hayan atendido, y me ha encantado son unas profesionales ,el trato como si fueras de casa y súper profesional volveré siempre las mejores                                      graciass  por todo ♥️ 💕 💜</div>
+                <div class="carousel-item carousel-review">
+                    <div class="review_item">
+                        <div class="review_main_text">Tengo más de un año haciéndome mis pestañas con Elena y siempre salgo encantadísima porque son preciosas y me duran un montón! Hace poco también me he realizado las cejas y son espectaculares!!
+                            Son muy profesionales, te aconsejan y el resultado merece muchísimo la pena! 💖</div>
+                        <div class="review_name">Yailyn Freitas</div>
+                    </div>
                 </div>
-                <div class="reviews_item">
-                    <div class="reviews_item_name">A. Santos</div>
-                    <div class="reviews_item_main_text">He estado hoy poniéndome pestañas... no tengo palabras para lo perfecto que ha sido! Había probado otros centros y nada que ver, no pesan nada las pestañas, tengo exactamente lo que pedí y me aconsejó. Además Elena es muy agradable!
-
-                        Muy recomendable!!! La mejor sin duda</div>
-                </div>
-                <div class="reviews_item">
-                    <div class="reviews_item_name">Vane Alberte feijoo</div>
-                    <div class="reviews_item_main_text">Una profesional de los pies a la cabeza !! Estoy más que encantada con el trabajo que hace !! Se lo recomiendo a todo el mundo !!!</div>
+                <div class="carousel-item carousel-review">
+                    <div class="review_item">
+                        <div class="review_main_text">Hoy ha sido la primera vez que he visitado a Elena 😍😍😍 y Aysha me ha puesto unas pestañas espectaculares❤❤ aparte de años deseando coger cita con Elena ya que admiro su trabajo desde hace años conocer su estudio ,a ella ,todo, y más, que me hayan atendido, y me ha encantado son unas profesionales ,el trato como si fueras de casa y súper profesional volveré siempre las mejores                                      graciass  por todo ♥️ 💕 💜
+                        </div>
+                        <div class="review_name">Raquel Fernández Doncel</div>
+                    </div>
                 </div>
             </div>
         </div>
