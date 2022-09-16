@@ -136,7 +136,13 @@
 
 </div>
 <div class="description" id = 'description'>
-    <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+    <div id="carouselDescription" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-indicators carousel-indicators-description">
+            <button type="button" data-bs-target="#carouselDescription" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselDescription" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselDescription" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            <button type="button" data-bs-target="#carouselDescription" data-bs-slide-to="3" aria-label="Slide 4"></button>
+        </div>
         <div class="carousel-inner">
 
             <div class="carousel-item carousel-description active">
@@ -145,15 +151,13 @@
                         <h3 class="content_title">Extensión de pestañas</h3>
                         <div class="content_text_block">
                             <p class="content_text">
-                                Un procedimiento popular para alargar y aumentar las pestañas naturales, <br>
-                                pegando los pelos sintéticos con un pegamento especial. <br>
-                                Este tratamiento permite obtener pestañas elegantes de la longitud y densidad <br>
+                                Un procedimiento popular para alargar y aumentar las pestañas naturales,
+                                pegando los pelos sintéticos con un pegamento especial.
+                                Este tratamiento permite obtener pestañas elegantes de la longitud y densidad
                                 deseadas haciendo que la mirada sea más expresiva y los ojos increíblemente atractivos.
-                                <br>
                                 La longitud de las extensiones de pestañas varía de 6 a 16 mm (en casos especiales
-                                podemos utilizar la longitud máxima hasta 21 mm).<br>
-                                <br>
-                                Nuestras expertas te ayudarán a elegir el mejor efecto, longitud y grosor de las <br>
+                                podemos utilizar la longitud máxima hasta 21 mm).
+                                Nuestras expertas te ayudarán a elegir el mejor efecto, longitud y grosor de las
                                 pestañas dependiendo de las características individuales de la cara / ojos y también las preferencias.
                             </p>
                         </div>
@@ -165,8 +169,10 @@
                             <a href="#pestanas" class="btn_to_price">Buscar precio</a>
                         </div>
                     </div>
-                    <div class="content_photo_block">
-                        <img src="assets/main_photos/description.jpg" alt="description" class="content_photo">
+                    <div class="content_video_block">
+                        <video autoplay muted loop id = 'LashLiftVideo' class="description_video">
+                            <source src="assets/videos/lashlifting.MOV" type="video/mp4">
+                        </video>
                     </div>
                 </div>
             </div>
@@ -177,16 +183,16 @@
                         <h3 class="content_title">Lifting de pestañas</h3>
                         <div class="content_text_block">
                             <p class="content_text">
-                                Es un procedimiento relativamente nuevo que ya ha conquistado corazones de muchas <br>
-                                mujeres en todo el mundo y ahora está ganando cada vez más popularidad en España. <br>
+                                Es un procedimiento relativamente nuevo que ya ha conquistado corazones de muchas
+                                mujeres en todo el mundo y ahora está ganando cada vez más popularidad en España.
                                 El lifting de pestañas es un tratamiento estético destinado a mejorar la longitud, la
-                                <br> curvatura y el tono de las pestañas naturales. <br>
-                                Después del procedimiento, las pestañas se vuelven más oscuras, más largas y <br>
-                                también se reduce su caída. <br>
-                                El efecto deseado se consigue aplicando sobre las pestañas unos compuestos <br>
-                                nutritivos y fortalecedores que los vuelven elásticos, densos y fuertes. <br>
+                                 curvatura y el tono de las pestañas naturales.
+                                Después del procedimiento, las pestañas se vuelven más oscuras, más largas y
+                                también se reduce su caída.
+                                El efecto deseado se consigue aplicando sobre las pestañas unos compuestos
+                                nutritivos y fortalecedores que los vuelven elásticos, densos y fuertes.
                                 Además, las pestañas se rizan y se pintan para brindar más expresividad a la mirada.
-                                <br>
+
                             </p>
                         </div>
                         <div class="content_additional_text_block">
@@ -197,8 +203,10 @@
                             <a href="#pestanas" class="btn_to_price">Buscar precio</a>
                         </div>
                     </div>
-                    <div class="content_photo_block">
-                        <img src="assets/main_photos/description.jpg" alt="description" class="content_photo">
+                    <div class="content_video_block">
+                        <video autoplay muted loop id = 'LashDesignVideo' class="description_video">
+                            <source src="assets/videos/lashdesign.MOV" type="video/mp4">
+                        </video>
                     </div>
                 </div>
             </div>
@@ -265,14 +273,6 @@
                 </div>
             </div>
 
-            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Previous</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Next</span>
-            </button>
 
         </div>
     </div>
@@ -423,11 +423,11 @@
 <!--                </div>-->
 <!--            </div>-->
 <!--        </div>-->
-        <div id="carouselExampleIndicators" class="carousel slide review_carousel" data-bs-ride="true">
-            <div class="carousel-indicators">
-                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        <div id="carouselReview" class="carousel slide review_carousel" data-bs-ride="true">
+            <div class="carousel-indicators carousel-indicators-review">
+                <button type="button" data-bs-target="#carouselReview" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselReview" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselReview" data-bs-slide-to="2" aria-label="Slide 3"></button>
             </div>
             <div class="carousel-inner inner_review">
                 <div class="carousel-item carousel-review active">
