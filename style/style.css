@@ -4,6 +4,8 @@ body {
     margin: 0;
     padding: 0;
     font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-size: 17px;
     background: white;
 }
 .call {
@@ -43,16 +45,14 @@ p {
     justify-content: space-around;
     align-items: center;
     padding: 0 10%;
-    /*background-color: #535352;*/
     background-color: black;
-    /*opacity: 80%;*/
 }
 .header_logo {
-    width: 180px;
+    width: 20%;
     height: auto;
 }
 .nav {
-    width: 800px;
+    width: 50%;
     display: flex;
     justify-content: space-between;
 }
@@ -68,8 +68,8 @@ p {
 .social {
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    width: 80px;
+    justify-content: left;
+    width: 10%;
 }
 .social_element_inner {
     width: 30px;
@@ -122,13 +122,11 @@ p {
     position: relative;
 }
 .about_title{
-    position: absolute;
-    left: 50%;
-    transform: translate(-50%, 0);
-    font-size: 90px;
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 600;
+    font-size: 120px;
+    font-family: 'Libre Baskerville', sans-serif;
+    font-weight: 400;
     text-transform: uppercase;
+    margin-left: -20px;
 }
 .about_main {
     display: flex;
@@ -136,60 +134,85 @@ p {
 .about_text_block{
     max-width: 50%;
     width: 100%;
-    padding-left: 50px;
+    /*padding-left: 50px;*/
     display: flex;
-    align-items: center;
+    /*justify-content: center;*/
+    flex-direction: column;
 }
 .about_text{
+    margin-top: 6px;
     font-family: 'Montserrat', sans-serif;
-    font-size: 15px;
+    font-size: 17px;
+    font-weight: 600;
+    text-align: justify;
+    width: 90%;
 }
 .about_photo_block {
     max-width: 50%;
     width: 100%;
     display: flex;
-    justify-content: right;
+    justify-content: center;
     align-items: center;
 }
-.about_photo{
+.about_video{
     width: auto;
-    max-width: 70%;
+    max-width: 75%;
+    position: relative;
+}
+.about_video::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: #9D5F34;
+    z-index: 1;
+    opacity: 20%;
 }
 .about_team_title {
-    margin: 0 auto;
-    font-size: 90px;
-    font-weight: 600;
-    padding-top: 100px;
+    margin: 200px auto 0 auto;
+    font-family: 'Libre Baskerville', sans-serif;
+    font-size: 100px;
+    font-weight: 400;
 }
 .about_lena {
     margin-top: 30px;
     display: flex;
-    justify-content: right;
+    justify-content: center;
 }
 .about_lena_text_block {
-    margin-right: 15px;
+    max-width: 45%;
+    width: 100%;
     display: flex;
     align-items: center;
+    justify-content: right;
+    padding-right: 20px;
 }
 .about_lena_text {
-    font-size: 20px;
+    width: 80%;
+    text-align: right;
 }
 .about_lena_photo_block {
     max-width: 45%;
     width: 100%;
 }
 .about_lena_photo {
-    width: auto;
-    max-width: 60%;
+    width: 100%;
+    max-width: 70%;
+}
+.workers {
+    display: flex;
+    margin-top: 100px;
 }
 .about_workers {
-    margin-top: 25px;
     display: flex;
     justify-content: left;
 }
 .about_workers_photo_block {
-    max-width: 20%;
-    width: 100%;
+    max-width: 40%;
     margin: 0 50px;
 }
 .about_workers_photo {
@@ -213,6 +236,9 @@ p {
     margin: 0 10px;
     background-color: #FBDA73;
 }
+.carousel-indicators-description [data-bs-target]:focus-visible {
+    outline: none;
+}
 .content {
     width: 100vw;
     height: 100%;
@@ -222,10 +248,10 @@ p {
 }
 .content_title {
     color: white;
-    margin: 0 auto;
-    margin-bottom: 20px;
-    font-size: 25px;
-    font-weight: 900;
+    margin: 0 auto 20px auto;
+    font-size: 35px;
+    font-family: 'Libre Baskerville', sans-serif;
+    font-weight: 400;
 }
 .content_text_part {
     display: flex;
@@ -243,18 +269,15 @@ p {
 .content_text {
     color: white;
     font-family: 'Montserrat', sans-serif;
-    font-size: 15px;
-    text-align: center;
     margin: 0 10%;
+    text-align: justify;
 }
 .content_additional_text_block {
-    margin: 0 10%;
-    margin-top: 20px;
+    margin: 50px 10% 0 10%;
     display: flex;
     justify-content: space-between;
 }
 .content_additional_text {
-    font-size: 15px;
     color: white;
 }
 .content_video_block {
@@ -335,9 +358,9 @@ p {
 .price_title {
     padding-top: 60px;
     text-align: center;
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 600;
-    font-size: 50px;
+    font-family: 'Libre Baskerville', sans-serif;
+    font-weight: 400;
+    font-size: 70px;
     color: #FBDA73;
 }
 .price_list {
@@ -359,6 +382,7 @@ p {
     color: #FBDA73;
     border-bottom: 1px solid #FBDA73;
     height: 30%;
+    margin-bottom: 10px;
     line-height: 45px;
 }
 .price_item_procedures{
@@ -385,14 +409,13 @@ p {
 .photo_gallery_title {
     padding-top: 80px;
     text-align: center;
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 600;
-    font-size: 50px;
+    font-family: 'Libre Baskerville', sans-serif;
+    font-weight: 400;
+    font-size: 70px;
     color: black;
 }
 .photo_gallery_items {
-    padding: 5% 15%;
-    padding-bottom: 0;
+    padding: 5% 15% 0 15%;
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
@@ -441,9 +464,9 @@ p {
 .reviews_title {
     padding-bottom: 80px;
     text-align: center;
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 600;
-    font-size: 50px;
+    font-family: 'Libre Baskerville', sans-serif;
+    font-weight: 400;
+    font-size: 70px;
     color: black;
 }
 .review_block {
@@ -491,47 +514,6 @@ p {
 .review_name {
     font-size: 20px;
 }
-/*.reviews_items {*/
-/*    padding: 0 5%;*/
-/*    height: 450px;*/
-/*}*/
-/*.reviews_short {*/
-/*    overflow-y: scroll;*/
-/*    scroll-behavior: smooth;*/
-/*    height: 100%;*/
-/*    width: 100%;*/
-/*}*/
-/*.reviews_item {*/
-/*    padding: 2%;*/
-/*    display: flex;*/
-/*    justify-content: space-between;*/
-/*}*/
-/*.reviews_item_name {*/
-/*    display: flex;*/
-/*    align-items: center;*/
-/*}*/
-/*.reviews_item_main_text {*/
-/*    width: 70%;*/
-/*    font-size: 15px;*/
-/*    font-weight: 600;*/
-/*}*/
-/*.reviews_short::-webkit-scrollbar{*/
-/*    margin-left: 5px;*/
-/*    width: 3px;*/
-/*}*/
-/*.reviews_short::-webkit-scrollbar-track {*/
-/*    background-color: black;*/
-/*    opacity: 25%;*/
-/*    border-left: 1px solid white;*/
-/*    border-right: 1px solid white;*/
-/*}*/
-/*.reviews_short::-webkit-scrollbar-thumb {*/
-/*    background-color: #FBDA73;*/
-/*    width: 4px;*/
-/*}*/
-/*.reviews_short_item_additional {*/
-/*    font-size: 10px;*/
-/*}*/
 .input_block {
     margin: 0 auto;
     width: 40%;
@@ -585,9 +567,9 @@ p {
 }
 .contacts_title {
     text-align: center;
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 600;
-    font-size: 50px;
+    font-family: 'Libre Baskerville', sans-serif;
+    font-weight: 400;
+    font-size: 70px;
     color: white;
 }
 .contacts_items {
