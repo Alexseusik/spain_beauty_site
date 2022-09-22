@@ -173,7 +173,8 @@ p {
     opacity: 20%;
 }
 .our_advantages {
-    margin-top: 115px;
+    margin-bottom: 130px;
+    margin-top: 150px;
 }
 .advantages_main_text_block {
     display: flex;
@@ -198,7 +199,7 @@ p {
     align-items: center;
 }
 .advantage_photo {
-    width: 45%;
+    width: 40%;
 }
 .advantage_text_block {
     margin-top: 30px;
@@ -250,15 +251,29 @@ p {
     margin-top: 100px;
 }
 .about_workers {
+    max-width: 50%;
+    width: 100%;
     display: flex;
     justify-content: left;
 }
 .about_workers_photo_block {
-    max-width: 40%;
-    margin: 0 50px;
+    max-width: 30%;
+    width: 100%;
+    display: flex;
+    justify-content: start;
 }
 .about_workers_photo {
     width: 100%;
+}
+.about_workers_text_block {
+    max-width: 50%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    margin-left: 45px;
+}
+.about_workers_text {
+    text-align: justify;
 }
 /*------------CAROUSEL--------------*/
 .description{
@@ -290,10 +305,11 @@ p {
 }
 .content_title {
     color: white;
-    margin: 0 auto 20px auto;
-    font-size: 35px;
+    font-size: 50px;
     font-family: 'Libre Baskerville', sans-serif;
     font-weight: 400;
+    margin-left: 10%;
+    margin-bottom: 30px;
 }
 .content_text_part {
     display: flex;
@@ -321,6 +337,9 @@ p {
 }
 .content_additional_text {
     color: white;
+    font-family: 'Libre Baskerville', sans-serif;
+    font-weight: 400;
+    width: 60%;
 }
 .content_video_block {
     max-width: 50%;
