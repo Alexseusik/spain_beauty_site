@@ -42,7 +42,7 @@ p {
 }
 /*------------HEADER--------------*/
 .header {
-    height: 80px;
+    height: 4.7rem;
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -74,10 +74,9 @@ p {
     width: 10%;
 }
 .social_element_inner {
-    width: 30px;
-    height: 30px;
+    width: 1.76rem;
+    height: 1.76rem;
 }
-
 /*------------MAIN--------------*/
 .main {
     height: 90vh;
@@ -91,8 +90,11 @@ p {
     position: fixed;
     top: 0;
     left: 0;
+    bottom: 0;
+    object-fit: cover;
     z-index: -1;
     width: 100%;
+    height: 100%;
 }
 .main::after{
     content: '';
@@ -106,8 +108,8 @@ p {
     opacity: 50%;
 }
 .main_logo{
-    width: 600px;
-    height: 600px;
+    width: 35.3rem;
+    height: 35.3rem;
 }
 /*------------ABOUT--------------*/
 .about {
@@ -122,7 +124,7 @@ p {
     font-family: 'Libre Baskerville', sans-serif;
     font-weight: 400;
     text-transform: uppercase;
-    margin-left: -20px;
+    margin-left: -1.18rem;
 }
 .about_main {
     display: flex;
@@ -135,7 +137,7 @@ p {
     flex-direction: column;
 }
 .about_text{
-    margin-top: 6px;
+    margin-top: 0.35rem;
     font-family: 'Montserrat', sans-serif;
     font-size: 1rem;
     font-weight: 600;
@@ -154,22 +156,9 @@ p {
     max-width: 75%;
     position: relative;
 }
-.about_video::before {
-    content: '';
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    background: #9D5F34;
-    z-index: 1;
-    opacity: 20%;
-}
 .our_advantages {
-    margin-bottom: 130px;
-    margin-top: 150px;
+    margin-bottom: 7.65rem;
+    margin-top: 8.82rem;
 }
 .advantages_main_text_block {
     display: flex;
@@ -216,7 +205,7 @@ p {
     margin-bottom: 5px;
 }
 .about_lena {
-    padding-top: 60px;
+    padding-top: 3.53rem;
     display: flex;
     justify-content: center;
 }
@@ -229,7 +218,7 @@ p {
 }
 .about_lena_text {
     text-align: justify;
-    margin-top: 50px;
+    margin-top: 2.94rem;
     font-size: 1rem;
 }
 .about_lena_photo_block {
@@ -244,7 +233,7 @@ p {
 }
 .workers {
     display: flex;
-    margin-top: 100px;
+    margin-top: 5.9rem;
 }
 .about_workers {
     max-width: 50%;
@@ -266,28 +255,25 @@ p {
     width: 100%;
     display: flex;
     align-items: center;
-    margin-left: 45px;
+    margin-left: 2.65rem;
 }
 .about_workers_text {
     font-size: 1rem;
     text-align: justify;
 }
 /*------------CAROUSEL--------------*/
-.description{
-    background: white;
-}
 .carousel-description {
-    height: 880px;
+    height: 51.76rem;
 }
 .carousel-indicators-description {
     margin: 0;
     width: 50%;
 }
 .carousel-indicators-description [data-bs-target] {
-    width: 30px;
-    height: 30px;
+    width: 1.76rem;
+    height: 1.76rem;
     border-radius: 50%;
-    margin: 0 10px;
+    margin: 0 0.6rem;
     background-color: #FBDA73;
 }
 .carousel-indicators-description [data-bs-target]:focus-visible {
@@ -306,7 +292,7 @@ p {
     font-family: 'Libre Baskerville', sans-serif;
     font-weight: 400;
     margin-left: 10%;
-    margin-bottom: 30px;
+    margin-bottom: 1.75rem;
 }
 .content_text_part {
     display: flex;
@@ -329,7 +315,7 @@ p {
     font-size: 1rem;
 }
 .content_additional_text_block {
-    margin: 50px 10% 0 10%;
+    margin: 2.95rem 10% 0 10%;
     display: flex;
     justify-content: space-between;
 }
@@ -357,17 +343,17 @@ p {
     height: auto;
 }
 .btn_to_price_block {
-    padding-top: 80px;
+    padding-top: 4.7rem;
 }
 .btn_to_price {
     width: auto;
     color: white;
     font-size: 1rem;
     background-color: #79632b;
-    border-radius: 20px;
+    border-radius: 1.18rem;
     text-decoration: none;
-    margin-top: 50px;
-    padding: 15px;
+    margin-top: 2.94rem;
+    padding: 0.94rem;
     transition: .2s all ease-in-out;
 }
 .btn_to_price:hover {
@@ -377,14 +363,14 @@ p {
 .certificate_additional {
     display: flex;
     justify-content: center;
-    padding-top: 50px;
+    padding-top: 2.94rem;
 }
 .order_certificate {
     text-decoration: none;
     font-size: 1rem;
     color: white;
-    padding: 20px;
-    border-radius: 20px;
+    padding: 1.18rem;
+    border-radius: 1.18rem;
     background-color: #79632b;
     transition: all .2s ease-in-out;
 }
@@ -396,8 +382,7 @@ p {
 .price {
     background: black;
     overflow: hidden;
-    min-height: 135vh;
-    max-height: 140vh;
+    min-height: 70rem;
     width: auto;
     position: relative;
 }
@@ -435,7 +420,7 @@ p {
     z-index: 2;
 }
 .price_title {
-    padding-top: 60px;
+    padding-top: 3.53rem;
     text-align: center;
     font-family: 'Libre Baskerville', sans-serif;
     font-weight: 400;
@@ -455,14 +440,14 @@ p {
     flex-direction: column;
     justify-content: space-between;
     height: 20%;
-    margin-bottom: 20px;
+    margin-bottom: 1.18rem;
 }
 .price_item_title {
     color: #FBDA73;
     border-bottom: 1px solid #FBDA73;
     height: 30%;
-    margin-bottom: 10px;
-    line-height: 45px;
+    margin-bottom: 0.6rem;
+    line-height: 2.65rem;
     font-family: 'Libre Baskerville', sans-serif;
 }
 .price_item_procedures{
@@ -477,17 +462,17 @@ p {
     font-size: 1.29rem;
     display: flex;
     justify-content: space-between;
-    margin-bottom: 15px;
+    margin-bottom: 0.9rem;
 }
 .price_item_text {
-    padding: 5px;
+    padding: 0.3rem;
 }
 /*------------PHOTO GALLERY--------------*/
 .photo_gallery {
     background: white;
 }
 .photo_gallery_title {
-    padding-top: 80px;
+    padding-top: 4.7rem;
     text-align: center;
     font-family: 'Libre Baskerville', sans-serif;
     font-weight: 400;
@@ -506,16 +491,13 @@ p {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-bottom: 20px;
+    margin-bottom: 1.18rem;
 }
 .photo_gallery_img {
     width: 100%;
 }
 .see_more_btn {
-    padding-top: 40px;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
+    padding-top: 2.36rem;
 }
 .see_more_text {
     text-align: center;
@@ -523,7 +505,7 @@ p {
     font-weight: 600;
 }
 .btn_more_ref {
-    margin-top: 20px;
+    margin-top: 1.18rem;
     display: flex;
     justify-content: center;
     color: rebeccapurple;
@@ -533,16 +515,16 @@ p {
     color: rebeccapurple;
 }
 .fa-instagram::before {
-    width: 60px;
+    width: 3.53rem;
     height: auto;
 }
 /*------------REVIEWS--------------*/
 .reviews {
     background: white;
-    padding: 130px 0;
+    padding: 7.65rem 0;
 }
 .reviews_title {
-    padding-bottom: 80px;
+    padding-bottom: 4.7rem;
     text-align: center;
     font-family: 'Libre Baskerville', sans-serif;
     font-weight: 400;
@@ -552,7 +534,7 @@ p {
 .review_block {
     display: flex;
     padding: 0 5%;
-    height: 450px;
+    height: 26.5rem;
 }
 .inner_review {
     max-height: 85%;
@@ -573,8 +555,8 @@ p {
 }
 .carousel-indicators-review [data-bs-target] {
     background-color: #FBDA73;
-    width: 15px;
-    height: 15px;
+    width: 0.88rem;
+    height: 0.88rem;
     border-radius: 50%;
 }
 .review_item {
@@ -604,7 +586,7 @@ p {
 }
 .input_part {
     width: 80%;
-    padding-bottom: 20px;
+    padding-bottom: 1.18rem;
 }
 .form-label {
     margin: 0;
@@ -635,7 +617,7 @@ p {
 .btn_input:active {
     background: #9D5F34;
     color: white;
-    font-size: 20px;
+    font-size: 1.18rem;
 }
 .btn_input:focus {
     background: #9D5F34;
@@ -644,7 +626,7 @@ p {
 /*------------CONTACT--------------*/
 .contacts {
     background: black;
-    padding: 120px 0;
+    padding: 7.05rem 0;
     color: white;
 }
 .contacts_title {
@@ -661,7 +643,7 @@ p {
 }
 .contact_item_title {
     font-weight: 600;
-    margin-bottom: 20px;
+    margin-bottom: 1.18rem;
 }
 .contact_item {
     display: flex;
@@ -689,7 +671,7 @@ p {
 .footer_title {
     font-size: 1.18rem;
     color: white;
-    margin-right: 20px;
+    margin-right: 1.18rem;
 }
 .footer_additional {
     display: flex;
@@ -717,6 +699,6 @@ p {
 /*------------MEDIA QUERY-------------*/
 @media screen and (max-width: 1440px) {
     html {
-        font-size: 14px;
+        font-size: 14.5px;
     }
 }
