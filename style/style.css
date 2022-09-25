@@ -1,11 +1,13 @@
 /*------------MAIN CLASS--------------*/
+html {
+    font-size: 17px;
+}
 body {
     display: block;
     margin: 0;
     padding: 0;
     font-family: 'Montserrat', sans-serif;
     font-weight: 600;
-    font-size: 17px;
     background: white;
 }
 .call {
@@ -58,7 +60,7 @@ p {
 }
 .nav_element {
     font-family: 'Montserrat', sans-serif;
-    font-size: 15px;
+    font-size: 0.9rem;
     text-decoration: none;
     color: white;
 }
@@ -103,11 +105,6 @@ p {
     background: black;
     opacity: 50%;
 }
-.main_title {
-    font-family: 'Cinzel', serif;
-    font-size: 40px;
-    color: white;
-}
 .main_logo{
     width: 600px;
     height: 600px;
@@ -121,7 +118,7 @@ p {
     position: relative;
 }
 .about_title{
-    font-size: 120px;
+    font-size: 7.05rem;
     font-family: 'Libre Baskerville', sans-serif;
     font-weight: 400;
     text-transform: uppercase;
@@ -134,15 +131,13 @@ p {
 .about_text_block{
     max-width: 50%;
     width: 100%;
-    /*padding-left: 50px;*/
     display: flex;
-    /*justify-content: center;*/
     flex-direction: column;
 }
 .about_text{
     margin-top: 6px;
     font-family: 'Montserrat', sans-serif;
-    font-size: 17px;
+    font-size: 1rem;
     font-weight: 600;
     text-align: justify;
     width: 90%;
@@ -182,7 +177,7 @@ p {
     align-items: center;
 }
 .advantages_main_text {
-    font-size: 30px;
+    font-size: 1.76rem;
 }
 .advantages {
     width: 100vw;
@@ -206,7 +201,7 @@ p {
     width: 100%;
 }
 .advantage_text {
-    font-size: 15px;
+    font-size: 0.88rem;
     text-align: justify;
 }
 .our_team {
@@ -215,7 +210,7 @@ p {
 .about_team_title {
     text-align: right;
     font-family: 'Libre Baskerville', sans-serif;
-    font-size: 120px;
+    font-size: 7.05rem;
     font-weight: 400;
     margin-top: -5px;
     margin-bottom: 5px;
@@ -235,6 +230,7 @@ p {
 .about_lena_text {
     text-align: justify;
     margin-top: 50px;
+    font-size: 1rem;
 }
 .about_lena_photo_block {
     max-width: 50%;
@@ -273,6 +269,7 @@ p {
     margin-left: 45px;
 }
 .about_workers_text {
+    font-size: 1rem;
     text-align: justify;
 }
 /*------------CAROUSEL--------------*/
@@ -305,7 +302,7 @@ p {
 }
 .content_title {
     color: white;
-    font-size: 50px;
+    font-size: 2.94rem;
     font-family: 'Libre Baskerville', sans-serif;
     font-weight: 400;
     margin-left: 10%;
@@ -329,6 +326,7 @@ p {
     font-family: 'Montserrat', sans-serif;
     margin: 0 10%;
     text-align: justify;
+    font-size: 1rem;
 }
 .content_additional_text_block {
     margin: 50px 10% 0 10%;
@@ -340,6 +338,7 @@ p {
     font-family: 'Libre Baskerville', sans-serif;
     font-weight: 400;
     width: 60%;
+    font-size: 1rem;
 }
 .content_video_block {
     max-width: 50%;
@@ -363,6 +362,7 @@ p {
 .btn_to_price {
     width: auto;
     color: white;
+    font-size: 1rem;
     background-color: #79632b;
     border-radius: 20px;
     text-decoration: none;
@@ -373,6 +373,24 @@ p {
 .btn_to_price:hover {
     color: #172820;
     transition: .2s all ease-in-out;
+}
+.certificate_additional {
+    display: flex;
+    justify-content: center;
+    padding-top: 50px;
+}
+.order_certificate {
+    text-decoration: none;
+    font-size: 1rem;
+    color: white;
+    padding: 20px;
+    border-radius: 20px;
+    background-color: #79632b;
+    transition: all .2s ease-in-out;
+}
+.order_certificate:hover {
+    color: #172820;
+    transition: all .2s ease-in-out;
 }
 /*------------PRICE--------------*/
 .price {
@@ -421,7 +439,7 @@ p {
     text-align: center;
     font-family: 'Libre Baskerville', sans-serif;
     font-weight: 400;
-    font-size: 70px;
+    font-size: 4.12rem;
     color: #FBDA73;
 }
 .price_list {
@@ -445,6 +463,7 @@ p {
     height: 30%;
     margin-bottom: 10px;
     line-height: 45px;
+    font-family: 'Libre Baskerville', sans-serif;
 }
 .price_item_procedures{
     height: 65%;
@@ -455,7 +474,7 @@ p {
 .price_item {
     color: #FBDA73;
     list-style-type: none;
-    font-size: 22px;
+    font-size: 1.29rem;
     display: flex;
     justify-content: space-between;
     margin-bottom: 15px;
@@ -472,7 +491,7 @@ p {
     text-align: center;
     font-family: 'Libre Baskerville', sans-serif;
     font-weight: 400;
-    font-size: 70px;
+    font-size: 4.12rem;
     color: black;
 }
 .photo_gallery_items {
@@ -500,7 +519,7 @@ p {
 }
 .see_more_text {
     text-align: center;
-    font-size: 25px;
+    font-size: 1.47rem;
     font-weight: 600;
 }
 .btn_more_ref {
@@ -527,7 +546,7 @@ p {
     text-align: center;
     font-family: 'Libre Baskerville', sans-serif;
     font-weight: 400;
-    font-size: 70px;
+    font-size: 4.12rem;
     color: black;
 }
 .review_block {
@@ -567,13 +586,13 @@ p {
 }
 .review_main_text {
     font-weight: 600;
-    font-size: 17px;
+    font-size: 1rem;
     height: 70%;
     display: flex;
     align-items: center;
 }
 .review_name {
-    font-size: 20px;
+    font-size: 1.18rem;
 }
 .input_block {
     margin: 0 auto;
@@ -589,6 +608,7 @@ p {
 }
 .form-label {
     margin: 0;
+    font-size: 1rem;
 }
 .form-control {
     width: 100%;
@@ -603,6 +623,7 @@ p {
     align-items: center;
 }
 .btn_input {
+    font-size: 1rem;
     width: 100%;
     background: #FBDA73;
     border: none;
@@ -630,7 +651,7 @@ p {
     text-align: center;
     font-family: 'Libre Baskerville', sans-serif;
     font-weight: 400;
-    font-size: 70px;
+    font-size: 4.12rem;
     color: white;
 }
 .contacts_items {
@@ -650,6 +671,7 @@ p {
 }
 .contact_item_text {
     text-align: center;
+    font-size: 1rem;
 }
 /*------------MAP--------------*/
 .map {
@@ -665,7 +687,7 @@ p {
     align-items: center;
 }
 .footer_title {
-    font-size: 20px;
+    font-size: 1.18rem;
     color: white;
     margin-right: 20px;
 }
@@ -674,7 +696,7 @@ p {
     flex-direction: column;
 }
 .footer_additional_item {
-    font-size: 15px;
+    font-size: 0.88rem;
     text-decoration: none;
     color: white;
     text-align: center;
@@ -690,4 +712,11 @@ p {
 }
 .footer_link:hover {
     color: #172820;
+}
+
+/*------------MEDIA QUERY-------------*/
+@media screen and (max-width: 1440px) {
+    html {
+        font-size: 14px;
+    }
 }
