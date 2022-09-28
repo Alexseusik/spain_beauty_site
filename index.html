@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Solena</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cinzel&family=Libre+Baskerville:wght@400;700&family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
@@ -12,14 +13,13 @@
             integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI="
             crossorigin="anonymous"></script>
     <script src="https://kit.fontawesome.com/ce86272e1a.js" crossorigin="anonymous"></script>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 </head>
 <body>
     <div class="call">
         <a href="" class="call_btn">
-            <svg id="Capa_1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
-                 width="1.7rem" height="1.7rem" viewBox="0 0 891.024 891.024" style="fill:black"
-                 xml:space="preserve">
+            <svg id="Capa_1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 891.024 891.024" style="fill:black"
+                 xml:space="preserve" class="call_btn_icon">
                 <g>
                     <path d="M2.8,180.875c46.6,134,144.7,286.2,282.9,424.399c138.2,138.2,290.4,236.301,424.4,282.9c18.2,6.3,38.3,1.8,52-11.8
                         l92.7-92.7l21.6-21.6c19.5-19.5,19.5-51.2,0-70.7l-143.5-143.4c-19.5-19.5-51.2-19.5-70.7,0l-38.899,38.9
@@ -31,7 +31,32 @@
         </a>
     </div>
     <div class="nav_burger">
-        <button class="burger_btn"></button>
+        <div class="burger_btn" id="burgerbtn" onclick="toggleBurger()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <nav class="nav_mobile" id="burgermenu">
+            <a class = 'nav_mobile_element' href="#about_us" onclick="toggleBurger()">Quiénes somos</a>
+            <a class = 'nav_mobile_element' href="#our_team" onclick="toggleBurger()">Nuestro equipo</a>
+            <a class = 'nav_mobile_element' href="#description" onclick="toggleBurger()">Servicios</a>
+            <a class = 'nav_mobile_element' href="#price" onclick="toggleBurger()">Precios</a>
+            <a class = 'nav_mobile_element' href="#reviews" onclick="toggleBurger()">Comentarios</a>
+            <a class = 'nav_mobile_element' href="#contacts" onclick="toggleBurger()">Contactos</a>
+            <div class="social">
+                <a href="" class="social_element">
+                    <span style="color: #FBDA73">
+                        <i class="fa-brands fa-facebook fa-7x"></i>
+                    </span>
+                </a>
+                <span style="width: 5rem;"></span>
+                <a href="" class="social_element">
+                    <span style="color: #FBDA73">
+                        <i class="fa-brands fa-instagram fa-7x"></i>
+                    </span>
+                </a>
+        </div>
+        </nav>
     </div>
     <header class="header">
         <img class="header_logo" src="assets/logo/solana/солена%20с%20Л/проз.png" alt="логотип">
@@ -61,10 +86,6 @@
     <div class="about">
         <div class="about_main" id = 'about_us'>
             <div class="about_photo_block">
-    <!--            <img src="assets/main_photos/about_main.jpeg" alt="About" class="about_photo">-->
-    <!--            <video autoplay muted loop id = 'AboutUsVideo' class="about_video">-->
-    <!--                <source src="assets/videos/about_us_video.MOV" type="video/mp4">-->
-    <!--            </video>-->
                 <video autoplay muted loop id = 'AboutUsVideo' class="about_video">
                     <source src="assets/videos/about_us_f!!.MOV" type="video/mp4">
                 </video>
@@ -308,7 +329,7 @@
                 <div class="carousel-item carousel-description" data-bs-interval="10000">
                     <div class="content">
                         <div class="content_text_part">
-                            <h3 class="content_title" style="line-height: 40px;">Micropigmentación <br> <span style="font-size: 25px;">de labios | cejas | ojos</span></h3>
+                            <h3 class="content_title" style="line-height: 2.35rem;">Micropigmentación <br> <span style="font-size: 1.47rem;">de labios | cejas | ojos</span></h3>
                             <div class="content_text_block">
                                 <p class="content_text">
                                     Un popular procedimiento estético diseñado para corregir, mejorar o resaltar ciertos
@@ -580,7 +601,10 @@
             <a href="" class="footer_additional_item">Offer agreement</a>
         </div>
     </footer>
+
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.1/dist/jquery.min.js"></script>
     <script src="js/script.js"></script>
 </body>
 </html>
