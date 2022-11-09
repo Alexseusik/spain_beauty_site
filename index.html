@@ -516,33 +516,31 @@
     <div class="reviews" id = 'reviews'>
         <h2 class="reviews_title">COMENTARIOS</h2>
         <div class="review_block">
-            <div id="carouselReview" class="carousel slide review_carousel" data-bs-ride="true">
-                <div class="carousel-indicators carousel-indicators-review">
-                    <button type="button" data-bs-target="#carouselReview" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                    <button type="button" data-bs-target="#carouselReview" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                    <button type="button" data-bs-target="#carouselReview" data-bs-slide-to="2" aria-label="Slide 3"></button>
-                </div>
-                <div class="carousel-inner inner_review">
-                    <div class="carousel-item carousel-review active">
+            <div class="reviews_items">
+                <input type="radio" name="slider" id="item-1" checked>
+                <input type="radio" name="slider" id="item-2">
+                <input type="radio" name="slider" id="item-3">
+                <div class="cards">
+                    <label class="card" for="item-1" id="song-1">
                         <div class="review_item">
                             <div class="review_main_text">Ayer visité por primera vez este estudio y decir que Elena me ha demostrado ser una gran profesional. Se nota que le encanta su trabajo y lo hace con todo lujo de detalle. Si estás pensando en ponerte volumen en tus pestañas te la recomiendo 100%; te las deja tan naturales que no se nota que son parte de las manos de una gran profesional.</div>
                             <div class="review_name">Rosae P</div>
                         </div>
-                    </div>
-                    <div class="carousel-item carousel-review">
+                    </label>
+                    <label class="card" for="item-2" id="song-2">
                         <div class="review_item">
                             <div class="review_main_text">Tengo más de un año haciéndome mis pestañas con Elena y siempre salgo encantadísima porque son preciosas y me duran un montón! Hace poco también me he realizado las cejas y son espectaculares!!
                                 Son muy profesionales, te aconsejan y el resultado merece muchísimo la pena! 💖</div>
                             <div class="review_name">Yailyn Freitas</div>
                         </div>
-                    </div>
-                    <div class="carousel-item carousel-review">
+                    </label>
+                    <label class="card" for="item-3" id="song-3">
                         <div class="review_item">
                             <div class="review_main_text">Hoy ha sido la primera vez que he visitado a Elena 😍😍😍 y Aysha me ha puesto unas pestañas espectaculares❤❤ aparte de años deseando coger cita con Elena ya que admiro su trabajo desde hace años conocer su estudio ,a ella ,todo, y más, que me hayan atendido, y me ha encantado son unas profesionales ,el trato como si fueras de casa y súper profesional volveré siempre las mejores                                      graciass  por todo ♥️ 💕 💜
                             </div>
                             <div class="review_name">Raquel Fernández Doncel</div>
                         </div>
-                    </div>
+                    </label>
                 </div>
             </div>
             <div class="input_block">
@@ -561,6 +559,52 @@
                 </div>
             </div>
         </div>
+<!--        <div class="review_block">-->
+<!--            <div id="carouselReview" class="carousel slide review_carousel" data-bs-ride="true">-->
+<!--                <div class="carousel-indicators carousel-indicators-review">-->
+<!--                    <button type="button" data-bs-target="#carouselReview" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>-->
+<!--                    <button type="button" data-bs-target="#carouselReview" data-bs-slide-to="1" aria-label="Slide 2"></button>-->
+<!--                    <button type="button" data-bs-target="#carouselReview" data-bs-slide-to="2" aria-label="Slide 3"></button>-->
+<!--                </div>-->
+<!--                <div class="carousel-inner inner_review">-->
+<!--                    <div class="carousel-item carousel-review active">-->
+<!--                        <div class="review_item">-->
+<!--                            <div class="review_main_text">Ayer visité por primera vez este estudio y decir que Elena me ha demostrado ser una gran profesional. Se nota que le encanta su trabajo y lo hace con todo lujo de detalle. Si estás pensando en ponerte volumen en tus pestañas te la recomiendo 100%; te las deja tan naturales que no se nota que son parte de las manos de una gran profesional.</div>-->
+<!--                            <div class="review_name">Rosae P</div>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                    <div class="carousel-item carousel-review">-->
+<!--                        <div class="review_item">-->
+<!--                            <div class="review_main_text">Tengo más de un año haciéndome mis pestañas con Elena y siempre salgo encantadísima porque son preciosas y me duran un montón! Hace poco también me he realizado las cejas y son espectaculares!!-->
+<!--                                Son muy profesionales, te aconsejan y el resultado merece muchísimo la pena! 💖</div>-->
+<!--                            <div class="review_name">Yailyn Freitas</div>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                    <div class="carousel-item carousel-review">-->
+<!--                        <div class="review_item">-->
+<!--                            <div class="review_main_text">Hoy ha sido la primera vez que he visitado a Elena 😍😍😍 y Aysha me ha puesto unas pestañas espectaculares❤❤ aparte de años deseando coger cita con Elena ya que admiro su trabajo desde hace años conocer su estudio ,a ella ,todo, y más, que me hayan atendido, y me ha encantado son unas profesionales ,el trato como si fueras de casa y súper profesional volveré siempre las mejores                                      graciass  por todo ♥️ 💕 💜-->
+<!--                            </div>-->
+<!--                            <div class="review_name">Raquel Fernández Doncel</div>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--            <div class="input_block">-->
+<!--                <div class="input_part name_input">-->
+<!--                    <label for="exampleFormControlInput1" class="form-label">Su nombre</label>-->
+<!--                    <input type="text" class="form-control"-->
+<!--                           id="exampleFormControlInput1"-->
+<!--                           placeholder="Introduzca su nombre...">-->
+<!--                </div>-->
+<!--                <div class="input_part review_input">-->
+<!--                    <label for="exampleFormControlTextarea1" class="form-label">Tu reseña</label>-->
+<!--                    <textarea class="form-control" id="exampleFormControlTextarea1"></textarea>-->
+<!--                </div>-->
+<!--                <div class="input_part submit_input">-->
+<!--                    <button type="submit" class="btn btn_input">Enviar reseña</button>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </div>-->
     </div>
     <div class="contacts" id = 'contacts'>
         <h2 class="contacts_title">CONTACTOS</h2>
