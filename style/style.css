@@ -34,6 +34,15 @@ h1,h2,h3,h4,h5,h6 {
 p {
     margin: 0;
 }
+.row {
+    flex-wrap: nowrap;
+    margin: 0;
+    padding: 0;
+}
+.row>* {
+    margin: 0;
+    padding: 0;
+}
 /*------------HEADER--------------*/
 .header {
     height: 4.7rem;
@@ -42,10 +51,6 @@ p {
     align-items: center;
     padding: 0 10%;
     background-color: black;
-}
-.header_logo {
-    width: 20%;
-    height: auto;
 }
 .nav_desktop {
     width: 50%;
@@ -63,7 +68,7 @@ p {
 .social {
     display: flex;
     align-items: center;
-    justify-content: left;
+    justify-content: space-between;
     width: 10%;
 }
 .social_element_inner {
@@ -852,64 +857,39 @@ input[type=radio] {
 
 /*------------MEDIA QUERY-------------*/
 
-/*!*Making adaptive all sizes and text*!*/
-/*@media screen and (max-width: 2560px) {*/
-/*    html {*/
-/*        font-size: 26px;*/
-/*    }*/
-/*}*/
-/*@media screen and (max-width: 2400px) {*/
-/*    html {*/
-/*        font-size: 24px;*/
-/*    }*/
-/*}*/
-/*@media screen and (max-width: 2150px) {*/
-/*    html {*/
-/*        font-size: 22px;*/
-/*    }*/
-/*}*/
-/*@media screen and (max-width: 1920px) {*/
-/*    html {*/
-/*        font-size: 19.5px;*/
-/*    }*/
-/*}*/
-/*@media screen and (max-width: 1680px) {*/
-/*    html {*/
-/*        font-size: 17px;*/
-/*    }*/
-/*}*/
-/*@media screen and (max-width: 1440px) {*/
-/*    html {*/
-/*        font-size: 14.5px;*/
-/*    }*/
-/*}*/
-/*@media screen and (max-width: 1366px) {*/
-/*    html {*/
-/*        font-size: 14px;*/
-/*    }*/
-/*}*/
-/*@media screen and (max-width: 1024px) {*/
-/*    html {*/
-/*        font-size: 10.5px;*/
-/*    }*/
-/*}*/
-/*@media screen and (max-width: 820px) {*/
-/*    html {*/
-/*        font-size: 8px;*/
-/*    }*/
-/*}*/
-/*@media screen and (max-width: 600px) {*/
-/*    html {*/
-/*        font-size: 6px;*/
-/*    }*/
-/*}*/
-/*@media screen and (max-width: 430px) {*/
-/*    html {*/
-/*        font-size: 5px;*/
-/*    }*/
-/*}*/
+/*Making adaptive all sizes and text*/
+@media screen and (max-width: 1920px) {
+    html {
+        font-size: 17px;
+    }
+}
+@media screen and (max-width: 1600px) {
+    html {
+        font-size: 14px;
+    }
+}
+@media screen and (max-width: 1280px) {
+    html {
+        font-size: 14px;
+    }
+}
+@media screen and (max-width: 1024px) {
+    html {
+        font-size: 14px;
+    }
+}
+@media screen and (max-width: 768px) {
+    html {
+        font-size: 14px;
+    }
+}
+@media screen and (max-width: 430px) {
+    html {
+        font-size: 14px;
+    }
+}
 
-/*Changing elements for mobile versions*/
+/*Changing elements for moblie versions*/
 @media screen and (max-width: 430px) {
     .call {
         width: 12rem;
