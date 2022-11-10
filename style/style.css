@@ -197,12 +197,29 @@ p {
     padding: 0 10% 10% 10%;
 }
 .about_team_title {
-    text-align: right;
+    text-align: center;
     font-family: 'Libre Baskerville', sans-serif;
-    font-size: 7.05rem;
+    font-size: 6rem;
     font-weight: 400;
-    margin-top: -5px;
-    margin-bottom: 5px;
+    /*margin-top: -0.3rem;*/
+    /*margin-bottom: 0.3rem;*/
+}
+.team {
+    display: flex;
+    align-items: flex-end;
+    margin-top: 5rem;
+}
+.worker {
+    position: relative;
+}
+.worker:hover .about_workers_text_block {
+    opacity: 1;
+}
+.lena {
+    position: relative;
+}
+.lena:hover .about_lena_text_block {
+    opacity: 1;
 }
 .about_lena {
     padding-top: 3.53rem;
@@ -210,19 +227,28 @@ p {
     justify-content: center;
 }
 .about_lena_text_block {
-    max-width: 50%;
-    width: 100%;
+    /*max-width: 50%;*/
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 75%;
+    height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    background: rgba(251,218,115, 0.8);
+    z-index: 2;
+    opacity: 0;
+    transition: opacity .3s ease-in-out;
 }
 .about_lena_text {
-    text-align: justify;
-    margin-top: 2.94rem;
+    text-align: center;
+    /*margin-top: 2.94rem;*/
     font-size: 1rem;
 }
 .about_lena_photo_block {
-    max-width: 50%;
+    /*max-width: 50%;*/
     width: 100%;
     display: flex;
     justify-content: center;
@@ -242,7 +268,7 @@ p {
     justify-content: left;
 }
 .about_workers_photo_block {
-    max-width: 30%;
+    /*max-width: 30%;*/
     width: 100%;
     display: flex;
     justify-content: start;
@@ -251,15 +277,24 @@ p {
     width: 100%;
 }
 .about_workers_text_block {
-    max-width: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /*max-width: 50%;*/
     width: 100%;
+    height: 100%;
     display: flex;
     align-items: center;
-    margin-left: 2.65rem;
+    background: rgba(251,218,115, 0.8);
+    z-index: 2;
+    opacity: 0;
+    transition: opacity .3s ease-in-out;
+    /*margin-left: 2.65rem;*/
 }
 .about_workers_text {
     font-size: 1rem;
-    text-align: justify;
+    text-align: center;
 }
 /*------------CAROUSEL--------------*/
 .carousel-description {
