@@ -12,8 +12,8 @@ body {
 }
 .call {
     position: fixed;
-    bottom: 1.18rem;
-    right: 1.18rem;
+    bottom: 1.2rem;
+    right: 1.2rem;
     z-index: 5;
     width: 5.9rem;
     height: 5.9rem;
@@ -51,6 +51,9 @@ p {
     align-items: center;
     padding: 0 10%;
     background-color: black;
+}
+.header_logo {
+    /*height: 95%;*/
 }
 .nav_desktop {
     width: 50%;
@@ -94,17 +97,17 @@ p {
     width: 100%;
     height: 100%;
 }
-.main::after{
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    z-index: -1;
-    background: #603c0d;
-    opacity: 20%;
-}
+/*.main::after{*/
+/*    content: '';*/
+/*    position: absolute;*/
+/*    top: 0;*/
+/*    left: 0;*/
+/*    bottom: 0;*/
+/*    right: 0;*/
+/*    z-index: -1;*/
+/*    background: #603c0d;*/
+/*    opacity: 20%;*/
+/*}*/
 .main_logo{
     width: 45rem;
     height: 45rem;
@@ -139,7 +142,7 @@ p {
     flex-direction: column;
 }
 .about_text{
-    font-size: 1rem;
+    font-size: 0.95rem;
     font-weight: 600;
     text-align: justify;
     width: 90%;
@@ -148,17 +151,16 @@ p {
     max-width: 50%;
     width: 100%;
     display: flex;
-    justify-content: center;
+    justify-content: left;
     align-items: center;
 }
 .about_video{
     width: auto;
-    max-width: 75%;
+    max-width: 90%;
     position: relative;
 }
 .our_advantages {
     margin-bottom: 7.65rem;
-    margin-top: 8.82rem;
 }
 .advantages_main_text_block {
     display: flex;
@@ -166,7 +168,7 @@ p {
     align-items: center;
 }
 .advantages_main_text {
-    font-size: 1.76rem;
+    font-size: 1rem;
 }
 .advantages {
     width: 100vw;
@@ -194,7 +196,7 @@ p {
     text-align: justify;
 }
 .our_team {
-    padding: 0 10% 10% 10%;
+    padding: 10%;
 }
 .about_team_title {
     text-align: center;
@@ -358,8 +360,8 @@ p {
     color: white;
     font-family: 'Libre Baskerville', sans-serif;
     font-weight: 400;
-    width: 60%;
-    font-size: 1rem;
+    width: 70%;
+    font-size: 0.95rem;
 }
 .content_video_block {
     max-width: 50%;
@@ -468,6 +470,7 @@ p {
     z-index: 2;
 }
 .price_title {
+    text-transform: uppercase;
     padding-top: 3.53rem;
     text-align: center;
     font-family: 'Libre Baskerville', sans-serif;
@@ -521,6 +524,7 @@ p {
     padding-bottom: 4.65rem;
 }
 .photo_gallery_title {
+    text-transform: uppercase;
     padding-top: 4.7rem;
     text-align: center;
     font-family: 'Libre Baskerville', sans-serif;
@@ -648,7 +652,7 @@ p {
     text-align: center;
     font-family: 'Libre Baskerville', sans-serif;
     font-weight: 400;
-    font-size: 4.12rem;
+    font-size: 2.5rem;
     color: white;
 }
 .review_block {
@@ -674,7 +678,7 @@ input[type=radio] {
 }
 .card {
     position: absolute;
-    width: 60%;
+    width: 70%;
     height: 100%;
     left: 0;
     right: 0;
@@ -685,24 +689,45 @@ input[type=radio] {
     border: none;
 }
 #item-1:checked ~ .cards #song-3, #item-2:checked ~ .cards #song-1, #item-3:checked ~ .cards #song-2 {
-    transform: translatex(-40%) scale(0.8);
+    transform: translatex(-115%) scale(0.8);
     opacity: 0.4;
     z-index: 0;
 }
 
 #item-1:checked ~ .cards #song-2, #item-2:checked ~ .cards #song-3, #item-3:checked ~ .cards #song-1 {
-    transform: translatex(40%) scale(0.8);
+    transform: translatex(115%) scale(0.8);
     opacity: 0.4;
     z-index: 0;
 }
 
 #item-1:checked ~ .cards #song-1, #item-2:checked ~ .cards #song-2, #item-3:checked ~ .cards #song-3 {
-    transform: translatex(0) scale(1);
+    transform: translatex(0) scale(1.3);
     opacity: 1;
     z-index: 1;
 }
-#item-1:checked ~ .cards #song-1 img, #item-2:checked ~ .cards #song-2 img, #item-3:checked ~ .cards #song-3 img {
-    box-shadow: 0px 0px 5px 0px rgba(81, 81, 81, 0.47);
+.review_item {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    /*background: #FBDA73;*/
+    border-radius: 1rem;
+}
+.review_main_text {
+    font-weight: 600;
+    line-height: 1.5rem;
+    font-size: 1rem;
+    height: 70%;
+    width: 90%;
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+.review_name {
+    font-size: 1.18rem;
+    padding-bottom: 2rem;
 }
 /*.review_block {*/
 /*    display: flex;*/
@@ -732,79 +757,56 @@ input[type=radio] {
 /*    height: 0.88rem;*/
 /*    border-radius: 50%;*/
 /*}*/
-.review_item {
-    height: 100%;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    background: #FBDA73;
-    border-radius: 1rem;
-}
-.review_main_text {
-    font-weight: 600;
-    font-size: 1rem;
-    height: 70%;
-    padding: 0 1rem;
-    display: flex;
-    align-items: center;
-}
-.review_name {
-    font-size: 1.18rem;
-    padding-bottom: 2rem;
-}
-.input_block {
-    /*margin: 4rem auto 0 auto;*/
-    width: 40%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-.input_part {
-    width: 80%;
-    padding-bottom: 1.18rem;
-}
-.form-label {
-    margin: 0;
-    font-size: 1rem;
-}
-.form-control {
-    width: 100%;
-}
-.form-control:focus {
-    box-shadow: none;
-    border-color: #FBDA73;
-}
-.submit_input {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.btn_input {
-    font-size: 1rem;
-    font-weight: 800;
-    width: 100%;
-    border: 0.2rem solid #FBDA73;
-    color: white;
-}
-.btn_input:hover {
-    background: #FBDA73;
-    border: 0.2rem solid #FBDA73;
-    color: black;
-}
-.btn_input:active {
-    background: #FBDA73;
-    color: black;
-    font-size: 1.18rem;
-    border: 0.2rem solid #FBDA73;
-}
-.btn_input:focus {
-    border: 0.2rem solid #FBDA73;
-    background: #FBDA73;
-    color: black;
-}
+/*.input_block {*/
+/*    width: 40%;*/
+/*    display: flex;*/
+/*    flex-direction: column;*/
+/*    justify-content: center;*/
+/*    align-items: center;*/
+/*}*/
+/*.input_part {*/
+/*    width: 80%;*/
+/*    padding-bottom: 1.18rem;*/
+/*}*/
+/*.form-label {*/
+/*    margin: 0;*/
+/*    font-size: 1rem;*/
+/*}*/
+/*.form-control {*/
+/*    width: 100%;*/
+/*}*/
+/*.form-control:focus {*/
+/*    box-shadow: none;*/
+/*    border-color: #FBDA73;*/
+/*}*/
+/*.submit_input {*/
+/*    display: flex;*/
+/*    justify-content: center;*/
+/*    align-items: center;*/
+/*}*/
+/*.btn_input {*/
+/*    font-size: 1rem;*/
+/*    font-weight: 800;*/
+/*    width: 100%;*/
+/*    border: 0.2rem solid #FBDA73;*/
+/*    color: white;*/
+/*}*/
+/*.btn_input:hover {*/
+/*    background: #FBDA73;*/
+/*    border: 0.2rem solid #FBDA73;*/
+/*    color: black;*/
+/*}*/
+/*.btn_input:active {*/
+/*    background: #FBDA73;*/
+/*    color: black;*/
+/*    font-size: 1.18rem;*/
+/*    border: 0.2rem solid #FBDA73;*/
+/*}*/
+/*.btn_input:focus {*/
+/*    border: 0.2rem solid #FBDA73;*/
+/*    background: #FBDA73;*/
+/*    color: black;*/
+/*}*/
 /*------------CONTACT--------------*/
 .contacts {
     /*background: black;*/
@@ -824,6 +826,7 @@ input[type=radio] {
     z-index: -1;
 }
 .contacts_title {
+    text-transform: uppercase;
     text-align: center;
     font-family: 'Libre Baskerville', sans-serif;
     font-weight: 400;
@@ -895,32 +898,32 @@ input[type=radio] {
 /*Making adaptive all sizes and text*/
 @media screen and (max-width: 1920px) {
     html {
-        font-size: 17px;
+        font-size: 19px;
     }
 }
 @media screen and (max-width: 1600px) {
     html {
-        font-size: 14px;
+        font-size: 16px;
     }
 }
 @media screen and (max-width: 1280px) {
     html {
-        font-size: 14px;
+        font-size: 13px;
     }
 }
 @media screen and (max-width: 1024px) {
     html {
-        font-size: 14px;
+        font-size: 10px;
     }
 }
 @media screen and (max-width: 768px) {
     html {
-        font-size: 14px;
+        font-size: 8px;
     }
 }
 @media screen and (max-width: 430px) {
     html {
-        font-size: 14px;
+        font-size: 6px;
     }
 }
 
@@ -1023,5 +1026,29 @@ input[type=radio] {
         width: 100%;
         justify-content: right;
         padding: 5rem;
+    }
+    .about_main {
+        flex-direction: column-reverse;
+    }
+    .about_text_block {
+        max-width: 100%;
+        align-items: center;
+    }
+    .about_title {
+        margin-left: 0;
+        text-align: center;
+        font-size: 10rem;
+    }
+    .about_text {
+        margin-top: 2rem;
+        max-width: 95%;
+        width: 100%;
+        text-align: center;
+        font-size: 1.5rem;
+    }
+    .about_photo_block {
+        display: none;
+        /*margin-top: 3rem;*/
+        /*max-width: 100%;*/
     }
 }
