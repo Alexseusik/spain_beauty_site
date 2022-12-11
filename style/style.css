@@ -53,7 +53,7 @@ p {
     background-color: black;
 }
 .header_logo {
-    /*height: 95%;*/
+    transform: scale(0.7);
 }
 .nav_desktop {
     width: 50%;
@@ -71,7 +71,6 @@ p {
 .social {
     display: flex;
     align-items: center;
-    justify-content: space-between;
     width: 10%;
 }
 .social_element_inner {
@@ -97,17 +96,6 @@ p {
     width: 100%;
     height: 100%;
 }
-/*.main::after{*/
-/*    content: '';*/
-/*    position: absolute;*/
-/*    top: 0;*/
-/*    left: 0;*/
-/*    bottom: 0;*/
-/*    right: 0;*/
-/*    z-index: -1;*/
-/*    background: #603c0d;*/
-/*    opacity: 20%;*/
-/*}*/
 .main_logo{
     width: 45rem;
     height: 45rem;
@@ -140,10 +128,11 @@ p {
     width: 100%;
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
 }
 .about_text{
     font-size: 0.95rem;
-    font-weight: 600;
+    font-weight: 400;
     text-align: justify;
     width: 90%;
 }
@@ -168,6 +157,7 @@ p {
     align-items: center;
 }
 .advantages_main_text {
+    font-weight: 600;
     font-size: 1rem;
 }
 .advantages {
@@ -203,100 +193,73 @@ p {
     font-family: 'Libre Baskerville', sans-serif;
     font-size: 6rem;
     font-weight: 400;
-    /*margin-top: -0.3rem;*/
-    /*margin-bottom: 0.3rem;*/
 }
-.team {
-    display: flex;
-    align-items: flex-end;
+.workers_width {
     margin-top: 5rem;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: flex-end;
 }
-.worker {
+.about_workers {
+    max-width: 25%;
+    width: 100%;
     position: relative;
 }
-.worker:hover .about_workers_text_block {
-    opacity: 1;
-}
-.lena {
-    position: relative;
-}
-.lena:hover .about_lena_text_block {
+.about_workers:hover .about_workers_text_block{
     opacity: 1;
 }
 .about_lena {
-    padding-top: 3.53rem;
-    display: flex;
-    justify-content: center;
+    max-width: 30%;
+    width: 100%;
+    position: relative;
+}
+.about_lena:hover .about_lena_text_block{
+    opacity: 1;
 }
 .about_lena_text_block {
-    /*max-width: 50%;*/
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 75%;
+    width: 100%;
     height: 100%;
     display: flex;
-    flex-direction: column;
     justify-content: center;
-    background: rgba(251,218,115, 0.8);
-    z-index: 2;
+    align-items: center;
+    background: rgba(251, 218, 115, 0.7);
+    transition: opacity .2s linear;
     opacity: 0;
-    transition: opacity .3s ease-in-out;
+}
+.about_workers_text_block {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(251, 218, 115, 0.7);
+    transition: opacity .2s linear;
+    opacity: 0;
 }
 .about_lena_text {
     text-align: center;
-    /*margin-top: 2.94rem;*/
-    font-size: 1rem;
+    padding: 0 3%;
 }
-.about_lena_photo_block {
-    /*max-width: 50%;*/
+.about_workers_text {
+    text-align: center;
+    padding: 0 5%;
+}
+.about_lena_photo_block{
     width: 100%;
-    display: flex;
-    justify-content: center;
 }
 .about_lena_photo {
-    max-width: 75%;
     width: 100%;
 }
-.workers {
-    display: flex;
-    margin-top: 5.9rem;
-}
-.about_workers {
-    max-width: 50%;
+.about_workers_photo_block{
     width: 100%;
-    display: flex;
-    justify-content: left;
-}
-.about_workers_photo_block {
-    /*max-width: 30%;*/
-    width: 100%;
-    display: flex;
-    justify-content: start;
 }
 .about_workers_photo {
     width: 100%;
 }
-.about_workers_text_block {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    /*max-width: 50%;*/
-    width: 100%;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    background: rgba(251,218,115, 0.8);
-    z-index: 2;
-    opacity: 0;
-    transition: opacity .3s ease-in-out;
-    /*margin-left: 2.65rem;*/
-}
-.about_workers_text {
-    font-size: 1rem;
-    text-align: center;
+.team_mobile_carousel {
+    display: none;
 }
 /*------------CAROUSEL--------------*/
 .carousel-description {
@@ -608,7 +571,7 @@ p {
 .see_more_text {
     text-align: center;
     font-size: 1.47rem;
-    font-weight: 600;
+    font-weight: 400;
 }
 .btn_more_ref {
     margin-top: 1.18rem;
@@ -627,7 +590,7 @@ p {
 /*------------REVIEWS--------------*/
 .reviews {
     /*background: white;*/
-    height: 53rem;
+    height: 50rem;
     color: white;
     position: relative;
     border-bottom: 1rem solid gray;
@@ -644,7 +607,7 @@ p {
     right: 0;
     z-index: -1;
     background: rgb(39 35 31);
-    opacity: 80%;
+    opacity: 85%;
 }
 .reviews_title {
     padding-top: 7rem;
@@ -674,7 +637,7 @@ input[type=radio] {
 .cards {
     position: relative;
     width: 100%;
-    height: 100%;
+    height: 90%;
 }
 .card {
     position: absolute;
@@ -689,13 +652,13 @@ input[type=radio] {
     border: none;
 }
 #item-1:checked ~ .cards #song-3, #item-2:checked ~ .cards #song-1, #item-3:checked ~ .cards #song-2 {
-    transform: translatex(-115%) scale(0.8);
+    transform: translatex(-115%) scale(0.7);
     opacity: 0.4;
     z-index: 0;
 }
 
 #item-1:checked ~ .cards #song-2, #item-2:checked ~ .cards #song-3, #item-3:checked ~ .cards #song-1 {
-    transform: translatex(115%) scale(0.8);
+    transform: translatex(115%) scale(0.7);
     opacity: 0.4;
     z-index: 0;
 }
@@ -712,15 +675,13 @@ input[type=radio] {
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    /*background: #FBDA73;*/
-    border-radius: 1rem;
 }
 .review_main_text {
-    font-weight: 600;
+    font-weight: 400;
     line-height: 1.5rem;
     font-size: 1rem;
     height: 70%;
-    width: 90%;
+    width: 100%;
     display: flex;
     align-items: center;
     text-align: center;
@@ -729,84 +690,6 @@ input[type=radio] {
     font-size: 1.18rem;
     padding-bottom: 2rem;
 }
-/*.review_block {*/
-/*    display: flex;*/
-/*    padding: 0 5%;*/
-/*    height: 26.5rem;*/
-/*}*/
-/*.inner_review {*/
-/*    max-height: 85%;*/
-/*    height: 100%;*/
-/*}*/
-/*.carousel-review {*/
-/*    height: 100%;*/
-/*}*/
-/*.review_carousel {*/
-/*    width: 40%;*/
-/*    margin: 0 auto;*/
-/*}*/
-/*.review_main_text {*/
-/*    text-align: center;*/
-/*}*/
-/*.carousel-indicators-review {*/
-/*    margin-bottom: 0;*/
-/*}*/
-/*.carousel-indicators-review [data-bs-target] {*/
-/*    background-color: #FBDA73;*/
-/*    width: 0.88rem;*/
-/*    height: 0.88rem;*/
-/*    border-radius: 50%;*/
-/*}*/
-/*.input_block {*/
-/*    width: 40%;*/
-/*    display: flex;*/
-/*    flex-direction: column;*/
-/*    justify-content: center;*/
-/*    align-items: center;*/
-/*}*/
-/*.input_part {*/
-/*    width: 80%;*/
-/*    padding-bottom: 1.18rem;*/
-/*}*/
-/*.form-label {*/
-/*    margin: 0;*/
-/*    font-size: 1rem;*/
-/*}*/
-/*.form-control {*/
-/*    width: 100%;*/
-/*}*/
-/*.form-control:focus {*/
-/*    box-shadow: none;*/
-/*    border-color: #FBDA73;*/
-/*}*/
-/*.submit_input {*/
-/*    display: flex;*/
-/*    justify-content: center;*/
-/*    align-items: center;*/
-/*}*/
-/*.btn_input {*/
-/*    font-size: 1rem;*/
-/*    font-weight: 800;*/
-/*    width: 100%;*/
-/*    border: 0.2rem solid #FBDA73;*/
-/*    color: white;*/
-/*}*/
-/*.btn_input:hover {*/
-/*    background: #FBDA73;*/
-/*    border: 0.2rem solid #FBDA73;*/
-/*    color: black;*/
-/*}*/
-/*.btn_input:active {*/
-/*    background: #FBDA73;*/
-/*    color: black;*/
-/*    font-size: 1.18rem;*/
-/*    border: 0.2rem solid #FBDA73;*/
-/*}*/
-/*.btn_input:focus {*/
-/*    border: 0.2rem solid #FBDA73;*/
-/*    background: #FBDA73;*/
-/*    color: black;*/
-/*}*/
 /*------------CONTACT--------------*/
 .contacts {
     /*background: black;*/
@@ -839,7 +722,7 @@ input[type=radio] {
     justify-content: space-between;
 }
 .contact_item_title {
-    font-weight: 600;
+    font-weight: 400;
     margin-bottom: 1.18rem;
 }
 .contact_item {
@@ -989,8 +872,8 @@ input[type=radio] {
         width: 100vw;
     }
     .main_logo {
-        width: 75rem;
-        height: 75rem;
+        width: 65rem;
+        height: 65rem;
     }
     .nav_mobile {
         position: absolute;
@@ -1046,9 +929,55 @@ input[type=radio] {
         text-align: center;
         font-size: 1.5rem;
     }
+    .about_text_starting {
+        display: block;
+        max-width: 100%;
+        width: 100%;
+    }
     .about_photo_block {
         display: none;
-        /*margin-top: 3rem;*/
-        /*max-width: 100%;*/
+    }
+    .about_team_title {
+        font-size: 9rem;
+    }
+    .team {
+        flex-direction: column
+    }
+    .team_mobile_carousel {
+        display: block;
+    }
+    .team_carousel_content {
+        display: flex;
+        flex-direction: column;
+        margin: 0 auto;
+        max-width: 100%;
+        width: 100%;
+    }
+    .team_carousel_photo {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .lena_mobile_photo {
+        width: 100%;
+    }
+    .advantages_main_text {
+        font-size: 1.5rem;
+        max-width: 80%;
+        width: 100%;
+        margin: 0 auto;
+        text-align: center;
+    }
+    .advantages {
+        flex-wrap: wrap;
+    }
+    .advantage {
+        width: 45%;
+    }
+    .last {
+        margin-top: 3rem;
+    }
+    .advantage_text {
+        font-size: 1.3rem;
     }
 }
