@@ -71,6 +71,7 @@ p {
 .social {
     display: flex;
     align-items: center;
+    justify-content: space-between;
     width: 10%;
 }
 .social_element_inner {
@@ -191,6 +192,7 @@ p {
     text-align: center;
     font-family: 'Libre Baskerville', sans-serif;
     font-size: 6rem;
+    line-height: 5.5rem;
     font-weight: 400;
 }
 .workers_width {
@@ -199,17 +201,19 @@ p {
     flex-direction: column;
 }
 .about_lena {
+    height: 100%;
     display: flex;
     flex-direction: row-reverse;
     align-items: center;
     max-width: 100%;
 }
 .about_lena_photo_block{
-    max-width: 35%;
+    max-width: 45%;
     width: 100%;
 }
 .about_lena_text_block {
-    max-width: 65%;
+    height: 100%;
+    max-width: 55%;
     width: 100%;
     padding: 0 5%;
 }
@@ -217,29 +221,25 @@ p {
     width: 100%;
 }
 .about_lena_text {
-    font-size: 1.3rem;
+    font-size: 1.2rem;
     text-align: justify;
+    margin-top: 4rem;
+    margin-bottom: 4rem;
 }
 .about_workers {
-    margin-top: -1rem;
     display: flex;
-    align-items: center;
-    justify-content: flex-end;
+    align-items: flex-end;
+    justify-content: space-between;
     max-width: 100%;
-    padding: 0 3rem;
 }
 .about_workers_text_block {
-    max-width: 45%;
+    margin-bottom: 1rem;
+    max-width: 60%;
     width: 100%;
 }
 .about_workers_photo_block{
-    max-width: 25%;
+    max-width: 35%;
     width: 100%;
-}
-.about_workers_text {
-    text-align: center;
-    padding: 0 5%;
-    margin-left: 5rem;
 }
 .about_workers_photo {
     width: 100%;
@@ -563,6 +563,7 @@ p {
     margin-top: 1.18rem;
     display: flex;
     justify-content: center;
+    align-items: center;
     color: rebeccapurple;
     text-decoration: none;
 }
@@ -638,13 +639,13 @@ input[type=radio] {
     border: none;
 }
 #item-1:checked ~ .cards #song-3, #item-2:checked ~ .cards #song-1, #item-3:checked ~ .cards #song-2 {
-    transform: translatex(-115%) scale(0.7);
+    transform: translatex(-110%) scale(0.7);
     opacity: 0.4;
     z-index: 0;
 }
 
 #item-1:checked ~ .cards #song-2, #item-2:checked ~ .cards #song-3, #item-3:checked ~ .cards #song-1 {
-    transform: translatex(115%) scale(0.7);
+    transform: translatex(110%) scale(0.7);
     opacity: 0.4;
     z-index: 0;
 }
@@ -670,7 +671,7 @@ input[type=radio] {
     width: 100%;
     display: flex;
     align-items: center;
-    text-align: center;
+    text-align: justify;
 }
 .review_name {
     font-size: 1.18rem;
@@ -925,7 +926,7 @@ input[type=radio] {
         display: none;
     }
     .about_team_title {
-        font-size: 10rem;
+        font-size: 9rem;
     }
     .workers_width {
         display: none;
@@ -940,17 +941,30 @@ input[type=radio] {
         margin: 0 auto;
         max-width: 100%;
         width: 100%;
+        height: 70rem;
+        position: relative;
     }
     .team_carousel_photo {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 70rem;
         display: flex;
         align-items: center;
         justify-content: center;
+    }
+    .team_carousel_text {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform:translate(-50%, -50%);
     }
     .lena_mobile_photo {
         width: 100%;
     }
     .advantages_main_text {
-        font-size: 1.5rem;
+        font-size: 2rem;
         max-width: 80%;
         width: 100%;
         margin: 0 auto;
@@ -960,12 +974,31 @@ input[type=radio] {
         flex-wrap: wrap;
     }
     .advantage {
-        width: 45%;
+        width: 60%;
     }
     .last {
         margin-top: 3rem;
     }
     .advantage_text {
-        font-size: 1.3rem;
+        font-size: 2rem;
+    }
+    .description {
+        height: 110rem;
+    }
+    .carousel-description {
+        height: 110rem;
+    }
+    .content {
+        flex-direction: column;
+    }
+    .content_video_block {
+        max-width: 100%;
+        max-height: 70%;
+        height: 100%;
+    }
+    .content_text_part {
+        max-width: 100%;
+        max-height: 30%;
+        height: 100%;
     }
 }
