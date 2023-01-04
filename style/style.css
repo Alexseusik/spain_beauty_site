@@ -113,7 +113,7 @@ p {
     position: relative;
 }
 .about_title{
-    font-size: 7.05rem;
+    font-size: 6rem;
     font-family: 'Libre Baskerville', sans-serif;
     font-weight: 400;
     text-transform: uppercase;
@@ -131,7 +131,7 @@ p {
     justify-content: space-between;
 }
 .about_text{
-    font-size: 0.95rem;
+    font-size: 0.85rem;
     font-weight: 400;
     text-align: justify;
     width: 90%;
@@ -140,13 +140,12 @@ p {
     max-width: 50%;
     width: 100%;
     display: flex;
-    justify-content: left;
+    justify-content: center;
     align-items: center;
 }
 .about_video{
     width: auto;
-    max-width: 90%;
-    position: relative;
+    max-width: 70%;
 }
 .our_advantages {
     margin-bottom: 7.65rem;
@@ -222,7 +221,7 @@ p {
     text-align: justify;
 }
 .about_workers {
-    margin-top: 5rem;
+    margin-top: -1rem;
     display: flex;
     align-items: center;
     justify-content: flex-end;
@@ -240,6 +239,7 @@ p {
 .about_workers_text {
     text-align: center;
     padding: 0 5%;
+    margin-left: 5rem;
 }
 .about_workers_photo {
     width: 100%;
@@ -906,14 +906,15 @@ input[type=radio] {
     .about_title {
         margin-left: 0;
         text-align: center;
-        font-size: 10rem;
+        font-size: 11rem;
     }
     .about_text {
         margin-top: 2rem;
         max-width: 95%;
         width: 100%;
-        text-align: center;
-        font-size: 1.5rem;
+        font-size: 2rem;
+        font-weight: 600;
+        text-align: justify;
     }
     .about_text_starting {
         display: block;
@@ -924,13 +925,14 @@ input[type=radio] {
         display: none;
     }
     .about_team_title {
-        font-size: 9rem;
+        font-size: 10rem;
     }
-    .team {
-        flex-direction: column
+    .workers_width {
+        display: none;
     }
     .team_mobile_carousel {
         display: block;
+        margin-top: 5rem;
     }
     .team_carousel_content {
         display: flex;
