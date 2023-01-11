@@ -132,7 +132,7 @@ p {
     justify-content: space-between;
 }
 .about_text{
-    font-size: 0.85rem;
+    font-size: 0.9rem;
     font-weight: 400;
     text-align: justify;
     width: 90%;
@@ -146,7 +146,7 @@ p {
 }
 .about_video{
     width: auto;
-    max-width: 70%;
+    max-width: 80%;
 }
 .our_advantages {
     margin-bottom: 7.65rem;
@@ -161,7 +161,8 @@ p {
     font-size: 1rem;
 }
 .advantages {
-    width: 100vw;
+    padding: 0 10%;
+    width: 100%;
     margin-top: 4.42rem;
     display: flex;
     justify-content: space-evenly;
@@ -208,25 +209,25 @@ p {
     max-width: 100%;
 }
 .about_lena_photo_block{
-    max-width: 45%;
+    max-width: 50%;
     width: 100%;
 }
 .about_lena_text_block {
     height: 100%;
-    max-width: 55%;
+    max-width: 50%;
     width: 100%;
     padding: 0 5%;
 }
 .about_lena_photo {
-    width: 100%;
+    width: 92%;
 }
 .about_lena_text {
     font-size: 1.2rem;
     text-align: justify;
-    margin-top: 4rem;
-    margin-bottom: 4rem;
+    margin: 4rem 1rem 4rem 0;
 }
 .about_workers {
+    margin-right: 1rem;
     display: flex;
     align-items: flex-end;
     justify-content: space-between;
@@ -719,6 +720,7 @@ input[type=radio] {
     width: 30%;
 }
 .contact_item_text {
+    width: 15rem;
     text-align: center;
     font-size: 1rem;
 }
@@ -774,6 +776,9 @@ input[type=radio] {
 @media screen and (max-width: 1600px) {
     html {
         font-size: 16px;
+    }
+    .about_text {
+        font-size: 1rem;
     }
 }
 @media screen and (max-width: 1280px) {
