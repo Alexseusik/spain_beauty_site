@@ -9,9 +9,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Lato&family=Libre+Baskerville:wght@400;700&family=Montserrat:wght@400;500;600;900&family=Nunito+Sans&family=Playfair+Display&family=Poppins&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
     <link rel="stylesheet" href="style/style.css">
-    <script src="https://code.jquery.com/jquery-3.6.1.js"
-            integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI="
-            crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
     <script src="https://kit.fontawesome.com/ce86272e1a.js" crossorigin="anonymous"></script>
 
 </head>
@@ -58,7 +56,7 @@
         </div>
         </nav>
     </div>
-    <header class="header row">
+    <header class="header row" id = "header">
         <img class="header_logo col-2" src="assets/logo/solana/солена%20с%20Л/проз%20—%20Отредактировано%20(1).png" alt="логотип">
         <nav class="nav_desktop col-8">
             <a class = 'nav_element' href="#about_us">Quiénes somos</a>
@@ -80,7 +78,7 @@
             </a>
         </span>
     </header>
-    <div class="main">
+    <div class="main" id = "main">
         <video autoplay muted loop id = 'MainVideo' class="MainVideo">
             <source src="assets/videos/main_backk.MOV" type="video/mp4">
         </video>
@@ -205,7 +203,7 @@
         <div class="our_advantages">
             <div class="advantages_main_text_block">
                 <p class="advantages_main_text">Si todavía tiene dudas, le mostramos los cuatro pilares que nos
-                    convierten en el centro líder en cuidado de cejas de Ourense.</p>
+                    convierten en el centro líder en cuidado de tu mirada.</p>
             </div>
             <div class="advantages">
                 <div class="advantage last">
@@ -340,7 +338,7 @@
                     <div class="content">
                         <div class="content_video_block">
                             <video autoplay muted loop id = 'LashDesignVideo' class="description_video">
-                                <source src="assets/videos/final_%3F/diseno_de_cejas.MOV" type="video/mp4">
+                                <source src="assets/videos/diseno_cejas.MOV" type="video/mp4">
                             </video>
                         </div>
                         <div class="content_text_part">
@@ -433,7 +431,7 @@
                                 </p>
                             </div>
                             <div class="certificate_additional">
-                                <a href = "#" class="order_certificate">Solicitar un servicio</a>
+                                <a href = "#" class="order_certificate">Contactar</a>
                             </div>
                         </div>
                     </div>
@@ -549,10 +547,10 @@
                 </video>
             </div>
             <div class="photo_gallery_item gallery_7">
-                <img src="assets/main_photos/IMAGE 2023-01-05 00:38:39.jpg" alt="review" class = "photo_gallery_img">
+                <img src="assets/main_photos/galerry_7.jpg" alt="review" class = "photo_gallery_img">
             </div>
-            <div class="photo_gallery_item gallery_8">
-                <img src="assets/main_photos/gallery_photo_final_%3F/8.jpg" alt="review" class = "photo_gallery_img">
+            <div style="overflow: hidden;" class="photo_gallery_item gallery_8">
+                <img style="scale: 1.1" src="assets/main_photos/gallery_8.jpg" alt="review" class = "photo_gallery_img">
             </div>
         </div>
         <div class="see_more_btn">
@@ -588,7 +586,10 @@
                     </label>
                     <label class="card" for="item-3" id="song-3">
                         <div class="review_item">
-                            <div class="review_main_text">Hoy ha sido la primera vez que he visitado a Elena 😍😍😍 y Aysha me ha puesto unas pestañas espectaculares❤❤ aparte de años deseando coger cita con Elena ya que admiro su trabajo desde hace años conocer su estudio ,a ella ,todo, y más, que me hayan atendido, y me ha encantado son unas profesionales ,el trato como si fueras de casa y súper profesional volveré siempre las mejores                                      graciass  por todo ♥️ 💕 💜
+                            <div class="review_main_text">
+                                He vuelto a ponerme mis extensiones de pestañas y no puedo agradecer más el trato, la profesionalidad, el cuidado ,no os cambio pkr nada del universo años admirando tu trabajo y por fin te he conocido personal y profesionalmente y estoy tan agradecida y feliz gracissss por ser y por tu profesionalidad y empatía no te cambio por nada del universo súper recomendable para todas graciasssss beso gigante.
+
+                                La mejor sin duda estoy súper feliz Elena y Anastasia graciasssss y sobre todo a Elena por su empatía y conocer lo que buscas y conseguirlo graciassss lo mejor que me ha pasado 😍😍😍😍😍😍😍😍😍😍😍😍😍😍😍😍😍😍😍😍😍😍😍😍😍😍
                             </div>
                             <div class="review_name">Raquel F.D</div>
                         </div>
@@ -619,14 +620,12 @@
             </div>
             <div class="contact_item">
                 <h3 class="contact_item_title">Nuestro horario <span style="font-size: 0.7rem; text-align: right; display: block;">*atendemos con cita previa</span></h3>
-                <div class="contact_item_text_block">
-                    <p class="contact_item_text">
-                        lu - vi  09:00 - 20:00
-                        <br>
-                        sa       10:00 - 14:00
-                        <br>
-                        do       cerrado
-                    </p>
+                <div class="contact_item_text_block" style="width: 100%; display: flex; justify-content: center">
+                    <table class="time_schedule_table">
+                        <tr class="table_row"><td class="table_day">lu - vi</td><td>09:00 - 20:00</td></tr>
+                        <tr class="table_row"><td class="table_day">sa</td><td>10:00-14:00</td></tr>
+                        <tr class="table_row"><td class="table_day">do</td><td>cerrado</td></tr>
+                    </table>
                 </div>
             </div>
         </div>
@@ -648,7 +647,6 @@
 
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.1/dist/jquery.min.js"></script>
     <script src="js/script.js"></script>
 </body>
 </html>
