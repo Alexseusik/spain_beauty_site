@@ -29,12 +29,16 @@
         </a>
     </div>
     <div class="nav_burger">
-        <div class="burger_btn" id="burgerbtn" onclick="toggleBurger()">
+        <span class="burger_logo">
+            <img class="burger_logo_img" src="assets/logo/solana/солена с Л/проз — Отредактировано.png" alt="">
+        </span>
+        <div class="burger_control">
+            <div class="burger_btn" id="burgerbtn" onclick="toggleBurger()">
             <span></span>
             <span></span>
             <span></span>
         </div>
-        <nav class="nav_mobile" id="burgermenu">
+            <nav class="nav_mobile" id="burgermenu">
             <a class = 'nav_mobile_element' href="#about_us" onclick="toggleBurger()">Quiénes somos</a>
             <a class = 'nav_mobile_element' href="#our_team" onclick="toggleBurger()">Nuestro equipo</a>
             <a class = 'nav_mobile_element' href="#description" onclick="toggleBurger()">Servicios</a>
@@ -55,6 +59,7 @@
                 </a>
         </div>
         </nav>
+        </div>
     </div>
     <header class="header row" id = "header">
         <img class="header_logo col-2" src="assets/logo/solana/солена%20с%20Л/проз%20—%20Отредактировано%20(1).png" alt="логотип">
@@ -136,16 +141,14 @@
                         <div class="carousel-item team_carousel_item">
                             <div class="team_carousel_content">
                                 <div class="team_carousel_photo">
-                                    <img src="assets/main_photos/nastya_v1.jpg" alt="About" class="about_workers_photo">
+                                    <img src="assets/main_photos/nastya_v1.jpg" alt="About" class="lena_mobile_photo">
                                 </div>
                                 <div class="team_carousel_text">
-                                    <p class="about_workers_text">
-                                        <b><span style="font-size: 1.59rem;">Anastasia Apanasenko</span></b>
-                                        <br>
-                                        Especialista en extensiones de pestañas en Solena School and Studio,
-                                        [completosu formación en la escuela de maquillaje y estética de...
-                                        con amplia experiencia en ...].
-                                    </p>
+                                    <div><b><span style="font-family: 'Libre Baskerville', sans-serif; font-weight: 700; font-size: 1.7rem;">Anastasia Apanasenko</span></b><br> la fundadora del estudio.</div>
+                                    <br>
+                                    Especialista en extensiones de pestañas en Solena School and Studio,
+                                    [completosu formación en la escuela de maquillaje y estética de...
+                                    con amplia experiencia en ...].
                                 </div>
                             </div>
                         </div>
@@ -288,7 +291,7 @@
                                     El proceso suele tardar entre 2 y 3,5 horas. <br>
                                     Tiempo de uso: 4-6 semanas.
                                 </p>
-                                <a href="#pestanas" class="btn_to_price">Ver precios</a>
+                                <a href="#price" class="btn_to_price">Ver precios</a>
                             </div>
                         </div>
                     </div>
@@ -328,7 +331,7 @@
                                     El proceso dura entre 1 y 1 .20 horas.<br>
                                     El resultado se mantendrá unas 6-8 semanas.
                                 </p>
-                                <a href="#pestanas" class="btn_to_price">Ver precios</a>
+                                <a href="#price" class="btn_to_price">Ver precios</a>
                             </div>
                         </div>
                     </div>
@@ -359,7 +362,7 @@
                                     <br>
                                     El resultado se mantiene durante 3-4 semanas.
                                 </p>
-                                <a href="#cejas" class="btn_to_price">Ver precios</a>
+                                <a href="#price" class="btn_to_price">Ver precios</a>
                             </div>
                         </div>
                     </div>
@@ -400,7 +403,7 @@
                                     El resultado se mantendrá entre 2 y 6 años,
                                     según las características individuales del cuerpo.
                                 </p>
-                                <a href="#micropigmentation" class="btn_to_price">Ver precios</a>
+                                <a href="#price" class="btn_to_price">Ver precios</a>
                             </div>
                         </div>
                     </div>
@@ -501,15 +504,15 @@
                     <div class="price_item_procedures">
                         <div class = "price_item">
                             <span class="price_item_text">Micropigmentación de cejas (sombreado)</span>
-                            <span class="price_item_amount">270€ (2 sesiones)</span>
+                            <span class="price_item_amount">270€<br>(2 sesiones)</span>
                         </div>
                         <div class = "price_item">
                             <span class="price_item_text">Micropigmentación de los ojos (zona entre pestañas)</span>
-                            <span class="price_item_amount">180€ (2 sesiones)</span>
+                            <span class="price_item_amount">180€<br>(2 sesiones)</span>
                         </div>
                         <div class = "price_item">
                             <span class="price_item_text">Micropigmentación de labios</span>
-                            <span class="price_item_amount">270€ (2 sesiones)</span>
+                            <span class="price_item_amount">270€<br>(2 sesiones)</span>
                         </div>
                     </div>
                 </div>
@@ -557,8 +560,8 @@
             <p class="see_more_text">Puedes ver más trabajos en nuestro Instagram</p>
             <div class="btn_more_ref_block">
                 <a href="https://www.instagram.com/solena_beauty.studio/" class="btn_more_ref">
-                    <i class="fa-brands fa-instagram fa-2x"></i>
-                    <p style="margin-left: 1rem; font-size: 1.5rem; font-weight: 400;">solena_beauty.studio</p>
+                    <i class="fa-brands fa-instagram fa-3x"></i>
+                    <p style="margin-left: 1rem; font-size: 2rem; font-weight: 400;">solena_beauty.studio</p>
                 </a>
             </div>
         </div>
@@ -596,6 +599,41 @@
                     </label>
                 </div>
             </div>
+        </div>
+        <div id="reviewMobileCarousel" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <div class="mobile_review_item">
+                        <div class="mobile_review_text">Ayer visité por primera vez este estudio y decir que Elena me ha demostrado ser una gran profesional. Se nota que le encanta su trabajo y lo hace con todo lujo de detalle. Si estás pensando en ponerte volumen en tus pestañas te la recomiendo 100%; te las deja tan naturales que no se nota que son parte de las manos de una gran profesional.</div>
+                        <div class="mobile_review_name">Rosae P</div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="mobile_review_item">
+                        <div class="mobile_review_text">Tengo más de un año haciéndome mis pestañas con Elena y siempre salgo encantadísima porque son preciosas y me duran un montón! Hace poco también me he realizado las cejas y son espectaculares!!
+                            Son muy profesionales, te aconsejan y el resultado merece muchísimo la pena! 💖</div>
+                        <div class="mobile_review_name">Yailyn F.</div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="mobile_review_item">
+                        <div class="mobile_review_text">
+                            He vuelto a ponerme mis extensiones de pestañas y no puedo agradecer más el trato, la profesionalidad, el cuidado ,no os cambio pkr nada del universo años admirando tu trabajo y por fin te he conocido personal y profesionalmente y estoy tan agradecida y feliz gracissss por ser y por tu profesionalidad y empatía no te cambio por nada del universo súper recomendable para todas graciasssss beso gigante.
+
+                            La mejor sin duda estoy súper feliz Elena y Anastasia graciasssss y sobre todo a Elena por su empatía y conocer lo que buscas y conseguirlo graciassss lo mejor que me ha pasado 😍😍😍😍😍😍😍😍😍😍😍😍😍😍😍😍😍😍😍😍😍😍😍😍😍😍
+                        </div>
+                        <div class="mobile_review_name">Raquel F.D</div>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
         </div>
     </div>
     <div class="contacts" id = 'contacts'>

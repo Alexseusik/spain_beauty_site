@@ -279,14 +279,14 @@ p {
 }
 .content_title {
     color: #fcda73;
-    font-size: 2.94rem;
+    font-size: 3rem;
     font-family: 'Libre Baskerville', sans-serif;
     font-weight: 400;
     margin-left: 10%;
     margin-bottom: 1.75rem;
 }
 .content_text_part {
-    background: linear-gradient(180deg, rgb(230 207 176) 0%, rgb(135 118 94) 33%, rgb(111 97 80) 66%, rgb(81 71 57) 100%);
+    background: linear-gradient(180deg, rgb(210, 180, 148) 0%, rgb(135 118 94) 33%, rgb(111 97 80) 66%, rgb(81 71 57) 100%);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -449,10 +449,10 @@ p {
 }
 .price_item_title {
     color: #FBDA73;
-    border-bottom: 1px solid #FBDA73;
+    border-bottom: 0.1rem solid #FBDA73;
     height: 30%;
     margin-bottom: 0.6rem;
-    line-height: 2.65rem;
+    line-height: 3.5rem;
     font-family: 'Libre Baskerville', sans-serif;
 }
 .price_item_procedures{
@@ -842,18 +842,35 @@ input[type=radio] {
         display: none;
     }
     .nav_burger {
+        display: flex;
+        width: 100%;
+        background-color: black;
+        position: fixed;
+        z-index: 1000;
+    }
+    .burger_logo {
+        width: 70%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .burger_logo_img {
+        width: 25rem;
+        height: auto;
+        padding-top: 1rem;
+    }
+    .burger_control {
         display: block;
-        position: absolute;
-        top: 0;
-        left: 0;
-        z-index: 5;
+        width: 30%;
     }
     .burger_btn {
-        width: 20rem;
-        height: 20rem;
+        width: 15rem;
+        height: 15rem;
         position: relative;
-        z-index:2;
         overflow: hidden;
+        margin-right: 0;
+        margin-left: auto;
+        z-index: 1002;
     }
     .burger_btn span {
         width: 8rem;
@@ -883,7 +900,7 @@ input[type=radio] {
         transform: translate(-50%, 0%) rotate(-45deg);
     }
     .main {
-        height: 100vh;
+        height: 75vh;
     }
     .MainVideo {
         height: 100vh;
@@ -894,12 +911,12 @@ input[type=radio] {
         height: 65rem;
     }
     .nav_mobile {
-        position: absolute;
+        position: fixed;
         top: 0;
         left: 0;
         background-color: #4b4b4b;
-        width: 100vw;
-        height: 100vh;
+        width: 100%;
+        height: 100%;
         display: flex;
         flex-direction: column;
         align-items: flex-end;
@@ -907,9 +924,11 @@ input[type=radio] {
         padding: 5rem;
         transform: translateX(-100%);
         transition: transform .5s;
+        z-index: 1001;
     }
     .nav_mobile.active {
         transform: translateX(0);
+        position: fixed;
     }
     .nav_mobile_element {
         text-decoration: none;
@@ -958,6 +977,7 @@ input[type=radio] {
     }
     .about_team_title {
         font-size: 9rem;
+        line-height: 1.2;
     }
     .workers_width {
         display: none;
@@ -969,6 +989,8 @@ input[type=radio] {
     .team_carousel_content {
         display: flex;
         flex-direction: column;
+        justify-content: center;
+        align-items: center;
         margin: 0 auto;
         max-width: 100%;
         width: 100%;
@@ -976,9 +998,6 @@ input[type=radio] {
         position: relative;
     }
     .team_carousel_photo {
-        position: absolute;
-        top: 0;
-        left: 0;
         width: 100%;
         height: 70rem;
         display: flex;
@@ -986,17 +1005,17 @@ input[type=radio] {
         justify-content: center;
     }
     .team_carousel_text {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform:translate(-50%, -50%);
+        width: 80%;
     }
     .lena_mobile_photo {
-        width: 100%;
+        width: 80%;
+    }
+    .about_workers_photo {
+        width: 80%;
     }
     .advantages_main_text {
         font-size: 2rem;
-        max-width: 80%;
+        max-width: 70%;
         width: 100%;
         margin: 0 auto;
         text-align: center;
@@ -1005,7 +1024,7 @@ input[type=radio] {
         flex-wrap: wrap;
     }
     .advantage {
-        width: 60%;
+        width: 70%;
     }
     .last {
         margin-top: 3rem;
@@ -1024,15 +1043,99 @@ input[type=radio] {
     }
     .content_video_block {
         max-width: 100%;
-        max-height: 70%;
+        max-height: 50%;
         height: 100%;
     }
     .content_text_part {
         max-width: 100%;
-        max-height: 30%;
+        max-height: 50%;
         height: 100%;
     }
     .content_text {
+        font-size: 1.5rem;
+    }
+    .content_title {
+        font-size: 4rem;
+    }
+    .carousel-indicators-description [data-bs-target] {
+        width: 2rem;
+        height: 2rem;
+    }
+    .content_additional_text {
+        font-size: 1.2rem;
+    }
+    .btn_to_price {
         font-size: 2rem;
+        border-width: 0.2rem;
+    }
+    .price {
+        min-height: 98rem;
+    }
+    .price_title {
+        font-size: 5rem;
+        padding-top: 6rem;
+    }
+    .price_item {
+        font-size: 1.7rem;
+        margin-bottom: 1.5rem;
+    }
+    .price_item_text {
+        display: flex;
+        align-items: center;
+    }
+    .price_item_title {
+        font-size: 2.5rem;
+    }
+    .price_item_amount {
+        text-align: center;
+    }
+    .photo_gallery_title {
+        font-size: 5rem;
+    }
+    .see_more_text {
+        font-size: 2rem;
+    }
+    .reviews {
+        height: 70rem;
+    }
+    .review_block {
+        display: none;
+    }
+    .mobile_review_item {
+        max-width: 70%;
+        width: 100%;
+        margin: 0 auto;
+        height: 45rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .mobile_review_text {
+        font-size: 1.8rem;
+        text-align: justify;
+    }
+    .mobile_review_name {
+        margin-top: 5rem;
+        font-size: 1.5rem;
+    }
+    .contacts_items {
+        padding: 5%;
+    }
+    .map {
+        height: 35rem;
+    }
+    .footer {
+        height: 7rem;
+    }
+    .footer_title {
+        font-size: 1.5rem;
+    }
+    .footer_additional {
+        flex-direction: row;
+    }
+    .footer_additional_item {
+        font-size: 1rem;
+        margin-right: 1rem;
     }
 }
