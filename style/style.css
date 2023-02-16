@@ -841,21 +841,28 @@ input[type=radio] {
     .header {
         display: none;
     }
+    .main {
+        margin-top: 12rem;
+    }
     .nav_burger {
         display: flex;
+        justify-content: space-between;
         width: 100%;
+        height: 12rem;
         background-color: black;
         position: fixed;
+        top: 0;
         z-index: 1000;
     }
     .burger_logo {
+
         width: 70%;
         display: flex;
         justify-content: center;
         align-items: center;
     }
     .burger_logo_img {
-        width: 25rem;
+        width: 20rem;
         height: auto;
         padding-top: 1rem;
     }
@@ -865,7 +872,7 @@ input[type=radio] {
     }
     .burger_btn {
         width: 15rem;
-        height: 15rem;
+        height: 12rem;
         position: relative;
         overflow: hidden;
         margin-right: 0;
@@ -874,7 +881,7 @@ input[type=radio] {
     }
     .burger_btn span {
         width: 8rem;
-        height: 0.5rem;
+        height: 0.3rem;
         position: absolute;
         top: 50%;
         left: 50%;
@@ -914,12 +921,12 @@ input[type=radio] {
         position: fixed;
         top: 0;
         left: 0;
-        background-color: #4b4b4b;
+        background-color: black;
         width: 100%;
         height: 100%;
         display: flex;
         flex-direction: column;
-        align-items: flex-end;
+        align-items: center;
         justify-content: center;
         padding: 5rem;
         transform: translateX(-100%);
@@ -934,7 +941,7 @@ input[type=radio] {
         text-decoration: none;
         color: #FBDA73;
         font-size: 5rem;
-        padding: 3rem;
+        padding: 1rem 3rem;
     }
     .nav_mobile_element:active {
         color: #FBDA73;
@@ -944,7 +951,7 @@ input[type=radio] {
     }
     .social {
         width: 100%;
-        justify-content: right;
+        justify-content: center;
         padding: 5rem;
     }
     .about_main {
@@ -985,11 +992,19 @@ input[type=radio] {
     .team_mobile_carousel {
         display: block;
         margin-top: 5rem;
+        height: 85rem;
+    }
+    .team_carousel_item {
+        height: 100%;
+    }
+    .team_inner_carousel {
+        height: 100%;
+        overflow: visible;
     }
     .team_carousel_content {
         display: flex;
         flex-direction: column;
-        justify-content: center;
+        justify-content: space-between;
         align-items: center;
         margin: 0 auto;
         max-width: 100%;
@@ -1005,13 +1020,43 @@ input[type=radio] {
         justify-content: center;
     }
     .team_carousel_text {
+        text-align: justify;
+        margin-top: 3rem;
         width: 80%;
+        font-size: 1.7rem;
     }
     .lena_mobile_photo {
         width: 80%;
     }
+    .carousel-control-prev-icon {
+        background: none;
+        display: block;
+        border-left: 0.5rem solid black;
+        border-top: 0.5rem solid black;
+        rotate: -45deg;
+    }
+    .carousel-control-next-icon {
+        background: none;
+        display: block;
+        border-left: 0.5rem solid black;
+        border-top: 0.5rem solid black;
+        rotate: 135deg;
+    }
+    .carousel-control-prev {
+        justify-content: left;
+    }
+    .carousel-control-next {
+        justify-content: right;
+    }
+    .visually-hidden {
+        width: 0;
+        height: 0;
+    }
     .about_workers_photo {
         width: 80%;
+    }
+    .our_advantages {
+        margin-top: 7.65rem;
     }
     .advantages_main_text {
         font-size: 2rem;
@@ -1033,26 +1078,26 @@ input[type=radio] {
         font-size: 2rem;
     }
     .description {
-        height: 120rem;
+        height: 135rem;
     }
     .carousel-description {
-        height: 120rem;
+        height: 135rem;
     }
     .content {
         flex-direction: column;
     }
     .content_video_block {
         max-width: 100%;
-        max-height: 50%;
+        max-height: 40%;
         height: 100%;
     }
     .content_text_part {
         max-width: 100%;
-        max-height: 50%;
+        max-height: 60%;
         height: 100%;
     }
     .content_text {
-        font-size: 1.5rem;
+        font-size: 1.7rem;
     }
     .content_title {
         font-size: 4rem;
@@ -1062,11 +1107,21 @@ input[type=radio] {
         height: 2rem;
     }
     .content_additional_text {
-        font-size: 1.2rem;
+        font-size: 1.5rem;
+    }
+    .order_certificate {
+        font-size: 2rem;
+    }
+    .content_additional_text_block {
+        flex-direction: column;
     }
     .btn_to_price {
-        font-size: 2rem;
-        border-width: 0.2rem;
+        font-size: 2.3rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        max-width: 35%;
+        width: 100%;
     }
     .price {
         min-height: 98rem;
@@ -1118,6 +1173,9 @@ input[type=radio] {
     .mobile_review_name {
         margin-top: 5rem;
         font-size: 1.5rem;
+    }
+    .review_control {
+        display: none;
     }
     .contacts_items {
         padding: 5%;
