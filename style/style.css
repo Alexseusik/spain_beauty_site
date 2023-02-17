@@ -593,6 +593,9 @@ p {
     height: auto;
 }
 /*------------REVIEWS--------------*/
+.mobile_review_item {
+    display: none;
+}
 .reviews {
     /*background: white;*/
     height: 50rem;
@@ -1198,6 +1201,9 @@ input[type=radio] {
     .mobile_review_name {
         margin-top: 5rem;
         font-size: 1.5rem;
+    }
+    .mobile_review_carousel {
+        display: block;
     }
     .review_control {
         display: none;
