@@ -167,7 +167,7 @@ p {
 .advantages {
     padding: 0 10%;
     width: 100%;
-    margin-top: 4.42rem;
+    margin-top: 5rem;
     display: flex;
     justify-content: space-evenly;
 }
@@ -365,7 +365,7 @@ p {
 .certificate_additional {
     display: flex;
     justify-content: right;
-    padding-top: 2.94rem;
+    padding-top: 3rem;
 }
 .order_certificate {
     text-decoration: none;
@@ -855,8 +855,7 @@ input[type=radio] {
         z-index: 1000;
     }
     .burger_logo {
-
-        width: 70%;
+        width: 55%;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -957,6 +956,9 @@ input[type=radio] {
     .about_main {
         flex-direction: column-reverse;
     }
+    .about_title_mobile_first {
+        font-size: 9.5rem;
+    }
     .about_text_block {
         max-width: 100%;
         align-items: center;
@@ -964,7 +966,7 @@ input[type=radio] {
     .about_title {
         margin-left: 0;
         text-align: center;
-        font-size: 11rem;
+        font-size: 11.5rem;
     }
     .about_text {
         margin-top: 2rem;
@@ -985,6 +987,9 @@ input[type=radio] {
     .about_team_title {
         font-size: 9rem;
         line-height: 1.2;
+    }
+    .about_team_title_mobile_first {
+        font-size: 7.1rem;
     }
     .workers_width {
         display: none;
@@ -1063,19 +1068,26 @@ input[type=radio] {
         max-width: 70%;
         width: 100%;
         margin: 0 auto;
-        text-align: center;
+        text-align: justify;
     }
     .advantages {
         flex-wrap: wrap;
+        margin-top: 8rem;
     }
     .advantage {
-        width: 70%;
+        width: 85%;
     }
     .last {
-        margin-top: 3rem;
+        margin-top: 10rem;
     }
     .advantage_text {
         font-size: 2rem;
+    }
+    .advantage_text_block {
+        margin-top: 5rem;
+    }
+    .advantage_photo {
+        width: 45%;
     }
     .description {
         height: 135rem;
@@ -1095,16 +1107,21 @@ input[type=radio] {
         max-width: 100%;
         max-height: 60%;
         height: 100%;
+        justify-content: left;
     }
     .content_text {
         font-size: 1.7rem;
     }
     .content_title {
         font-size: 4rem;
+        margin-top: 10rem;
+    }
+    .carousel-indicators-description {
+        width: 100%;
     }
     .carousel-indicators-description [data-bs-target] {
-        width: 2rem;
-        height: 2rem;
+        width: 2.5rem;
+        height: 2.5rem;
     }
     .content_additional_text {
         font-size: 1.5rem;
@@ -1113,18 +1130,23 @@ input[type=radio] {
         font-size: 2rem;
     }
     .content_additional_text_block {
-        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
     }
     .btn_to_price {
-        font-size: 2.3rem;
+        margin-top: 0;
+        font-size: 2rem;
         display: flex;
         justify-content: center;
         align-items: center;
-        max-width: 35%;
+        max-width: 27%;
         width: 100%;
     }
+    .order_certificate {
+        margin-right: 6rem;
+    }
     .price {
-        min-height: 98rem;
+        min-height: 90rem;
     }
     .price_title {
         font-size: 5rem;
@@ -1132,7 +1154,7 @@ input[type=radio] {
     }
     .price_item {
         font-size: 1.7rem;
-        margin-bottom: 1.5rem;
+        margin-bottom: 1rem;
     }
     .price_item_text {
         display: flex;
@@ -1149,6 +1171,9 @@ input[type=radio] {
     }
     .see_more_text {
         font-size: 2rem;
+    }
+    .btn_more_ref {
+        margin-top: 3rem;
     }
     .reviews {
         height: 70rem;
@@ -1167,7 +1192,7 @@ input[type=radio] {
         align-items: center;
     }
     .mobile_review_text {
-        font-size: 1.8rem;
+        font-size: 1.5rem;
         text-align: justify;
     }
     .mobile_review_name {
