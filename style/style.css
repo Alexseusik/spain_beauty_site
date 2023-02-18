@@ -353,8 +353,8 @@ p {
     font-size: 1rem;
     border: 0.1rem solid #FBDA73;
     border-radius: 0.6rem;
-    margin-top: 2.94rem;
-    padding: 0.94rem;
+    margin-top: 3rem;
+    padding: 1rem;
     transition: .2s all ease-in-out;
 }
 .btn_to_price:hover {
@@ -557,7 +557,7 @@ p {
     object-fit: cover;
 }
 .see_more_btn {
-    padding-top: 2.36rem;
+    margin-top: 2.4rem;
 }
 .see_more_text {
     text-align: center;
@@ -858,7 +858,7 @@ input[type=radio] {
         z-index: 1000;
     }
     .burger_logo {
-        width: 55%;
+        width: 45%;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -960,7 +960,7 @@ input[type=radio] {
         flex-direction: column-reverse;
     }
     .about_title_mobile_first {
-        font-size: 9.5rem;
+        font-size: 9.1rem;
     }
     .about_text_block {
         max-width: 100%;
@@ -969,12 +969,12 @@ input[type=radio] {
     .about_title {
         margin-left: 0;
         text-align: center;
-        font-size: 11.5rem;
+        font-size: 11rem;
     }
     .about_text {
         margin-top: 2rem;
         max-width: 95%;
-        width: 100%;
+        width: 85%;
         font-size: 2rem;
         font-weight: 600;
         text-align: justify;
@@ -988,11 +988,11 @@ input[type=radio] {
         display: none;
     }
     .about_team_title {
-        font-size: 9rem;
+        font-size: 10.5rem;
         line-height: 1.2;
     }
     .about_team_title_mobile_first {
-        font-size: 7.1rem;
+        font-size: 8.5rem;
     }
     .workers_width {
         display: none;
@@ -1030,11 +1030,11 @@ input[type=radio] {
     .team_carousel_text {
         text-align: justify;
         margin-top: 3rem;
-        width: 80%;
+        width: 85%;
         font-size: 1.7rem;
     }
     .lena_mobile_photo {
-        width: 80%;
+        width: 85%;
     }
     .carousel-control-prev-icon {
         background: none;
@@ -1068,7 +1068,7 @@ input[type=radio] {
     }
     .advantages_main_text {
         font-size: 2rem;
-        max-width: 70%;
+        max-width: 68%;
         width: 100%;
         margin: 0 auto;
         text-align: justify;
@@ -1103,21 +1103,21 @@ input[type=radio] {
     }
     .content_video_block {
         max-width: 100%;
-        max-height: 45%;
+        max-height: 40%;
         height: 100%;
     }
     .content_text_part {
         max-width: 100%;
-        max-height: 55%;
+        max-height: 60%;
         height: 100%;
         justify-content: left;
     }
     .content_text {
-        font-size: 1.7rem;
+        font-size: 1.9rem;
     }
     .content_title {
         font-size: 4rem;
-        margin-top: 10rem;
+        margin-top: 7rem;
     }
     .carousel-indicators-description {
         width: 100%;
@@ -1128,16 +1128,16 @@ input[type=radio] {
     }
     .content_additional_text {
         font-size: 1.5rem;
+        width: 100%;
     }
     .order_certificate {
         font-size: 2rem;
     }
     .content_additional_text_block {
+        flex-direction: column;
         justify-content: space-between;
-        align-items: center;
     }
     .btn_to_price {
-        margin-top: 0;
         font-size: 2rem;
         display: flex;
         justify-content: center;
@@ -1172,11 +1172,15 @@ input[type=radio] {
     .photo_gallery_title {
         font-size: 5rem;
     }
+    .see_more_btn {
+        margin-top: 5rem;
+    }
     .see_more_text {
         font-size: 2rem;
     }
-    .btn_more_ref {
-        margin-top: 3rem;
+    .reviews_title {
+        font-size: 4rem;
+        padding-bottom: 5rem;
     }
     .reviews {
         height: 70rem;
