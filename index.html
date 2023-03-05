@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns="http://www.w3.org/1999/html">
 <head>
     <meta charset="UTF-8">
     <title>Solena</title>
@@ -8,12 +8,83 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lato&family=Libre+Baskerville:wght@400;700&family=Montserrat:wght@400;500;600;900&family=Nunito+Sans&family=Playfair+Display&family=Poppins&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
     <link rel="stylesheet" href="style/style.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
     <script src="https://kit.fontawesome.com/ce86272e1a.js" crossorigin="anonymous"></script>
 
+
+    <link rel='stylesheet' type='text/css' href='https://api.tomtom.com/maps-sdk-for-web/cdn/6.x/6.5.0/maps/maps.css'>
+    <script onload="mapContent();" src="https://api.tomtom.com/maps-sdk-for-web/cdn/6.x/6.5.0/maps/maps-web.min.js" defer></script>
+
+    <style>
+        #map {
+            height: 500px;
+            width: 100%;
+        }
+
+        @media only screen and (max-width: 767px) {
+            #map {
+                height: 300px;
+            }
+        }
+
+        /*#marker {*/
+        /*    background-image: url('/wp-content/uploads/2021/04/copywriter-logo-dark.svg');*/
+        /*    background-size: cover;*/
+        /*    width: 30px;*/
+        /*    height: 30px;*/
+        /*}*/
+
+    </style>
+
 </head>
 <body>
+    <div class="banner" id="banner">
+        <div class="banner_content" id="bannercontent">
+            <div class="banner_btn_item">
+                <div class="banner_btn" id="bannerbtn" onclick="closeAdBanner()">
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+            <div class="banner_text_item" id="bannertext">
+                <p class = "banner_text">
+                    Domine los pilares de una profesión relevante en sólo tres días en Solena School &Studio <br>
+                    <br>
+                    Curso básico "La clásica perfecta" impartido por Olena Yurkiv con prácticas <br>
+                    <br>
+                    Duración del curso: 3 días <br>
+                    Maximo: 3 personas <br>
+                    Precio: 1000 € <br>
+                    <br>
+                    Le proporcionamos todo el material y las herramientas necesarias para el aprendizaje, <br>
+                    así como modelos sobre los que trabajar y un resumen de la teoría. <br>
+                    Al finalizar, recibirás un diploma de Solena School & Studio y tu primer portfolio con tus trabajos. <br>
+                    <br> </p>
+                <a class="banner_detail_info">Programa del curso (кнопка)</a> <br>
+                <a class="banner_detail_info">Inscribirse en el curso (кнопка)</a> <br>
+                <div class="banner_social_info">
+                    <div class="banner_social_icon_block">
+                        <a class="banner_social_icon"><i class="fa-brands fa-instagram fa-2x"></i></a>
+                        <a class="banner_social_icon"><i class="fa-brands fa-facebook fa-2x"></i></a>
+                        <a class="banner_social_icon"><i class="fa-brands fa-whatsapp fa-2x"></i></a>
+                    </div>
+                    <div class="banner_social_text">
+                        Nuestras redes sociales
+                    </div>
+                </div> <br>
+            </div>
+        </div>
+
+    </div>
+    <div class="banner_closed" id = "bannerclosed" onclick="openAdBanner()">
+        <div class="banner_closed_text_item">
+            <div class="banner_closed_text">
+                Course information
+            </div>
+        </div>
+    </div>
     <div class="call">
         <a href="" class="call_btn">
             <svg id="Capa_1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 891.024 891.024" style="fill:black"
@@ -105,7 +176,11 @@
             <div class="about_text_block">
                 <h2 class="about_title"><span style="color: black" class="about_title_mobile_first">Quiénes </span><span style="color: #fcda73; margin-left: 0.9rem;">somos</span></h2>
                 <p class="about_text">
-                    No es ningún enigma afirmar que el rostro es nuestra seña de identidad.
+                    Alguien dijo: "Pienso que lo que se llama belleza, reside únicamente en la sonrisa",
+                    pero nosotros sabemos de sobra que los ojos y la mirada es el verdadero origen de la belleza,
+                    porque reflejan nuestra alma, nuestro estado de ánimo, nuestro corazón. Por eso aquí, en Solena,
+                    entendemos la importancia de cuidar tus ojos con los productos de alta gama y  tratamientos más
+                    innovadores.
                     <br>
                     <br>
                     Contando con una larga experiencia en la industria de la belleza,
@@ -423,20 +498,15 @@
                             </video>
                         </div>
                         <div class="content_text_part">
-                            <h3 class="content_title">Certificados de regalo</h3>
+                            <h3 class="content_title">Tarjeta Regalo</h3>
                             <div class="content_text_block">
                                 <p class="content_text">
-                                    Un regalo idóneo y muy conveniente para amigos, familiares o compañeros de trabajo
-                                    que es oportuno para cualquier día tanto para hombres como para mujeres.
-                                    <br>
-                                    <br>
-                                    Tenemos dos bonos. El bono de cuantía determinada tiene un valor para solicitar
-                                    uno o varios procedimientos en el estudio. El bono de tratamientos especificará qué
-                                    tipo de procedimiento se realizará.
-                                    <br>
-                                    <br>
-                                    El certificado de regalo de Solena School and Studio es válido durante 365 días
-                                    a partir de la fecha de compra.
+                                    No sabes que regalarles a tus seres queridos, amigos o compañeros de trabajo? <br><br>
+                                    Nosotros tenemos la solución! La tarjeta regalo de Solena Beauty estudio es un regalo idóneo para cualquier situación.
+                                    <br><br>
+                                    La puedes disfrutar a lo largo del año desde la fecha de la compra. <br><br>
+                                    No te arrepentirás! <br><br>
+                                    Garantizamos el trato personalizado y satisfacción con el resultado. <br><br>
                                 </p>
                             </div>
                             <div class="certificate_additional">
@@ -671,11 +741,7 @@
             </div>
         </div>
     </div>
-    <div class="map">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1705.6380523942014!2d-7.863770440335613!3d42.34066915970882!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd2ffeb85fe3c997%3A0x988ec82860d1ae4b!2sZephir%20Brow%26Lash%20Studio!5e0!3m2!1suk!2sua!4v1658868872451!5m2!1suk!2sua"
-                width="100%"
-                height="100%"></iframe>
-    </div>
+    <div id='map'></div>
     <footer class="footer">
         <div class="footer_title">
             2022 &copy; Created by <a href="https://t.me/alexseis" class="footer_link">Oleksii</a>
@@ -689,5 +755,42 @@
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
     <script src="js/script.js"></script>
+    <script>
+        function mapContent(){
+            var api_key = 'Vu8r7eBA5OxfyUQ9LWEHz3g02uYOAfwE';
+            var latAndLong = {lat: 42.34045, lng: -7.8627};
+            var zoomLevel = 18;
+            var yourAddress = 'SOLENA Beauty Studio, Rúa Bedoya, 4, entresuelo, local 4, 32004 Ourense, Province of Ourense, Spain';
+
+            var map = tt.map({
+                container: 'map',
+                key: api_key,
+                center: latAndLong,
+                zoom: zoomLevel,
+                style: "solenastyle.json"
+            });
+
+            var marker = new tt.Marker().setLngLat(latAndLong).addTo(map);
+
+            // FOR CUSTOM MARKER
+            //var customMarker = document.createElement('div');
+            //customMarker.id = 'marker';
+            //var marker = new tt.Marker({element: customMarker}).setLngLat(latAndLong).addTo(map);
+
+            var popupOffsets = {
+                top: [0, 0],
+                bottom: [0, -70],
+                'bottom-right': [0, -70],
+                'bottom-left': [0, -70],
+                left: [25, -35],
+                right: [-25, -35]
+            }
+
+            var popup = new tt.Popup({offset: popupOffsets}).setHTML(yourAddress);
+            marker.setPopup(popup).togglePopup();
+
+        }
+
+    </script>
 </body>
 </html>

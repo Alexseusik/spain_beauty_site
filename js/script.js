@@ -1,29 +1,39 @@
 let burgerbtn = document.querySelector("#burgerbtn");
 let burgermenu = document.querySelector("#burgermenu");
+
+let banner = document.querySelector("#banner");
+let bannerconntent = document.querySelector("#bannercontent");
+let bannerclosed = document.querySelector("#bannerclosed");
+
+const map =
 function toggleBurger() {
     burgerbtn.classList.toggle("active");
     burgermenu.classList.toggle("active");
 }
+function closeAdBanner() {
+    // bannerconntent.classList.remove("animate__animated",
+    //     "animate__slideInUp");
+    bannerconntent.classList.add(/*"animate__animated",
+        "animate__slideOutDown",*/
+        "closed");
+    banner.classList.add("closed");
+    // bannerclosed.classList.remove("animate__slideOutDown");
+    bannerclosed.classList.add("active",
+        /*"animate__animated",
+        "animate__slideInUp"*/);
 
-// $(function () {
-//     // Header
-//     let header = $("#header");
-//     let main = $("#main");
-//     let mainH = main.innerHeight() - 20;
-//     let scrollPos = $(window).scrollTop();
-//     checkScroll(scrollPos,mainH);
-//
-//     $(window).on("scroll resize", function(){
-//         let mainH = main.innerHeight() - 20;
-//         scrollPos=$(this).scrollTop();
-//         checkScroll(scrollPos,mainH);
-//     });
-//
-//     function checkScroll(scrollPos,mainH) {
-//         if (scrollPos> mainH) {
-//             header.addClass("fixed");
-//         } else {
-//             header.removeClass("fixed");
-//         }
-//     }
-// })
+}
+function openAdBanner() {
+    bannerconntent.classList.remove(/*"animate__animated",
+        "animate__slideOutDown",*/ "closed");
+    // bannerconntent.classList.add("animate__animated",
+    //     "animate__slideInUp");
+    banner.classList.remove("closed");
+    bannerclosed.classList.remove("active",
+        /*"animate__slideInUp"*/);
+    // bannerclosed.classList.add("animate__slideOutDown");
+}
+
+function initMap() {
+
+}
