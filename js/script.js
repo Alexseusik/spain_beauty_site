@@ -5,7 +5,6 @@ let banner = document.querySelector("#banner");
 let bannerconntent = document.querySelector("#bannercontent");
 let bannerclosed = document.querySelector("#bannerclosed");
 
-const map =
 function toggleBurger() {
     burgerbtn.classList.toggle("active");
     burgermenu.classList.toggle("active");

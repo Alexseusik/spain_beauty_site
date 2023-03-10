@@ -19,22 +19,9 @@
 
     <style>
         #map {
-            height: 500px;
+            height: 50rem;
             width: 100%;
         }
-
-        @media only screen and (max-width: 767px) {
-            #map {
-                height: 300px;
-            }
-        }
-
-        /*#marker {*/
-        /*    background-image: url('/wp-content/uploads/2021/04/copywriter-logo-dark.svg');*/
-        /*    background-size: cover;*/
-        /*    width: 30px;*/
-        /*    height: 30px;*/
-        /*}*/
 
     </style>
 
@@ -49,21 +36,21 @@
                 </div>
             </div>
             <div class="banner_text_item" id="bannertext">
-                <p class = "banner_text">
-                    Domine los pilares de una profesión relevante en sólo tres días en Solena School &Studio <br>
+                <div class = "banner_text">
+                    <div style="font-size: 2rem;">Domine los pilares de una profesión relevante en sólo tres días en Solena School &Studio</div> <br>
                     <br>
-                    Curso básico "La clásica perfecta" impartido por Olena Yurkiv con prácticas <br>
+                    <div style="font-size: 3rem;">Curso básico <br>"La clásica perfecta" <br>impartido por Olena Yurkiv con prácticas</div><br>
                     <br>
-                    Duración del curso: 3 días <br>
+                    <div style="font-size: 2rem;">Duración del curso: 3 días <br>
                     Maximo: 3 personas <br>
-                    Precio: 1000 € <br>
+                    Precio: 1000 € </div><br>
                     <br>
-                    Le proporcionamos todo el material y las herramientas necesarias para el aprendizaje, <br>
-                    así como modelos sobre los que trabajar y un resumen de la teoría. <br>
-                    Al finalizar, recibirás un diploma de Solena School & Studio y tu primer portfolio con tus trabajos. <br>
-                    <br> </p>
+                    <div style="font-size: 2rem; text-align: justify;">Le proporcionamos todo el material y las herramientas necesarias para el aprendizaje, <br>
+                    así como modelos sobre los que trabajar y un resumen de la teoría. <br> <br>
+                    Al finalizar, recibirás un diploma de Solena School & Studio y tu primer portfolio con tus trabajos.</div> <br>
+                    <br> </div>
                 <a class="banner_detail_info">Programa del curso (кнопка)</a> <br>
-                <a class="banner_detail_info">Inscribirse en el curso (кнопка)</a> <br>
+                <a class="banner_detail_info" style="margin-top: 0;">Inscribirse en el curso (кнопка)</a> <br>
                 <div class="banner_social_info">
                     <div class="banner_social_icon_block">
                         <a class="banner_social_icon"><i class="fa-brands fa-instagram fa-2x"></i></a>
@@ -161,7 +148,7 @@
         </span>
     </header>
     <div class="main" id = "main">
-        <video autoplay muted loop id = 'MainVideo' class="MainVideo">
+        <video preload="auto" muted autoplay loop id = 'MainVideo' class="MainVideo">
             <source src="assets/videos/main_backk.mp4" type="video/mp4">
         </video>
         <img src="assets/logo/solana/весь логотип/прозр.png" alt="main_logo" class="main_logo">
@@ -209,7 +196,7 @@
                                     <img src="assets/main_photos/lena_about_f!!!.PNG" alt="About" class="lena_mobile_photo">
                                 </div>
                                 <div class="team_carousel_text">
-                                    <div><b><span style="font-family: 'Libre Baskerville', sans-serif; font-weight: 700; font-size: 1.7rem;">Оlena Yurkiv</span></b><br> la fundadora del estudio.</div>
+                                    <div class="lena_name_text"><b><span style="font-family: 'Libre Baskerville', sans-serif; font-weight: 700; font-size: 3rem;">Оlena Yurkiv</span></b><br>la fundadora del estudio.</div>
                                     <br>
                                     Especialista en extensiones de pestañas, estilista de cejas y maquillaje permanente
                                     con una experiencia solida en el sector. Оlena está afincada en Ourense desde el año 2006
@@ -222,10 +209,10 @@
                         <div class="carousel-item team_carousel_item">
                             <div class="team_carousel_content">
                                 <div class="team_carousel_photo">
-                                    <img src="assets/main_photos/nastya_v1.jpg" alt="About" class="lena_mobile_photo">
+                                    <img src="assets/main_photos/nastya.JPG" alt="About" class="lena_mobile_photo">
                                 </div>
                                 <div class="team_carousel_text">
-                                    <div><b><span style="font-family: 'Libre Baskerville', sans-serif; font-weight: 700; font-size: 1.7rem;">Anastasia Apanasenko</span></b><br> la fundadora del estudio.</div>
+                                    <div><b><span style="font-family: 'Libre Baskerville', sans-serif; font-weight: 700; font-size: 3rem;">Anastasia Apanasenko</span></b><br></div>
                                     <br>
                                     Especialista en extensiones de pestañas en Solena School and Studio,
                                     [completosu formación en la escuela de maquillaje y estética de...
@@ -298,9 +285,10 @@
                         <p class="advantage_text">
                             Seleccionamos rigurosamente los productos de alta calidad para los tratamientos ya que la salud de nuestros clientes es primordial;
                         </p>
+                        <p class="advantage_text_mobile">Utilizamos materiales de alta calidad</p>
                     </div>
                 </div>
-                <div class="advantage last">
+                <div class="advantage">
                     <div class="advantage_icon_block">
                         <img src="assets/img/advantages/free-icon-diploma-4442368.png" alt="" class="advantage_photo">
                     </div>
@@ -308,6 +296,7 @@
                         <p class="advantage_text">
                             Trabajamos desde el año 2016 y nos aseguramos profesionales formación.
                         </p>
+                        <p class="advantage_text_mobile">Llevamos más de 6 años trabajando</p>
                     </div>
                 </div>
                 <div class="advantage last">
@@ -318,6 +307,7 @@
                         <p class="advantage_text">
                             Utilizamos materiales desechables siguiendo todos los protocolos de desinfección estipulados por el Ministerio de Sanidad.
                         </p>
+                        <p class="advantage_text_mobile">Cumplimos todas las normas establecidas por el Ministerio de Sanidad</p>
                     </div>
                 </div>
                 <div class="advantage last">
@@ -328,6 +318,7 @@
                         <p class="advantage_text">
                             Asesoramos a cada cliente con la combinación de cejas y pestañas idónea según sus preferencias.
                         </p>
+                        <p class="advantage_text_mobile">Nuestro servicio trabaja para complacer a nuestros clientes</p>
                     </div>
                 </div>
             </div>
@@ -344,7 +335,7 @@
             </div>
             <div class="carousel-inner">
 
-                <div class="carousel-item carousel-description active" data-bs-interval="10000">
+                <div class="carousel-item carousel-description active" data-bs-interval="15000">
                     <div class="content">
                         <div class="content_video_block">
                             <video autoplay muted loop id = 'LashExtVideo' class="description_video">
@@ -378,7 +369,7 @@
                     </div>
                 </div>
 
-                <div class="carousel-item carousel-description" data-bs-interval="10000">
+                <div class="carousel-item carousel-description" data-bs-interval="15000">
                     <div class="content">
                         <div class="content_video_block">
                             <video autoplay muted loop id = 'LashLiftVideo' class="description_video">
@@ -389,22 +380,17 @@
                             <h3 class="content_title">Lifting de pestañas</h3>
                             <div class="content_text_block">
                                 <p class="content_text">
-                                    Es un procedimiento relativamente nuevo que ya ha conquistado los corazones de
-                                    muchas mujeres alrededor de todo el mundo y que ahora está ganando cada vez más
-                                    popularidad en España.
+                                    Se trata de un procedimiento relativamente nuevo que ya ha conquistado el corazón de
+                                    muchas mujeres de todo el mundo y que ahora está ganando popularidad en España.
                                     <br>
                                     <br>
-                                    El lifting de pestañas es un tratamiento estético destinado a mejorar la longitud,
-                                    curvatura y tono de las pestañas.
-                                    Después del procedimiento, las pestañas se vuelven más oscuras, más largas y también
-                                    se reduce su caída.
-                                    El efecto deseado se consigue aplicando sobre las pestañas unos compuestosnutritivos
-                                    y revitalizadores que les aportarán mayor elasticidad, densidad y fuerza.
+                                    El lifting de pestañas tiene como objetivo mejorar la longitud, el rizo y el tono de
+                                    las pestañas. Después del procedimiento las pestañas se vuelven más oscuras, más largas
+                                    y se reduce la pérdida de pestañas. El efecto deseado se obtiene aplicando composiciones
+                                    nutritivas y revitalizantes, que confieren a las pestañas mayor elasticidad, densidad
+                                    y fuerza.
                                     <br>
                                     <br>
-                                    Además, las pestañas se rizan y se tiñen
-                                    para brindar mayor expresividad a la mirada.
-
                                 </p>
                             </div>
                             <div class="content_additional_text_block">
@@ -418,7 +404,7 @@
                     </div>
                 </div>
 
-                <div class="carousel-item carousel-description" data-bs-interval="10000">
+                <div class="carousel-item carousel-description" data-bs-interval="15000">
                     <div class="content">
                         <div class="content_video_block">
                             <video autoplay muted loop id = 'LashDesignVideo' class="description_video">
@@ -432,6 +418,8 @@
                                     El objetivo de este procedimiento es crear el color y la forma de cejas perfectas,
                                     eliminando el exceso de vello con pinzas o cera y pigmentándolas con tintes
                                     sintéticos o henna orgánica.
+                                    <br>
+                                    <br>
                                     Las profesionales de Solena School and Studio siempre tienen en consideración el
                                     tipo de rostro, color y forma de los ojos, además de las preferencias de cada
                                     cliente, lo cual nos permite lograr el mejor resultado.
@@ -449,7 +437,7 @@
                     </div>
                 </div>
 
-                <div class="carousel-item carousel-description" data-bs-interval="10000">
+                <div class="carousel-item carousel-description" data-bs-interval="15000">
                     <div class="content">
                         <div class="content_video_block">
                             <video autoplay muted loop id = 'MicroPigmVideo' class="description_video">
@@ -457,25 +445,22 @@
                             </video>
                         </div>
                         <div class="content_text_part">
-                            <h3 class="content_title" style="line-height: 2.35rem;">Micropigmentación de: <br>
-                                <span style="font-size: 1.47rem;">cejas | ojos | labios</span>
+                            <h3 class="content_title" style="line-height: 4rem;">Micropigmentación de: <br>
+                                <span style="font-size: 2.5rem;">cejas | ojos | labios</span>
                             </h3>
                             <div class="content_text_block">
                                 <p class="content_text">
-                                    Procedimiento estético diseñado para corregir, mejorar o realzar ciertos rasgos
-                                    faciales, así como simplificar la rutina diaria mediante la imitación del
-                                    maquillaje cotidiano. Utilizando este procedimiento, la tediosa tarea de marcar el
-                                    contorno del ojo, cejas o labios caerá en el olvido.
+                                    Un tratamiento cosmético diseñado para corregir, realzar o intensificar determinados
+                                    rasgos faciales y simplificar la rutina diaria simulando el maquillaje cotidiano.
                                     <br>
                                     <br>
-                                    La micropigmentación no solo aporta el tono adecuado, sino que también se consigue
-                                    corregir la forma de los labios y cejas. Cabe destacar que con esa técnica se
-                                    elimina el contorno borroso de la ceja y también aportara el volumen deseado a
-                                    unos labios finos.
+                                    La micropigmentación no sólo permite obtener el tono deseado, sino también corregir
+                                    la forma de los labios y las cejas. El procedimiento elimina el contorno difuminado
+                                    de la ceja y también da el volumen deseado a los labios finos.
                                     <br>
                                     <br>
-                                    <span style="font-weight: 400; font-style: italic;">El efecto se obtiene introduciendo un pigmento en las capas
-                                        superiores de la piel mediante una aguja.</span>
+                                    <span style="font-weight: 400; font-style: italic;">El efecto se consigue inyectando pigmento en las capas superiores
+                                        de la piel con una aguja.</span>
                                 </p>
                             </div>
                             <div class="content_additional_text_block">
@@ -490,7 +475,7 @@
                     </div>
                 </div>
 
-                <div class="carousel-item carousel-description" data-bs-interval="10000">
+                <div class="carousel-item carousel-description" data-bs-interval="15000">
                     <div class="content">
                         <div class="content_video_block">
                             <video autoplay muted loop id = 'SertificateVideo' class="description_video">
@@ -501,12 +486,14 @@
                             <h3 class="content_title">Tarjeta Regalo</h3>
                             <div class="content_text_block">
                                 <p class="content_text">
-                                    No sabes que regalarles a tus seres queridos, amigos o compañeros de trabajo? <br><br>
-                                    Nosotros tenemos la solución! La tarjeta regalo de Solena Beauty estudio es un regalo idóneo para cualquier situación.
-                                    <br><br>
-                                    La puedes disfrutar a lo largo del año desde la fecha de la compra. <br><br>
-                                    No te arrepentirás! <br><br>
-                                    Garantizamos el trato personalizado y satisfacción con el resultado. <br><br>
+                                    ¿No sabe qué regalar a sus seres queridos, amigos o colegas?
+                                    <br>
+                                    <br>
+                                    ¡Tenemos la solución! La tarjeta regalo de Solena Beauty Studio es el regalo perfecto
+                                    para cualquier ocasión. Que podrás utilizar durante un año a partir de la fecha de compra.
+                                    <br>
+                                    <br>
+                                    ¡No se arrepentirá! Le garantizamos un trato personalizado y la satisfacción con el resultado.
                                 </p>
                             </div>
                             <div class="certificate_additional">
@@ -579,11 +566,11 @@
                     <h3 class="price_item_title">Micropigmentación</h3>
                     <div class="price_item_procedures">
                         <div class = "price_item">
-                            <span class="price_item_text">Micropigmentación de cejas (sombreado)</span>
+                            <span class="price_item_text">Micropigmentación de cejas <br>(sombreado)</span>
                             <span class="price_item_amount">270€<br>(2 sesiones)</span>
                         </div>
                         <div class = "price_item">
-                            <span class="price_item_text">Micropigmentación de los ojos (zona entre pestañas)</span>
+                            <span class="price_item_text">Micropigmentación de los ojos <br>(zona entre pestañas)</span>
                             <span class="price_item_amount">180€<br>(2 sesiones)</span>
                         </div>
                         <div class = "price_item">
@@ -675,20 +662,20 @@
         </div>
         <div id="reviewMobileCarousel" class="carousel slide mobile_review_carousel" data-bs-ride="carousel">
             <div class="carousel-inner">
+<!--                <div class="carousel-item active">-->
+<!--                    <div class="mobile_review_item">-->
+<!--                        <div class="mobile_review_text">Ayer visité por primera vez este estudio y decir que Elena me ha demostrado ser una gran profesional. Se nota que le encanta su trabajo y lo hace con todo lujo de detalle. Si estás pensando en ponerte volumen en tus pestañas te la recomiendo 100%; te las deja tan naturales que no se nota que son parte de las manos de una gran profesional.</div>-->
+<!--                        <div class="mobile_review_name">Rosae P</div>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--                <div class="carousel-item">-->
+<!--                    <div class="mobile_review_item">-->
+<!--                        <div class="mobile_review_text">Tengo más de un año haciéndome mis pestañas con Elena y siempre salgo encantadísima porque son preciosas y me duran un montón! Hace poco también me he realizado las cejas y son espectaculares!!-->
+<!--                            Son muy profesionales, te aconsejan y el resultado merece muchísimo la pena! 💖</div>-->
+<!--                        <div class="mobile_review_name">Yailyn F.</div>-->
+<!--                    </div>-->
+<!--                </div>-->
                 <div class="carousel-item active">
-                    <div class="mobile_review_item">
-                        <div class="mobile_review_text">Ayer visité por primera vez este estudio y decir que Elena me ha demostrado ser una gran profesional. Se nota que le encanta su trabajo y lo hace con todo lujo de detalle. Si estás pensando en ponerte volumen en tus pestañas te la recomiendo 100%; te las deja tan naturales que no se nota que son parte de las manos de una gran profesional.</div>
-                        <div class="mobile_review_name">Rosae P</div>
-                    </div>
-                </div>
-                <div class="carousel-item">
-                    <div class="mobile_review_item">
-                        <div class="mobile_review_text">Tengo más de un año haciéndome mis pestañas con Elena y siempre salgo encantadísima porque son preciosas y me duran un montón! Hace poco también me he realizado las cejas y son espectaculares!!
-                            Son muy profesionales, te aconsejan y el resultado merece muchísimo la pena! 💖</div>
-                        <div class="mobile_review_name">Yailyn F.</div>
-                    </div>
-                </div>
-                <div class="carousel-item">
                     <div class="mobile_review_item">
                         <div class="mobile_review_text">
                             He vuelto a ponerme mis extensiones de pestañas y no puedo agradecer más el trato, la profesionalidad, el cuidado ,no os cambio pkr nada del universo años admirando tu trabajo y por fin te he conocido personal y profesionalmente y estoy tan agradecida y feliz gracissss por ser y por tu profesionalidad y empatía no te cambio por nada del universo súper recomendable para todas graciasssss beso gigante.
