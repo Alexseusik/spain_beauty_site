@@ -50,9 +50,9 @@ p {
     left: 0;
     height: 4.7rem;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
-    padding: 0 10%;
+    padding: 0 7%;
     background-color: black;
     z-index: 1000;
 }
@@ -60,7 +60,7 @@ p {
     transform: scale(0.7);
 }
 .nav_desktop {
-    width: 50%;
+    width: 60%;
     display: flex;
     justify-content: space-between;
 }
@@ -76,11 +76,11 @@ p {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    width: 10%;
+    width: 7%;
 }
 .social_element_inner {
-    width: 1.76rem;
-    height: 1.76rem;
+    width: 1.5rem;
+    height: 1.5rem;
 }
 /*------------MAIN--------------*/
 .main {
@@ -338,7 +338,7 @@ p {
     display: none;
 }
 .our_team {
-    padding: 10%;
+    padding: 10% 5%;
 }
 .about_team_title {
     text-align: center;
@@ -533,7 +533,7 @@ p {
 .price {
     background: black;
     overflow: hidden;
-    min-height: 75rem;
+    min-height: 70rem;
     width: auto;
     position: relative;
 }
@@ -592,7 +592,7 @@ p {
     flex-direction: column;
     justify-content: space-between;
     height: 20%;
-    margin-bottom: 1.18rem;
+    margin-bottom: 2rem;
 }
 .price_item_title {
     color: #FBDA73;
@@ -614,10 +614,12 @@ p {
     font-size: 1.29rem;
     display: flex;
     justify-content: space-between;
-    margin-bottom: 0.9rem;
 }
 .price_item_text {
     padding: 0.3rem;
+}
+.price_item_amount {
+    text-align: right;
 }
 /*------------PHOTO GALLERY--------------*/
 .photo_gallery {
@@ -704,7 +706,7 @@ p {
     object-fit: cover;
 }
 .see_more_btn {
-    margin-top: 2.4rem;
+    margin-top: 6rem;
 }
 .see_more_text {
     text-align: center;
@@ -1455,7 +1457,7 @@ input[type=radio] {
         font-size: 2rem;
     }
     .map {
-        height: 35rem;
+        height: 40rem;
     }
     .footer {
         height: 7rem;
