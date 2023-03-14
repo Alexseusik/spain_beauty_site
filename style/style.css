@@ -65,7 +65,7 @@ p {
     justify-content: space-between;
 }
 .nav_element {
-    font-size: 0.9rem;
+    font-size: 1rem;
     text-decoration: none;
     color: white;
 }
@@ -295,6 +295,9 @@ p {
 .about_video{
     width: auto;
     max-width: 80%;
+}
+.advantages_main_text_mobile {
+    display: none;
 }
 .our_advantages {
     margin-bottom: 7.65rem;
@@ -885,6 +888,7 @@ input[type=radio] {
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: space-between;
     width: 30%;
 }
 .contact_item_text {
@@ -898,6 +902,7 @@ input[type=radio] {
 }
 .table_row {
     width: 100%;
+    line-height: 1.2rem;
 }
 .table_day {
     width: 40%;
@@ -1056,6 +1061,17 @@ input[type=radio] {
         justify-content: center;
         align-items: center;
     }
+    .logo_item {
+        width: 80%;
+        height: 23%;
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .logo_item_photo {
+        width: 110%;
+    }
     .burger_logo_img {
         width: 20rem;
         height: auto;
@@ -1136,7 +1152,7 @@ input[type=radio] {
         text-decoration: none;
         color: #FBDA73;
         font-size: 5rem;
-        padding: 1rem 3rem;
+        padding: .5rem 3rem;
     }
     .nav_mobile_element:active {
         color: #FBDA73;
@@ -1199,10 +1215,7 @@ input[type=radio] {
     .team_mobile_carousel {
         display: block;
         margin-top: 5rem;
-        height: 85rem;
-    }
-    .team_carousel_item {
-        height: 100%;
+        margin-bottom: 10rem;
     }
     .team_inner_carousel {
         height: 100%;
@@ -1216,7 +1229,7 @@ input[type=radio] {
         margin: 0 auto;
         max-width: 100%;
         width: 100%;
-        height: 70rem;
+        height: 100%;
         position: relative;
     }
     .team_carousel_photo {
@@ -1225,6 +1238,7 @@ input[type=radio] {
         display: flex;
         align-items: center;
         justify-content: center;
+        overflow: hidden;
     }
     .team_carousel_text {
         text-align: justify;
@@ -1267,20 +1281,22 @@ input[type=radio] {
     .about_workers_photo {
         width: 80%;
     }
-    .our_advantages {
-        margin-top: 30rem;
-    }
     .advantages_main_text_block {
         width: 95%;
         margin: 0 auto;
     }
     .advantages_main_text {
-        font-size: 3rem;
-        max-width: 80%;
+        display: none;
+    }
+    .advantages_main_text_mobile {
+        display: block;
+        text-align: center;
+        font-size: 5rem;
+        max-width: 85%;
         width: 100%;
         margin: 0 auto;
-        text-align: justify;
         line-height: 4rem;
+        font-weight: 600;
     }
     .advantage {
         width: 50%;
@@ -1371,7 +1387,7 @@ input[type=radio] {
         margin-right: 6rem;
     }
     .price {
-        min-height: 117rem;
+        min-height: 111rem;
     }
     .price_title {
         font-size: 5rem;
@@ -1455,6 +1471,21 @@ input[type=radio] {
     }
     .contact_item_title {
         font-size: 2rem;
+    }
+    .contact_item_text {
+        font-size: 1.35rem;
+        width: 20rem;
+    }
+    .contact_item {
+        justify-content: space-between;
+    }
+    .time_schedule_table {
+        font-size: 1.35rem;
+        width: 90%;
+    }
+    .table_row {
+        padding: 0;
+        line-height: 1.5rem;
     }
     .map {
         height: 40rem;
