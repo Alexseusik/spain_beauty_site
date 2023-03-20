@@ -12,8 +12,6 @@
     <link rel="stylesheet" href="style/style.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
     <script src="https://kit.fontawesome.com/ce86272e1a.js" crossorigin="anonymous"></script>
-
-
     <link rel='stylesheet' type='text/css' href='https://api.tomtom.com/maps-sdk-for-web/cdn/6.x/6.5.0/maps/maps.css'>
     <script onload="mapContent();" src="https://api.tomtom.com/maps-sdk-for-web/cdn/6.x/6.5.0/maps/maps-web.min.js" defer></script>
 
@@ -22,7 +20,6 @@
             height: 35rem;
             width: 100%;
         }
-
     </style>
 
 </head>
@@ -72,7 +69,7 @@
         </div>
     </div>
     <div class="call">
-        <a href="" class="call_btn">
+        <a href="https://wa.me/34604022526" class="call_btn" target="_blank">
             <svg id="Capa_1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 891.024 891.024" style="fill:black"
                  xml:space="preserve" class="call_btn_icon">
                 <g>
@@ -106,24 +103,30 @@
             <a class = 'nav_mobile_element' href="#reviews" onclick="toggleBurger()">Comentarios</a>
             <a class = 'nav_mobile_element' href="#contacts" onclick="toggleBurger()">Contactos</a>
             <div class="social">
-                <a href="" class="social_element">
+                <a href="https://www.facebook.com/Solenastudio" class="social_element" target="_blank">
                     <span style="color: #FBDA73">
                         <i class="fa-brands fa-facebook fa-7x"></i>
                     </span>
                 </a>
                 <span style="width: 5rem;"></span>
-                <a href="" class="social_element">
+                <a href="https://www.instagram.com/solena_school.studio/" class="social_element" target="_blank">
                     <span style="color: #FBDA73">
                         <i class="fa-brands fa-instagram fa-7x"></i>
                     </span>
                 </a>
                 <span style="width: 5rem;"></span>
-                <a href="" class="social_element">
+                <a href="https://wa.me/34604022526" class="social_element" target="_blank">
                     <span style="color: #FBDA73">
                         <i class="fa-brands fa-whatsapp fa-7x"></i>
                     </span>
                 </a>
-        </div>
+                <span style="width: 5rem;"></span>
+                <a href="https://www.linkedin.com/company/solena-school-and-studio/" class="social_element" target="_blank">
+                    <span style="color: #FBDA73">
+                        <i class="fa-brands fa-linkedin fa-7x"></i>
+                    </span>
+                </a>
+            </div>
         </nav>
         </div>
     </div>
@@ -138,17 +141,17 @@
             <a class = 'nav_element' href="#contacts">Contactos</a>
         </nav>
         <span class="social col-2">
-            <a href="https://www.facebook.com/Solenastudio" class="social_element">
+            <a href="https://www.facebook.com/Solenastudio" class="social_element" target="_blank">
                 <img src="assets/img/facebook.png" alt="facebook" class="social_element_inner">
             </a>
-            <a href="https://www.instagram.com/solena_beauty.studio/" class="social_element">
+            <a href="https://www.instagram.com/solena_school.studio/" class="social_element" target="_blank">
                 <img src="assets/img/inst.png" alt="instagram" class="social_element_inner">
             </a>
-            <a href="https://wa.me/34604022526" class="social_element">
+            <a href="https://wa.me/34604022526" class="social_element" target="_blank">
                 <img src="assets/img/whatsapp_f.jpg" alt="whatsapp" class="social_element_inner">
             </a>
-            <a href="https://wa.me/34604022526" class="social_element">
-                <i class="fa-brands fa-linkedin" class="social_element_inner"></i>
+            <a href="https://www.linkedin.com/company/solena-school-and-studio/" class="social_element" target="_blank">
+                <img src="assets/img/linkedin1.png" alt="linkedin" class="social_element_inner">
             </a>
         </span>
     </header>
@@ -159,7 +162,7 @@
         <img src="assets/logo/solana/весь логотип/прозр.png" alt="main_logo" class="main_logo">
     </div>
     <div class="about">
-        <div class="about_main" id = 'about_us'>
+        <div class="about_main scroll_margin_class" id="about_us">
             <div class="about_photo_block">
                 <video autoplay muted loop id = 'AboutUsVideo' class="about_video">
                     <source src="assets/videos/about_us_f!!.MOV" type="video/mp4">
@@ -189,8 +192,8 @@
             </div>
         </div>
 
-        <div class="our_team">
-            <h2 class="about_team_title" id = 'our_team'><span class="about_team_title_mobile_first">NUESTRO</span><span style="color: #FBDA73;"> EQUIPO</span></h2>
+        <div class="our_team scroll_margin_class" id = 'our_team'>
+            <h2 class="about_team_title"><span class="about_team_title_mobile_first">NUESTRO</span><span style="color: #FBDA73;"> EQUIPO</span></h2>
 
             <div class="team_mobile_carousel row">
                 <div id="carouselExampleControls" class="carousel team_mobile_carousel slide" data-bs-ride="carousel">
@@ -331,7 +334,7 @@
             </div>
         </div>
     </div>
-    <div class="description" id = 'description'>
+    <div class="description scroll_margin_class" id = 'description'>
         <div id="carouselDescription" class="carousel slide carousel-fade" data-bs-ride="carousel">
             <div class="carousel-indicators carousel-indicators-description">
                 <button type="button" data-bs-target="#carouselDescription" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
@@ -513,7 +516,7 @@
             </div>
         </div>
     </div>
-    <div class="price" id = 'price'>
+    <div class="price scroll_margin_class" id = 'price'>
 
             <video autoplay muted loop id = 'BackVideo' class="BackVideo">
                 <source src="assets/videos/price_back.MP4" type="video/mp4">
@@ -588,7 +591,7 @@
             </div>
         </div>
     </div>
-    <div class="photo_gallery">
+    <div class="photo_gallery scroll_margin_class">
         <h2 class="photo_gallery_title">Galería</h2>
         <div class="photo_gallery_items">
             <div class="photo_gallery_item gallery_1">
@@ -632,7 +635,7 @@
             </div>
         </div>
     </div>
-    <div class="reviews" id = 'reviews'>
+    <div class="reviews scroll_margin_class" id = 'reviews'>
         <h2 class="reviews_title">Lo que dicen de nosotros <br>nuestros clientes</h2>
         <div class="review_block">
             <div class="reviews_items">
@@ -702,7 +705,7 @@
             </button>
         </div>
     </div>
-    <div class="contacts" id = 'contacts'>
+    <div class="contacts scroll_margin_class" id = 'contacts'>
         <h2 class="contacts_title">Contactos</h2>
         <div class="contacts_items">
             <div class="contact_item">

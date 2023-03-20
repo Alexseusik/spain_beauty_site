@@ -1,4 +1,8 @@
 /*------------MAIN CLASS--------------*/
+:root {
+    --header-height: 5rem;
+    --burger-height: 12rem;
+}
 html {
     font-size: 17px;
 }
@@ -43,12 +47,15 @@ p {
     margin: 0;
     padding: 0;
 }
+.scroll_margin_class {
+    scroll-margin-top: calc(var(--header-height) + 1rem);
+}
 /*------------HEADER--------------*/
 .header {
     position: fixed;
     top: 0;
     left: 0;
-    height: 4.7rem;
+    height: 5rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -76,7 +83,7 @@ p {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    width: 7%;
+    width: 10%;
 }
 .social_element_inner {
     width: 1.5rem;
@@ -270,7 +277,7 @@ p {
 }
 .about_main {
     display: flex;
-    padding: 10% 10% 0 10%;
+    padding: 7% 10% 0 10%;
 }
 .about_text_block{
     max-width: 45%;
@@ -1031,6 +1038,9 @@ input[type=radio] {
 
 /*Changing elements for moblie versions*/
 @media screen and (max-width: 430px) {
+    .scroll_margin_class {
+        scroll-margin-top: calc(var(--burger-height) + 1rem);
+    }
     .call {
         width: 12rem;
         height: 12rem;
@@ -1063,7 +1073,7 @@ input[type=radio] {
     }
     .logo_item {
         width: 80%;
-        height: 23%;
+        height: 25%;
         overflow: hidden;
         display: flex;
         justify-content: center;
@@ -1211,6 +1221,8 @@ input[type=radio] {
     }
     .our_team {
         padding-top: 15%;
+        padding-bottom: 0;
+        min-height: 160rem;
     }
     .team_mobile_carousel {
         display: block;
