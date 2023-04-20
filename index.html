@@ -24,44 +24,25 @@
 
 </head>
 <body>
-    <div class="banner" id="banner">
-        <div class="banner_content" id="bannercontent">
-            <div class="banner_btn_item">
-                <div class="banner_btn" id="bannerbtn" onclick="closeAdBanner()">
+    <div class="banner-width" id="banner">
+        <div class="banner_main">
+            <div class="banner_btn">
+                <div class="btn_course_description" id="additionalBannerBtn" onclick="changeAdditionalBanner()"><p>Programa del curso</p></div>
+                <div class="btn_course_registration"><a href="https://wa.me/34604022526" target="_blank">Inscribirse en el curso</a></div>
+            </div>
+            <div class="banner_additional" id="courseInfo">
+                <div class="banner_close_btn" id = "closeCourseInfo" onclick="changeAdditionalBanner()">
                     <span></span>
                     <span></span>
                 </div>
             </div>
-            <div class="banner_text_item" id="bannertext">
-                <div class = "banner_text">
-                    <div style="font-size: 2rem;">Domine los pilares de una profesión relevante en sólo tres días en Solena School &Studio</div> <br>
-                    <br>
-                    <div style="font-size: 3rem;">Curso básico <br>"La clásica perfecta" <br>impartido por Olena Yurkiv con prácticas</div><br>
-                    <br>
-                    <div style="font-size: 2rem;">Duración del curso: 3 días <br>
-                    Maximo: 3 personas <br>
-                    Precio: 1000 € </div><br>
-                    <br>
-                    <div style="font-size: 2rem; text-align: justify;">Le proporcionamos todo el material y las herramientas necesarias para el aprendizaje, <br>
-                    así como modelos sobre los que trabajar y un resumen de la teoría. <br> <br>
-                    Al finalizar, recibirás un diploma de Solena School & Studio y tu primer portfolio con tus trabajos.</div> <br>
-                    <br> </div>
-                <a class="banner_detail_info">Programa del curso (кнопка)</a> <br>
-                <a class="banner_detail_info" style="margin-top: 0;">Inscribirse en el curso (кнопка)</a> <br>
-                <div class="banner_social_info">
-                    <div class="banner_social_icon_block">
-                        <a class="banner_social_icon"><i class="fa-brands fa-instagram fa-2x"></i></a>
-                        <a class="banner_social_icon"><i class="fa-brands fa-facebook fa-2x"></i></a>
-                        <a class="banner_social_icon"><i class="fa-brands fa-whatsapp fa-2x"></i></a>
-                    </div>
-                    <div class="banner_social_text">
-                        Nuestras redes sociales
-                    </div>
-                </div> <br>
+            <div class="banner_close_btn" id = "closebanner" onclick="changeAdBanner()">
+                <span></span>
+                <span></span>
             </div>
         </div>
     </div>
-    <div class="banner_closed" id = "bannerclosed" onclick="openAdBanner()">
+    <div class="banner_closed" id = "bannerclosed" onclick="changeAdBanner()">
         <div class="banner_closed_text_item">
             <div class="banner_closed_text">
                 Course information
