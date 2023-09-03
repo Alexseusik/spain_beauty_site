@@ -5,7 +5,6 @@ let banner = document.querySelector("#banner");
 let bannerinfo = document.querySelector("#bannerclosed");
 
 let courseinfo = document.querySelector("#courseInfo");
-let closeinfo = document.querySelector("#closeCourseInfo");
 
 function toggleBurger() {
     burgerbtn.classList.toggle("active");

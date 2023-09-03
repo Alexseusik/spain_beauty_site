@@ -27,9 +27,8 @@ body {
     justify-content: center;
     align-items: center;
 }
-.call_btn_icon {
-    width: 3rem;
-    height: 2rem;
+.call_btn_icon::before {
+    scale: 2;
 }
 h1,h2,h3,h4,h5,h6 {
     display: block;
@@ -48,7 +47,7 @@ p {
     padding: 0;
 }
 .scroll_margin_class {
-    scroll-margin-top: calc(var(--header-height) + 1rem);
+    scroll-margin-top: calc(var(--header-height) + 5rem);
 }
 /*------------HEADER--------------*/
 .header {
@@ -121,27 +120,29 @@ p {
     position: absolute;
     width: 100vw;
     height: 100vh;
+    visibility: visible;
     opacity: 1;
-    transition: .2s all ease-in-out;
+    transition: visibility 0s, opacity .1s linear;
 }
 .banner-width.closed {
+    visibility: hidden;
     opacity: 0;
-    transition: .2s all ease-in-out;
+    transition: visibility 0s, opacity .5s linear;
 }
 .banner_main{
     position: fixed;
     top: 50%;
     left: 50%;
-    background: url("../assets/banner/banner-width.png");
+    background: url("../assets/banner/banner_width_1.webp");
     background-size: cover;
     transform: translate(-50%, -50%);
-    width: 65%;
+    height: 90%;
     aspect-ratio: 1.4/1;
     z-index: 1005;
 }
 .banner_btn {
     position: absolute;
-    bottom: 15%;
+    bottom: 10%;
     left: 50%;
     transform: translate(-50%);
     width: 80%;
@@ -157,6 +158,7 @@ p {
     margin-left: .7rem;
 }
 .btn_course_description p, .btn_course_registration a {
+    font-size: 1.5rem;
     text-decoration: none;
     cursor: pointer;
     width: 100%;
@@ -182,7 +184,7 @@ p {
     display: flex;
     justify-content: center;
     align-items: center;
-    opacity: .3;
+    opacity: .5;
     transition: .2s all ease-in-out;
     cursor: pointer;
 }
@@ -194,8 +196,9 @@ p {
     position: absolute;
     display: block;
     width: 3rem;
-    height: .2rem;
+    height: .5rem;
     background: white;
+    border-radius: 30%;
 }
 .banner_close_btn span:nth-child(1) {
     transform: rotate(45deg);
@@ -228,6 +231,7 @@ p {
     align-items: center;
 }
 .banner_closed_text {
+    text-align: center;
     font-weight: 600;
 }
 .banner_additional {
@@ -236,7 +240,7 @@ p {
 }
 .banner_additional.active {
     position: fixed;
-    background: url("../assets/banner/banner-width-additional.png");
+    background: url("../assets/banner/banner_width_additional-1.webp");
     background-size: cover;
     width: 100%;
     aspect-ratio: 1.4/1;
@@ -305,7 +309,7 @@ p {
 .advantages {
     padding: 0 10%;
     width: 100%;
-    margin-top: 5rem;
+    margin-top: 2rem;
     display: flex;
     justify-content: space-evenly;
 }
@@ -523,11 +527,25 @@ p {
     background-color: #FBDA73;
     transition: all .2s ease-in-out;
 }
+.course_info {
+    text-decoration: none;
+    font-size: 1rem;
+    color: #FBDA73;
+    padding: 1.18rem;
+    border-radius: 0.6rem;
+    border: 0.1rem solid #FBDA73;
+    transition: all .2s ease-in-out;
+}
+.course_info:hover {
+    color: black;
+    background-color: #FBDA73;
+    transition: all .2s ease-in-out;
+}
 /*------------PRICE--------------*/
 .price {
     background: black;
     overflow: hidden;
-    min-height: 70rem;
+    min-height: 85rem;
     width: auto;
     position: relative;
 }
@@ -1001,54 +1019,58 @@ input[type=radio] {
 
 /*Changing elements for moblie versions*/
 @media screen and (max-width: 430px) {
+    .fa-phone::before {
+        width: 4rem;
+        height: 4rem;
+    }
     .scroll_margin_class {
         scroll-margin-top: calc(var(--burger-height) + 1rem);
     }
     .call {
-        width: 12rem;
-        height: 12rem;
+        width: 9rem;
+        height: 9rem;
     }
     .call_btn_icon {
         width: 4rem;
         height: 4rem;
     }
     .banner_main {
-        width: 75%;
-        background: url("../assets/banner/banner-mobile.png");
+        width: 95%;
+        background: url("../assets/banner/banner_mobile_1.webp") center;
         background-size: cover;
         aspect-ratio: 9/16;
     }
     .banner_additional.active {
-        background: url("../assets/banner/banner-mobile-additional.png");
+        background: url("../assets/banner/banner_mobile_additional_1.webp");
         background-size: cover;
         aspect-ratio: 9/16;
     }
     .banner_btn{
         flex-direction: column;
         align-items: center;
-        bottom: 10%;
-        height: 15%;
+        bottom: 5%;
+        height: 20%;
     }
     .btn_course_description {
         margin-left: 0;
     }
     .btn_course_description, .btn_course_registration {
         width: 70%;
-        height: 30%;
+        height: 35%;
     }
     .btn_course_description p, .btn_course_registration a {
         font-size: 2rem;
     }
     .banner_close_btn {
-        width: 7rem;
-        height: 7rem;
+        width: 10rem;
+        height: 10rem;
     }
     .banner_close_btn span:nth-child(n) {
-        width: 5rem;
+        width: 7rem;
     }
     .banner_closed {
-        width: 20rem;
-        height: 7rem;
+        width: 13rem;
+        height: 8rem;
         font-size: 1.5rem;
     }
     .header {
@@ -1387,7 +1409,24 @@ input[type=radio] {
         flex-direction: column;
         justify-content: space-between;
     }
+    .content_text.course{
+        font-size: 1.75rem;
+    }
+    .content_title.course {
+        margin-top: 6rem;
+    }
+    .content_additional_text_block.course {
+        flex-direction: row;
+    }
+    .content_additional_text.course {
+        font-size: 1.75rem;
+        width: 60%;
+    }
+    .course_info{
+        font-size: 2.5rem;
+    }
     .btn_to_price {
+        border-width: .2rem;
         font-size: 2rem;
         display: flex;
         justify-content: center;
@@ -1401,7 +1440,7 @@ input[type=radio] {
         margin-right: 6rem;
     }
     .price {
-        min-height: 111rem;
+        min-height: 125rem;
     }
     .price_title {
         font-size: 5rem;
