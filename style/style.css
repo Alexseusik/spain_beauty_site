@@ -1,4 +1,8 @@
 /*------------MAIN CLASS--------------*/
+:root {
+    --header-height: 5rem;
+    --burger-height: 12rem;
+}
 html {
     font-size: 17px;
 }
@@ -12,8 +16,8 @@ body {
 }
 .call {
     position: fixed;
-    bottom: 1.18rem;
-    right: 1.18rem;
+    bottom: 1.2rem;
+    right: 1.2rem;
     z-index: 5;
     width: 5.9rem;
     height: 5.9rem;
@@ -23,9 +27,8 @@ body {
     justify-content: center;
     align-items: center;
 }
-.call_btn_icon {
-    width: 3rem;
-    height: 2rem;
+.call_btn_icon::before {
+    scale: 2;
 }
 h1,h2,h3,h4,h5,h6 {
     display: block;
@@ -43,22 +46,32 @@ p {
     margin: 0;
     padding: 0;
 }
+.scroll_margin_class {
+    scroll-margin-top: calc(var(--header-height) + 5rem);
+}
 /*------------HEADER--------------*/
 .header {
-    height: 4.7rem;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 5rem;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
-    padding: 0 10%;
+    padding: 0 7%;
     background-color: black;
+    z-index: 1000;
+}
+.header_logo {
+    transform: scale(0.7);
 }
 .nav_desktop {
-    width: 50%;
+    width: 60%;
     display: flex;
     justify-content: space-between;
 }
 .nav_element {
-    font-size: 0.9rem;
+    font-size: 1rem;
     text-decoration: none;
     color: white;
 }
@@ -72,8 +85,8 @@ p {
     width: 10%;
 }
 .social_element_inner {
-    width: 1.76rem;
-    height: 1.76rem;
+    width: 1.5rem;
+    height: 1.5rem;
 }
 /*------------MAIN--------------*/
 .main {
@@ -94,17 +107,6 @@ p {
     width: 100%;
     height: 100%;
 }
-.main::after{
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    z-index: -1;
-    background: #603c0d;
-    opacity: 20%;
-}
 .main_logo{
     width: 45rem;
     height: 45rem;
@@ -112,6 +114,139 @@ p {
 }
 .nav_burger {
     display: none;
+}
+/*------------BANNER--------------*/
+.banner-width{
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    visibility: visible;
+    opacity: 1;
+    transition: visibility 0s, opacity .1s linear;
+}
+.banner-width.closed {
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s, opacity .5s linear;
+}
+.banner_main{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    background: url("../assets/banner/banner_width_1.webp");
+    background-size: cover;
+    transform: translate(-50%, -50%);
+    height: 90%;
+    aspect-ratio: 1.4/1;
+    z-index: 1005;
+}
+.banner_btn {
+    position: absolute;
+    bottom: 10%;
+    left: 50%;
+    transform: translate(-50%);
+    width: 80%;
+    height: 10%;
+    display: flex;
+    justify-content: space-evenly;
+}
+.btn_course_description, .btn_course_registration  {
+    width: 40%;
+    border: .1rem solid #FBDA73;
+}
+.btn_course_description {
+    margin-left: .7rem;
+}
+.btn_course_description p, .btn_course_registration a {
+    font-size: 1.5rem;
+    text-decoration: none;
+    cursor: pointer;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #FBDA73;
+    transition: .2s all ease-in-out;
+}
+.btn_course_description p:hover,
+.btn_course_registration a:hover {
+    background: #FBDA73;
+    color: black;
+    transition: .2s all ease-in-out;
+}
+.banner_close_btn {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 5rem;
+    height: 5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: .5;
+    transition: .2s all ease-in-out;
+    cursor: pointer;
+}
+.banner_close_btn:hover{
+    opacity: 1;
+    transition: .2s all ease-in-out;
+}
+.banner_close_btn span:nth-child(n) {
+    position: absolute;
+    display: block;
+    width: 3rem;
+    height: .5rem;
+    background: white;
+    border-radius: 30%;
+}
+.banner_close_btn span:nth-child(1) {
+    transform: rotate(45deg);
+}
+.banner_close_btn span:nth-child(2) {
+    transform: rotate(-45deg);
+}
+.banner_closed {
+    position: fixed;
+    bottom: 1rem;
+    left: 1rem;
+    width: 15rem;
+    height: 5rem;
+    z-index: 1000;
+    background: #FBDA73;
+    border-radius: 2rem;
+    opacity: 0;
+    cursor: pointer;
+    transition: .2s all ease-in-out;
+    animation-duration: .8s;
+}
+.banner_closed.active {
+    opacity: 1;
+    transition: .5s all ease-in-out;
+}
+.banner_closed_text_item {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.banner_closed_text {
+    text-align: center;
+    font-weight: 600;
+}
+.banner_additional {
+    opacity: 0;
+    transition: .2s all ease-in-out;
+}
+.banner_additional.active {
+    position: fixed;
+    background: url("../assets/banner/banner_width_additional-1.webp");
+    background-size: cover;
+    width: 100%;
+    aspect-ratio: 1.4/1;
+    z-index: 1005;
+    opacity: 1;
+    transition: .2s all ease-in-out;
 }
 /*------------ABOUT--------------*/
 .about {
@@ -122,7 +257,7 @@ p {
     position: relative;
 }
 .about_title{
-    font-size: 7.05rem;
+    font-size: 6rem;
     font-family: 'Libre Baskerville', sans-serif;
     font-weight: 400;
     text-transform: uppercase;
@@ -130,22 +265,23 @@ p {
 }
 .about_main {
     display: flex;
-    padding: 10% 10% 0 10%;
+    padding: 7% 10% 0 10%;
 }
 .about_text_block{
-    max-width: 50%;
+    max-width: 45%;
     width: 100%;
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
 }
 .about_text{
-    font-size: 1rem;
-    font-weight: 600;
+    font-size: 0.85rem;
+    font-weight: 400;
     text-align: justify;
     width: 90%;
 }
 .about_photo_block {
-    max-width: 50%;
+    max-width: 55%;
     width: 100%;
     display: flex;
     justify-content: center;
@@ -153,12 +289,13 @@ p {
 }
 .about_video{
     width: auto;
-    max-width: 75%;
-    position: relative;
+    max-width: 80%;
+}
+.advantages_main_text_mobile {
+    display: none;
 }
 .our_advantages {
     margin-bottom: 7.65rem;
-    margin-top: 8.82rem;
 }
 .advantages_main_text_block {
     display: flex;
@@ -166,11 +303,13 @@ p {
     align-items: center;
 }
 .advantages_main_text {
-    font-size: 1.76rem;
+    font-weight: 600;
+    font-size: 1rem;
 }
 .advantages {
-    width: 100vw;
-    margin-top: 4.42rem;
+    padding: 0 10%;
+    width: 100%;
+    margin-top: 2rem;
     display: flex;
     justify-content: space-evenly;
 }
@@ -193,73 +332,70 @@ p {
     font-size: 0.88rem;
     text-align: justify;
 }
+.advantage_text_mobile {
+    display: none;
+}
 .our_team {
-    padding: 0 10% 10% 10%;
+    padding: 10% 5%;
 }
 .about_team_title {
-    text-align: right;
+    text-align: center;
     font-family: 'Libre Baskerville', sans-serif;
-    font-size: 7.05rem;
+    font-size: 6rem;
+    line-height: 5.5rem;
     font-weight: 400;
-    margin-top: -5px;
-    margin-bottom: 5px;
 }
-.about_lena {
-    padding-top: 3.53rem;
-    display: flex;
-    justify-content: center;
-}
-.about_lena_text_block {
-    max-width: 50%;
-    width: 100%;
+.workers_width {
+    margin-top: 5rem;
     display: flex;
     flex-direction: column;
-    justify-content: center;
 }
-.about_lena_text {
-    text-align: justify;
-    margin-top: 2.94rem;
-    font-size: 1rem;
+.about_lena {
+    height: 100%;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    max-width: 100%;
 }
-.about_lena_photo_block {
+.about_lena_photo_block{
     max-width: 50%;
     width: 100%;
-    display: flex;
-    justify-content: center;
+}
+.about_lena_text_block {
+    height: 100%;
+    max-width: 50%;
+    width: 100%;
+    padding: 0 5%;
 }
 .about_lena_photo {
-    max-width: 75%;
-    width: 100%;
+    width: 92%;
 }
-.workers {
-    display: flex;
-    margin-top: 5.9rem;
+.about_lena_text {
+    font-size: 1.2rem;
+    text-align: justify;
+    margin: 4rem 1rem 4rem 0;
 }
 .about_workers {
-    max-width: 50%;
-    width: 100%;
+    margin-right: 1rem;
     display: flex;
-    justify-content: left;
+    align-items: flex-end;
+    justify-content: space-between;
+    max-width: 100%;
 }
-.about_workers_photo_block {
-    max-width: 30%;
+.about_workers_text_block {
+    margin-bottom: 1rem;
+    max-width: 60%;
     width: 100%;
-    display: flex;
-    justify-content: start;
+}
+.about_workers_photo_block{
+    max-width: 35%;
+    width: 100%;
 }
 .about_workers_photo {
     width: 100%;
 }
-.about_workers_text_block {
-    max-width: 50%;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    margin-left: 2.65rem;
-}
-.about_workers_text {
-    font-size: 1rem;
-    text-align: justify;
+.team_mobile_carousel {
+    display: none;
 }
 /*------------CAROUSEL--------------*/
 .carousel-description {
@@ -288,14 +424,14 @@ p {
 }
 .content_title {
     color: #fcda73;
-    font-size: 2.94rem;
+    font-size: 3rem;
     font-family: 'Libre Baskerville', sans-serif;
     font-weight: 400;
     margin-left: 10%;
     margin-bottom: 1.75rem;
 }
 .content_text_part {
-    background: linear-gradient(180deg, rgb(230 207 176) 0%, rgb(135 118 94) 33%, rgb(111 97 80) 66%, rgb(81 71 57) 100%);
+    background: linear-gradient(180deg, rgb(210, 180, 148) 0%, rgb(135 118 94) 33%, rgb(111 97 80) 66%, rgb(81 71 57) 100%);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -323,8 +459,8 @@ p {
     color: white;
     font-family: 'Libre Baskerville', sans-serif;
     font-weight: 400;
-    width: 60%;
-    font-size: 1rem;
+    width: 70%;
+    font-size: 0.95rem;
 }
 .content_video_block {
     max-width: 50%;
@@ -362,8 +498,8 @@ p {
     font-size: 1rem;
     border: 0.1rem solid #FBDA73;
     border-radius: 0.6rem;
-    margin-top: 2.94rem;
-    padding: 0.94rem;
+    margin-top: 3rem;
+    padding: 1rem;
     transition: .2s all ease-in-out;
 }
 .btn_to_price:hover {
@@ -374,7 +510,7 @@ p {
 .certificate_additional {
     display: flex;
     justify-content: right;
-    padding-top: 2.94rem;
+    padding-top: 3rem;
 }
 .order_certificate {
     text-decoration: none;
@@ -391,11 +527,25 @@ p {
     background-color: #FBDA73;
     transition: all .2s ease-in-out;
 }
+.course_info {
+    text-decoration: none;
+    font-size: 1rem;
+    color: #FBDA73;
+    padding: 1.18rem;
+    border-radius: 0.6rem;
+    border: 0.1rem solid #FBDA73;
+    transition: all .2s ease-in-out;
+}
+.course_info:hover {
+    color: black;
+    background-color: #FBDA73;
+    transition: all .2s ease-in-out;
+}
 /*------------PRICE--------------*/
 .price {
     background: black;
     overflow: hidden;
-    min-height: 75rem;
+    min-height: 85rem;
     width: auto;
     position: relative;
 }
@@ -422,7 +572,7 @@ p {
     object-fit: cover;
     z-index: 1;
     background: black;
-    opacity: 60%;
+    opacity: 70%;
 }
 .price_content {
     position: absolute;
@@ -433,6 +583,7 @@ p {
     z-index: 2;
 }
 .price_title {
+    text-transform: uppercase;
     padding-top: 3.53rem;
     text-align: center;
     font-family: 'Libre Baskerville', sans-serif;
@@ -453,14 +604,14 @@ p {
     flex-direction: column;
     justify-content: space-between;
     height: 20%;
-    margin-bottom: 1.18rem;
+    margin-bottom: 2rem;
 }
 .price_item_title {
     color: #FBDA73;
-    border-bottom: 1px solid #FBDA73;
+    border-bottom: 0.1rem solid #FBDA73;
     height: 30%;
     margin-bottom: 0.6rem;
-    line-height: 2.65rem;
+    line-height: 3.5rem;
     font-family: 'Libre Baskerville', sans-serif;
 }
 .price_item_procedures{
@@ -475,17 +626,20 @@ p {
     font-size: 1.29rem;
     display: flex;
     justify-content: space-between;
-    margin-bottom: 0.9rem;
 }
 .price_item_text {
     padding: 0.3rem;
 }
+.price_item_amount {
+    text-align: right;
+}
 /*------------PHOTO GALLERY--------------*/
 .photo_gallery {
     background: white;
-    padding-bottom: 4.65rem;
+    padding-bottom: 4rem;
 }
 .photo_gallery_title {
+    text-transform: uppercase;
     padding-top: 4.7rem;
     text-align: center;
     font-family: 'Libre Baskerville', sans-serif;
@@ -564,31 +718,48 @@ p {
     object-fit: cover;
 }
 .see_more_btn {
-    padding-top: 2.36rem;
+    margin-top: 6rem;
 }
 .see_more_text {
     text-align: center;
     font-size: 1.47rem;
-    font-weight: 600;
+    font-weight: 400;
 }
-.btn_more_ref {
-    margin-top: 1.18rem;
+.btn_more_ref_block {
     display: flex;
     justify-content: center;
-    color: rebeccapurple;
+    align-items: center;
+    margin-top: 1.2rem;
+}
+.btn_more_ref {
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: black;
     text-decoration: none;
+    font-weight: 400;
+    border: .1rem solid black;
+    border-radius: 0.6rem;
+    transition: all .3s ease-in-out;
 }
 .btn_more_ref:hover {
-    color: rebeccapurple;
+    transition: .3s all ease-in-out;
+    background: black;
+    opacity: .5;
+    color: white;
 }
 .fa-instagram::before {
     width: 3.53rem;
     height: auto;
 }
 /*------------REVIEWS--------------*/
+.mobile_review_item {
+    display: none;
+}
 .reviews {
     /*background: white;*/
-    height: 53rem;
+    height: 50rem;
     color: white;
     position: relative;
     border-bottom: 1rem solid gray;
@@ -605,15 +776,15 @@ p {
     right: 0;
     z-index: -1;
     background: rgb(39 35 31);
-    opacity: 80%;
+    opacity: 85%;
 }
 .reviews_title {
     padding-top: 7rem;
-    padding-bottom: 4.7rem;
+    padding-bottom: 7rem;
     text-align: center;
     font-family: 'Libre Baskerville', sans-serif;
     font-weight: 400;
-    font-size: 4.12rem;
+    font-size: 2.5rem;
     color: white;
 }
 .review_block {
@@ -635,11 +806,11 @@ input[type=radio] {
 .cards {
     position: relative;
     width: 100%;
-    height: 100%;
+    height: 90%;
 }
 .card {
     position: absolute;
-    width: 60%;
+    width: 70%;
     height: 100%;
     left: 0;
     right: 0;
@@ -650,53 +821,22 @@ input[type=radio] {
     border: none;
 }
 #item-1:checked ~ .cards #song-3, #item-2:checked ~ .cards #song-1, #item-3:checked ~ .cards #song-2 {
-    transform: translatex(-40%) scale(0.8);
+    transform: translatex(-110%) scale(0.7);
     opacity: 0.4;
     z-index: 0;
 }
 
 #item-1:checked ~ .cards #song-2, #item-2:checked ~ .cards #song-3, #item-3:checked ~ .cards #song-1 {
-    transform: translatex(40%) scale(0.8);
+    transform: translatex(110%) scale(0.7);
     opacity: 0.4;
     z-index: 0;
 }
 
 #item-1:checked ~ .cards #song-1, #item-2:checked ~ .cards #song-2, #item-3:checked ~ .cards #song-3 {
-    transform: translatex(0) scale(1);
+    transform: translatex(0) scale(1.3);
     opacity: 1;
     z-index: 1;
 }
-#item-1:checked ~ .cards #song-1 img, #item-2:checked ~ .cards #song-2 img, #item-3:checked ~ .cards #song-3 img {
-    box-shadow: 0px 0px 5px 0px rgba(81, 81, 81, 0.47);
-}
-/*.review_block {*/
-/*    display: flex;*/
-/*    padding: 0 5%;*/
-/*    height: 26.5rem;*/
-/*}*/
-/*.inner_review {*/
-/*    max-height: 85%;*/
-/*    height: 100%;*/
-/*}*/
-/*.carousel-review {*/
-/*    height: 100%;*/
-/*}*/
-/*.review_carousel {*/
-/*    width: 40%;*/
-/*    margin: 0 auto;*/
-/*}*/
-/*.review_main_text {*/
-/*    text-align: center;*/
-/*}*/
-/*.carousel-indicators-review {*/
-/*    margin-bottom: 0;*/
-/*}*/
-/*.carousel-indicators-review [data-bs-target] {*/
-/*    background-color: #FBDA73;*/
-/*    width: 0.88rem;*/
-/*    height: 0.88rem;*/
-/*    border-radius: 50%;*/
-/*}*/
 .review_item {
     height: 100%;
     width: 100%;
@@ -704,71 +844,19 @@ input[type=radio] {
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    background: #FBDA73;
-    border-radius: 1rem;
 }
 .review_main_text {
-    font-weight: 600;
-    font-size: 1rem;
+    font-weight: 400;
+    font-size: 0.8rem;
     height: 70%;
-    padding: 0 1rem;
+    width: 85%;
     display: flex;
     align-items: center;
+    text-align: justify;
 }
 .review_name {
     font-size: 1.18rem;
     padding-bottom: 2rem;
-}
-.input_block {
-    /*margin: 4rem auto 0 auto;*/
-    width: 40%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-.input_part {
-    width: 80%;
-    padding-bottom: 1.18rem;
-}
-.form-label {
-    margin: 0;
-    font-size: 1rem;
-}
-.form-control {
-    width: 100%;
-}
-.form-control:focus {
-    box-shadow: none;
-    border-color: #FBDA73;
-}
-.submit_input {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.btn_input {
-    font-size: 1rem;
-    font-weight: 800;
-    width: 100%;
-    border: 0.2rem solid #FBDA73;
-    color: white;
-}
-.btn_input:hover {
-    background: #FBDA73;
-    border: 0.2rem solid #FBDA73;
-    color: black;
-}
-.btn_input:active {
-    background: #FBDA73;
-    color: black;
-    font-size: 1.18rem;
-    border: 0.2rem solid #FBDA73;
-}
-.btn_input:focus {
-    border: 0.2rem solid #FBDA73;
-    background: #FBDA73;
-    color: black;
 }
 /*------------CONTACT--------------*/
 .contacts {
@@ -789,6 +877,7 @@ input[type=radio] {
     z-index: -1;
 }
 .contacts_title {
+    text-transform: uppercase;
     text-align: center;
     font-family: 'Libre Baskerville', sans-serif;
     font-weight: 400;
@@ -801,18 +890,31 @@ input[type=radio] {
     justify-content: space-between;
 }
 .contact_item_title {
-    font-weight: 600;
+    font-weight: 400;
     margin-bottom: 1.18rem;
 }
 .contact_item {
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: space-between;
     width: 30%;
 }
 .contact_item_text {
+    width: 15rem;
     text-align: center;
     font-size: 1rem;
+}
+.time_schedule_table {
+    width: 70%;
+    text-align: center;
+}
+.table_row {
+    width: 100%;
+    line-height: 1.2rem;
+}
+.table_day {
+    width: 40%;
 }
 /*------------MAP--------------*/
 .map {
@@ -860,65 +962,171 @@ input[type=radio] {
 /*Making adaptive all sizes and text*/
 @media screen and (max-width: 1920px) {
     html {
-        font-size: 17px;
+        font-size: 19px;
     }
 }
 @media screen and (max-width: 1600px) {
     html {
-        font-size: 14px;
+        font-size: 16px;
+    }
+    .about_text {
+        font-size: .85rem;
     }
 }
 @media screen and (max-width: 1280px) {
     html {
-        font-size: 14px;
+        font-size: 13px;
+    }
+    .banner_text {
+        font-size: 1.2rem;
+    }
+    .banner_detail_info {
+        font-size: 1.2rem;
+    }
+    .banner_social_info {
+        width: 40%;
+        font-size: 1rem;
     }
 }
 @media screen and (max-width: 1024px) {
     html {
-        font-size: 14px;
+        font-size: 10px;
+    }
+    .banner_text {
+        max-width: 85%;
+        font-size: 1.3rem;
+    }
+    .banner_detail_info {
+        font-size: 1.3rem;
+        margin-top: 2rem;
+    }
+    .banner_social_info {
+        width: 45%;
+        font-size: 1.3rem;
+        margin-top: 2rem;
     }
 }
 @media screen and (max-width: 768px) {
     html {
-        font-size: 14px;
+        font-size: 8px;
     }
 }
 @media screen and (max-width: 430px) {
     html {
-        font-size: 14px;
+        font-size: 6px;
     }
 }
 
 /*Changing elements for moblie versions*/
 @media screen and (max-width: 430px) {
+    .fa-phone::before {
+        width: 4rem;
+        height: 4rem;
+    }
+    .scroll_margin_class {
+        scroll-margin-top: calc(var(--burger-height) + 1rem);
+    }
     .call {
-        width: 12rem;
-        height: 12rem;
+        width: 9rem;
+        height: 9rem;
     }
     .call_btn_icon {
         width: 4rem;
         height: 4rem;
     }
+    .banner_main {
+        width: 95%;
+        background: url("../assets/banner/banner_mobile_1.webp") center;
+        background-size: cover;
+        aspect-ratio: 9/16;
+    }
+    .banner_additional.active {
+        background: url("../assets/banner/banner_mobile_additional_1.webp");
+        background-size: cover;
+        aspect-ratio: 9/16;
+    }
+    .banner_btn{
+        flex-direction: column;
+        align-items: center;
+        bottom: 5%;
+        height: 20%;
+    }
+    .btn_course_description {
+        margin-left: 0;
+    }
+    .btn_course_description, .btn_course_registration {
+        width: 70%;
+        height: 35%;
+    }
+    .btn_course_description p, .btn_course_registration a {
+        font-size: 2rem;
+    }
+    .banner_close_btn {
+        width: 10rem;
+        height: 10rem;
+    }
+    .banner_close_btn span:nth-child(n) {
+        width: 7rem;
+    }
+    .banner_closed {
+        width: 13rem;
+        height: 8rem;
+        font-size: 1.5rem;
+    }
     .header {
         display: none;
     }
+    .main {
+        margin-top: 12rem;
+    }
     .nav_burger {
-        display: block;
-        position: absolute;
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        height: 12rem;
+        background-color: black;
+        position: fixed;
         top: 0;
-        left: 0;
-        z-index: 5;
+        z-index: 1000;
+    }
+    .burger_logo {
+        width: 45%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .logo_item {
+        width: 80%;
+        height: 25%;
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .logo_item_photo {
+        width: 110%;
+    }
+    .burger_logo_img {
+        width: 20rem;
+        height: auto;
+        padding-top: 1rem;
+    }
+    .burger_control {
+        display: block;
+        width: 30%;
     }
     .burger_btn {
-        width: 20rem;
-        height: 20rem;
+        width: 15rem;
+        height: 12rem;
         position: relative;
-        z-index:2;
         overflow: hidden;
+        margin-right: 0;
+        margin-left: auto;
+        z-index: 1002;
     }
     .burger_btn span {
         width: 8rem;
-        height: 0.5rem;
+        height: 0.3rem;
         position: absolute;
         top: 50%;
         left: 50%;
@@ -944,39 +1152,41 @@ input[type=radio] {
         transform: translate(-50%, 0%) rotate(-45deg);
     }
     .main {
-        height: 100vh;
+        height: 75vh;
     }
     .MainVideo {
         height: 100vh;
         width: 100vw;
     }
     .main_logo {
-        width: 75rem;
-        height: 75rem;
+        width: 65rem;
+        height: 65rem;
     }
     .nav_mobile {
-        position: absolute;
+        position: fixed;
         top: 0;
         left: 0;
-        background-color: #4b4b4b;
-        width: 100vw;
-        height: 100vh;
+        background-color: black;
+        width: 100%;
+        height: 100%;
         display: flex;
         flex-direction: column;
-        align-items: flex-end;
+        align-items: center;
         justify-content: center;
         padding: 5rem;
         transform: translateX(-100%);
         transition: transform .5s;
+        z-index: 1001;
     }
     .nav_mobile.active {
         transform: translateX(0);
+        position: fixed;
     }
     .nav_mobile_element {
         text-decoration: none;
         color: #FBDA73;
         font-size: 5rem;
-        padding: 3rem;
+        padding: .5rem 3rem;
     }
     .nav_mobile_element:active {
         color: #FBDA73;
@@ -986,7 +1196,364 @@ input[type=radio] {
     }
     .social {
         width: 100%;
-        justify-content: right;
+        justify-content: center;
         padding: 5rem;
+        padding-top: 10rem;
+    }
+    .about_main {
+        flex-direction: column-reverse;
+    }
+    .about_title_mobile_first {
+        font-size: 9.7rem;
+    }
+    .about_text_block {
+        max-width: 100%;
+        align-items: center;
+    }
+    .about_title {
+        margin-left: 0;
+        text-align: center;
+        font-size: 11.7rem;
+    }
+    .about_text {
+        margin-top: 4rem;
+        max-width: 95%;
+        width: 95%;
+        font-size: 2rem;
+        text-align: justify;
+    }
+    .about_text_starting {
+        display: block;
+        max-width: 100%;
+        width: 100%;
+    }
+    .about_photo_block {
+        display: none;
+    }
+    .about_team_title {
+        font-size: 11.3rem;
+        line-height: 1.2;
+    }
+    .about {
+        padding-bottom: 10rem;
+    }
+    .about_team_title_mobile_first {
+        font-size: 9.1rem;
+    }
+    .workers_width {
+        display: none;
+    }
+    .our_team {
+        padding-top: 15%;
+        padding-bottom: 0;
+        min-height: 165rem;
+    }
+    .team_mobile_carousel {
+        display: block;
+        margin-top: 5rem;
+        margin-bottom: 10rem;
+    }
+    .team_inner_carousel {
+        height: 100%;
+        overflow: visible;
+    }
+    .team_carousel_content {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        margin: 0 auto;
+        max-width: 100%;
+        width: 100%;
+        height: 100%;
+        position: relative;
+    }
+    .team_carousel_photo {
+        width: 100%;
+        height: 70rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+    }
+    .team_carousel_text {
+        text-align: justify;
+        margin-top: 3rem;
+        width: 95%;
+        font-size: 2rem;
+    }
+    .lena_name_text {
+        font-weight: 600;
+    }
+    .lena_mobile_photo {
+        width: 95%;
+    }
+    .carousel-control-prev-icon {
+        background: none;
+        display: block;
+        border-left: 0.5rem solid black;
+        border-top: 0.5rem solid black;
+        rotate: -45deg;
+    }
+    .carousel-control-next-icon {
+        background: none;
+        display: block;
+        border-left: 0.5rem solid black;
+        border-top: 0.5rem solid black;
+        rotate: 135deg;
+    }
+    .carousel-control-prev {
+        justify-content: left;
+        left: -2rem;
+    }
+    .carousel-control-next {
+        justify-content: right;
+        right: -2rem;
+    }
+    .visually-hidden {
+        width: 0;
+        height: 0;
+    }
+    .about_workers_photo {
+        width: 80%;
+    }
+    .advantages_main_text_block {
+        width: 95%;
+        margin: 0 auto;
+    }
+    .advantages_main_text {
+        display: none;
+    }
+    .advantages_main_text_mobile {
+        display: block;
+        text-align: center;
+        font-size: 5rem;
+        max-width: 85%;
+        width: 100%;
+        margin: 0 auto;
+        line-height: 4rem;
+        font-weight: 600;
+    }
+    .advantage {
+        width: 50%;
+    }
+    .advantages {
+        flex-wrap: wrap;
+        margin-top: 10rem;
+        justify-content: space-between;
+    }
+    .last {
+        margin-top: 5rem;
+    }
+    .advantage_text_block {
+        margin-top: 5rem;
+        width: 100%;
+    }
+    .advantage_text {
+        display: none;
+    }
+    .advantage_text_mobile {
+        display: block;
+        text-align: center;
+        font-size: 2rem;
+        margin: 0 auto;
+        max-width: 85%;
+        width: 100%;
+    }
+    .advantage_photo {
+        width: 45%;
+    }
+    .description {
+        height: 135rem;
+    }
+    .carousel-description {
+        height: 135rem;
+    }
+    .content {
+        flex-direction: column;
+    }
+    .content_video_block {
+        max-width: 100%;
+        max-height: 35%;
+        height: 100%;
+    }
+    .content_text_part {
+        max-width: 100%;
+        max-height: 65%;
+        height: 100%;
+        justify-content: left;
+    }
+    .content_text {
+        font-size: 2rem;
+    }
+    .content_title {
+        font-size: 4rem;
+        margin-top: 7rem;
+        margin-bottom: 4rem;
+    }
+    .carousel-indicators-description {
+        width: 100%;
+    }
+    .carousel-indicators-description [data-bs-target] {
+        width: 2.5rem;
+        height: 2.5rem;
+    }
+    .content_additional_text {
+        font-size: 2rem;
+        width: 100%;
+    }
+    .order_certificate {
+        font-size: 2rem;
+    }
+    .content_additional_text_block {
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    .content_text.course{
+        font-size: 1.75rem;
+    }
+    .content_title.course {
+        margin-top: 6rem;
+    }
+    .content_additional_text_block.course {
+        flex-direction: row;
+    }
+    .content_additional_text.course {
+        font-size: 1.75rem;
+        width: 60%;
+    }
+    .course_info{
+        font-size: 2.5rem;
+    }
+    .btn_to_price {
+        border-width: .2rem;
+        font-size: 2rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        max-width: 27%;
+        width: 100%;
+        margin-top: 5rem;
+    }
+    .order_certificate {
+        margin-top: 4rem;
+        margin-right: 6rem;
+    }
+    .price {
+        min-height: 125rem;
+    }
+    .price_title {
+        font-size: 5rem;
+        padding-top: 9rem;
+    }
+    .price_item_procedures {
+        margin-top: 2rem;
+    }
+    .price_block {
+        margin-bottom: 4rem;
+    }
+    .price_item_text {
+        font-size: 2rem;
+        display: flex;
+        align-items: center;
+    }
+    .price_item_title {
+        font-size: 3rem;
+    }
+    .price_item_amount {
+        text-align: right;
+        font-size: 2rem;
+    }
+    .photo_gallery {
+        padding-bottom: 9rem;
+    }
+    .photo_gallery_title {
+        padding-top: 9rem;
+        font-size: 5rem;
+    }
+    .see_more_btn {
+        margin-top: 7rem;
+    }
+    .see_more_text {
+        font-size: 2rem;
+    }
+    .btn_more_ref_block {
+        margin-top: 2rem;
+    }
+    .reviews_title {
+        font-size: 4rem;
+        padding-bottom: 5rem;
+        padding-top: 9rem;
+    }
+    .reviews {
+        height: 74rem;
+    }
+    .review_block {
+        display: none;
+    }
+    .mobile_review_item {
+        max-width: 70%;
+        width: 100%;
+        margin: 0 auto;
+        height: 45rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .mobile_review_text {
+        font-size: 1.5rem;
+        text-align: justify;
+    }
+    .mobile_review_name {
+        margin-top: 5rem;
+        font-size: 1.5rem;
+    }
+    .mobile_review_carousel {
+        display: block;
+        padding-bottom: 9rem;
+    }
+    .review_control {
+        display: none;
+    }
+    .contacts {
+        padding-top: 9rem;
+    }
+    .contacts_items {
+        padding: 5%;
+    }
+    .contact_item_title {
+        font-size: 2rem;
+    }
+    .contact_item_text {
+        font-size: 1.35rem;
+        width: 20rem;
+    }
+    .contact_item {
+        justify-content: space-between;
+    }
+    .time_schedule_table {
+        font-size: 1.35rem;
+        width: 90%;
+    }
+    .table_row {
+        padding: 0;
+        line-height: 1.5rem;
+    }
+    .map {
+        height: 40rem;
+    }
+    .footer {
+        height: 7rem;
+    }
+    .footer_title {
+        font-size: 1.5rem;
+    }
+    .footer_additional {
+        flex-direction: row;
+    }
+    .footer_additional_item {
+        font-size: 1rem;
+        margin-right: 1rem;
     }
 }
